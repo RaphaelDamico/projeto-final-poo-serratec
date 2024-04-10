@@ -3,15 +3,15 @@ package org.serratec.poo.classes;
 import java.time.LocalDate;
 
 public class Funcionario extends Pessoa{
-	private String cargo;
+	private Cargo cargo;
 
 	public Funcionario(String nome, LocalDate dataDeNascimento, String cpf, Contato contato, Login login,
-			String cargo) {
+			Cargo cargo) {
 		super(nome, dataDeNascimento, cpf, contato, login);
 		this.cargo = cargo;
 	}
 
-	public String getCargo() {
+	public Cargo getCargo() {
 		return cargo;
 	}
 
