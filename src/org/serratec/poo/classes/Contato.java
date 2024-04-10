@@ -21,7 +21,10 @@ public class Contato {
 	}
 	@Override
 	public String toString() {
-		return "Contato [email=" + email + ", telefone=" + telefone + "]";
+		return String.format("""
+				Email: %s
+				Telefone: %s
+				""", email, telefone);
 	}
 	
 	

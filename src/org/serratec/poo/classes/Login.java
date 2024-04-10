@@ -1,20 +1,10 @@
 package org.serratec.poo.classes;
 
 public class Login {
-	private String nickname;
 	private String senha;
-	
-	public Login(String nickname, String senha) {
-		this.nickname = nickname;
+
+	public Login(String senha) {
 		this.senha = senha;
-	}
-
-	public String getNickname() {
-		return nickname;
-	}
-
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
 	}
 
 	public String getSenha() {
@@ -27,8 +17,10 @@ public class Login {
 
 	@Override
 	public String toString() {
-		return "Login [nickname=" + nickname + ", senha=" + senha + "]";
+		return String.format("""
+				Senha: %s
+				""", senha);
+
 	}
-	
-	
+
 }
