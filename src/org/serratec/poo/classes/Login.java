@@ -10,17 +10,10 @@ public class Login {
 	public String getSenha() {
 		return senha;
 	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
+	
+	public void loginUsuario() {
+		
 	}
-
-	@Override
-	public String toString() {
-		return String.format("""
-				Senha: %s
-				""", senha);
-
-	}
-
-}
+	
+}	
+	

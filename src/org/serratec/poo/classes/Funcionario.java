@@ -7,7 +7,7 @@ public class Funcionario extends Pessoa{
 
 	public Funcionario(String nome, LocalDate dataDeNascimento, String cpf, Contato contato, Login login,
 			Cargo cargo) {
-		super(nome, dataDeNascimento, cpf, contato, login);
+		super(nome, dataDeNascimento, cpf, contato);
 		this.cargo = cargo;
 	}
 
@@ -17,7 +17,9 @@ public class Funcionario extends Pessoa{
 
 	@Override
 	public String toString() {
-		return "Funcionario [cargo=" + cargo + "]";
+		return super.toString() + String.format("""
+				Cargo: %s
+				""", cargo);
 	}
 	
 	

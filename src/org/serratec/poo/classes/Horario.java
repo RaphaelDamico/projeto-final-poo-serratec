@@ -6,22 +6,26 @@ import java.time.LocalTime;
 public class Horario {
 	private LocalDate data;
 	private LocalTime hora;
+
 	public Horario(LocalDate data, LocalTime hora) {
 		this.data = data;
 		this.hora = hora;
 	}
+
 	public LocalDate getData() {
 		return data;
 	}
+
 	public LocalTime getHora() {
 		return hora;
 	}
+
 	@Override
 	public String toString() {
-		return "Horario [data=" + data + ", hora=" + hora + "]";
+		return String.format("""
+				Data: %s
+				Hora: %s
+				""", data, hora);
 	}
-	
-	
+
 }
-
-
