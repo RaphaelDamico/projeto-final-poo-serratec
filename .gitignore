@@ -1,29 +1,29 @@
-/bin/
-# Java related
-target/**
-*.jar
-*.war
-*.ear
-*.class
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-# eclipse specific
-*.pydevproject
-.project
-.metadata
-bin/**
-tmp/**
-tmp/**/*
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
+### Eclipse ###
+.apt_generated
 .classpath
-.settings/
-.loadpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-# External tool builders
-.externalToolBuilders/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-# Locally stored "Eclipse launch configurations"
-*.launch
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
