@@ -1,7 +1,6 @@
-package org.serrate.poo.utils;
+package org.serratec.poo.utils;
 
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 

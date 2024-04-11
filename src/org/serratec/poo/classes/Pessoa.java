@@ -3,7 +3,7 @@ package org.serratec.poo.classes;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import org.serrate.poo.utils.Utils;
+import org.serratec.poo.utils.Utils;
 
 public abstract class Pessoa {
 	private String nome;
