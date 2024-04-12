@@ -1,7 +1,5 @@
 package org.serratec.poo.classes;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 public class Horario {
 	private String data;

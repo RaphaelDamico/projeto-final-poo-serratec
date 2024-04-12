@@ -1,7 +1,5 @@
 package org.serratec.poo.classes;
 
-import java.time.LocalDate;
-
 public class Aluno extends Pessoa {
 	private Plano plano;
 	private String dataMatricula;

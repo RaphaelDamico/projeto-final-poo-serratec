@@ -1,6 +1,5 @@
 package org.serratec.poo.classes;
 
-import java.time.LocalDate;
 
 public class PersonalTrainer extends Pessoa {
 	private String especialidade;
@@ -8,11 +7,10 @@ public class PersonalTrainer extends Pessoa {
 	private Horario horarioAtendimento;
 
 	public PersonalTrainer(String nome, String dataDeNascimento, String cpf, Contato contato, String senha,
-			String especialidade, String cref, Horario horarioAtendimento) {
+			String especialidade, String cref) {
 		super(nome, dataDeNascimento, cpf, contato, senha);
 		this.especialidade = especialidade;
 		this.cref = cref;
-		this.horarioAtendimento = horarioAtendimento;
 	}
 
 	public String getEspecialidade() {
