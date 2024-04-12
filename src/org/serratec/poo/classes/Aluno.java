@@ -4,22 +4,23 @@ import java.time.LocalDate;
 
 public class Aluno extends Pessoa {
 	private Plano plano;
-	private LocalDate dataMatricula;
+	private String dataMatricula;
 	private Avaliacao avaliacao;
 
-	public Aluno(String nome, LocalDate dataDeNascimento, String cpf, Contato contato, Login login, Plano plano,
-			LocalDate dataMatricula, Avaliacao avaliacao) {
-		super(nome, dataDeNascimento, cpf, contato);
+	public Aluno(String nome, String dataDeNascimento, String cpf, Contato contato, String senha, Plano plano,
+			String dataMatricula, Avaliacao avaliacao) {
+		super(nome, dataDeNascimento, cpf, contato, senha);
 		this.plano = plano;
 		this.dataMatricula = dataMatricula;
 		this.avaliacao = avaliacao;
 	}
 
+
 	public Plano getPlano() {
 		return plano;
 	}
 
-	public LocalDate getDataMatricula() {
+	public String getDataMatricula() {
 		return dataMatricula;
 	}
 

@@ -7,26 +7,29 @@ import org.serratec.poo.utils.Utils;
 
 public abstract class Pessoa {
 	private String nome;
-	private LocalDate dataDeNascimento;
+	private String dataDeNascimento;
 	private String cpf;
 	private Contato contato;
-	private Login login;
+	private String senha;
 	private Utils utils;
-
-	public Pessoa(String nome, LocalDate dataDeNascimento, String cpf, Contato contato) {
+	private static final String TXTALUNOS = "C:/Users/joaop/OneDrive/Área de Trabalho/JAVA/projeto-final-poo-serratec/Lista Alunos.txt";
+	public static String getListaAlunos() {
+	return TXTALUNOS;
+	}
+	public Pessoa(String nome, String dataDeNascimento, String cpf, Contato contato, String senha) {
 		this.nome = nome;
 		this.dataDeNascimento = dataDeNascimento;
 		this.cpf = cpf;
 		this.contato = contato;
+		this.senha = senha;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public LocalDate getDataDeNascimento() {
-		LocalDate data = utils.formataDataDeNascimento(dataDeNascimento);
-		return data;
+	public String getDataDeNascimento() {
+		return dataDeNascimento;
 	}
 
 	public String getCpf() {
@@ -37,12 +40,10 @@ public abstract class Pessoa {
 		return contato;
 	}
 
-	public Login getLogin() {
-
-		return login;
+	public String getSenha() {
+		return senha;
 	}
-
-//	public int getIdade(LocalDate dataDeNascimento) {
+	//	public int getIdade(LocalDate dataDeNascimento) {
 //		LocalDate idade = utils.converteIdade(dataDeNascimento);
 //		return getIdade(idade);
 //	}
@@ -55,8 +56,7 @@ public abstract class Pessoa {
 				Data de nascimento: %s
 				CPF: %s
 				%s
-				%s
-				""", nome, fmt.format(getDataDeNascimento()), cpf, contato, getLogin());
+						""", nome, fmt.format(getDataDeNascimento()), cpf, contato);
 
 	}
 

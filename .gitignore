@@ -3,6 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .idea
+projeto-final-poo-serratec.iml
 
 ### Eclipse ###
 .apt_generated

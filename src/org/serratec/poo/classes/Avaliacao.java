@@ -1,18 +1,16 @@
 package org.serratec.poo.classes;
 
 public class Avaliacao {
-	private Aluno aluno;
-	private PersonalTrainer personalTrainer;
+	private String nomePersonal;
 	private Horario horario;
 	private double alturaAluno;
 	private double pesoAluno;
 	private double taxaDeGordura;
 	private String restricoes;
 
-	public Avaliacao(Aluno aluno, PersonalTrainer personalTrainer, Horario horario, double alturaAluno,
+	public Avaliacao(String nomePersonal, Horario horario, double alturaAluno,
 			double pesoAluno, double taxaDeGordura, String restricoes) {
-		this.aluno = aluno;
-		this.personalTrainer = personalTrainer;
+		this.nomePersonal = nomePersonal;
 		this.horario = horario;
 		this.alturaAluno = alturaAluno;
 		this.pesoAluno = pesoAluno;
@@ -52,12 +50,9 @@ public class Avaliacao {
 		this.restricoes = restricoes;
 	}
 
-	public Aluno getAluno() {
-		return aluno;
-	}
 
-	public PersonalTrainer getPersonalTrainer() {
-		return personalTrainer;
+	public String getPersonal() {
+		return nomePersonal;
 	}
 
 	public double getTaxaDeGordura() {
@@ -71,14 +66,14 @@ public class Avaliacao {
 	@Override
 	public String toString() {
 		return String.format("""
-				Aluno: %s
+				Aluno: 
 				Personal trainer: %s
 				Horario: %s Horas
 				Altura: %.2f Metros
 				Peso: %.2f KG
 				Taxa de gordura: %.2f
 				Restrições: %s
-				""", aluno, personalTrainer, horario, alturaAluno, pesoAluno, taxaDeGordura, restricoes);
+				""", nomePersonal, horario, alturaAluno, pesoAluno, taxaDeGordura, restricoes);
 	}
 
 }

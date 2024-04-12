@@ -16,26 +16,26 @@ public class Menu {
 			
 			if(opcaoMenu.equalsIgnoreCase("aluno")) {
 				System.out.println(UtilsMenu.exibeMenuAluno());
+				if (sc.hasNextInt()) {
+					opcao = sc.nextInt();
+				} else {
+					opcao = -1;
+				}
+			}
+			if(opcaoMenu.equalsIgnoreCase("personal")) {
+				System.out.println(UtilsMenu.exibeMenuPersonal());
 				if(sc.hasNextInt()) {
 					opcao = sc.nextInt();
 				} else {
 					opcao = -1;
 				}
-				if(opcaoMenu.equalsIgnoreCase("personal")) {
-					System.out.println(UtilsMenu.exibeMenuPersonal());
-					if(sc.hasNextInt()) {
-						opcao = sc.nextInt();
-					} else {
-						opcao = -1;
-					}
-				}
-				if(opcaoMenu.equalsIgnoreCase("funcionario")){
-					System.out.println(UtilsMenu.exibeMenuFuncionario());
-					if(sc.hasNextInt()) {
-						opcao = sc.nextInt();
-					} else {
-						opcao = -1;
-					}
+			}
+			if(opcaoMenu.equalsIgnoreCase("funcionario")){
+				System.out.println(UtilsMenu.exibeMenuFuncionario());
+				if(sc.hasNextInt()) {
+					opcao = sc.nextInt();
+				} else {
+					opcao = -1;
 				}
 			}
 				sc.close();

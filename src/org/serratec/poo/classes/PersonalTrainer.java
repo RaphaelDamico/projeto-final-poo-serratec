@@ -8,8 +8,8 @@ public class PersonalTrainer extends Pessoa {
 	private Horario horarioAtendimento;
 
 	public PersonalTrainer(String nome, LocalDate dataDeNascimento, String cpf, Contato contato, Login login,
-			String especialidade, String cref, Horario horarioAtendimento) {
-		super(nome, dataDeNascimento, cpf, contato);
+			String especialidade, String cref, Horario horarioAtendimento, String senha) {
+		super(nome, dataDeNascimento, cpf, contato, senha);
 		this.especialidade = especialidade;
 		this.cref = cref;
 		this.horarioAtendimento = horarioAtendimento;

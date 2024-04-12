@@ -4,19 +4,19 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Horario {
-	private LocalDate data;
-	private LocalTime hora;
+	private String data;
+	private String hora;
 
-	public Horario(LocalDate data, LocalTime hora) {
+	public Horario(String data, String hora) {
 		this.data = data;
 		this.hora = hora;
 	}
 
-	public LocalDate getData() {
+	public String getData() {
 		return data;
 	}
 
-	public LocalTime getHora() {
+	public String getHora() {
 		return hora;
 	}
 
