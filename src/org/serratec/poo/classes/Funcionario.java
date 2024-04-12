@@ -1,7 +1,5 @@
 package org.serratec.poo.classes;
 
-import java.time.LocalDate;
-
 public class Funcionario extends Pessoa{
 	private Cargo cargo;
 
