@@ -56,7 +56,7 @@ public abstract class Pessoa {
 				Data de nascimento: %s
 				CPF: %s
 				%s
-						""", nome, fmt.format(getDataDeNascimento()), cpf, contato);
+						""", nome, dataDeNascimento, cpf, contato);
 
 	}
 

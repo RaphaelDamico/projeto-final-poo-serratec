@@ -9,9 +9,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.serratec.poo.classes.Pessoa.getListaAlunos;
+
 public class LeArquivo {
     public static List<Aluno> listaAluno() throws IOException {
-        BufferedReader txt = new BufferedReader(new FileReader("C:/Users/joaop/OneDrive/Área de Trabalho/JAVA/projeto-final-poo-serratec/Lista Alunos.txt"));
+        String diretorio = getListaAlunos();
+        BufferedReader txt = new BufferedReader(new FileReader(diretorio));
         List<Aluno> alunos = new ArrayList();
 
         String linha;
@@ -25,12 +28,15 @@ public class LeArquivo {
                     new Contato(dados[3], dados[4]), //contato
                     dados[5], //senha
                     new Plano(dados[6], dados[7], Double.parseDouble(dados[8]), dados[9]),//plano
-                    dados[7],//data matricula
-                    new Avaliacao(dados[8], new Horario(dados[9], dados [10]),
-                            Double.parseDouble(dados[11]),Double.parseDouble(dados[ 12]), Double.parseDouble(dados[13]), dados[14]));
+                    dados[10]);
             alunos.add(aluno);
         }
 
         return alunos;
+    }
+
+    public static void main(String[] args) throws IOException {
+        List<Aluno> alunos = listaAluno();
+        System.out.println(alunos);
     }
 }

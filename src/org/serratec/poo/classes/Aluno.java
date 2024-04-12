@@ -8,11 +8,10 @@ public class Aluno extends Pessoa {
 	private Avaliacao avaliacao;
 
 	public Aluno(String nome, String dataDeNascimento, String cpf, Contato contato, String senha, Plano plano,
-			String dataMatricula, Avaliacao avaliacao) {
+			String dataMatricula) {
 		super(nome, dataDeNascimento, cpf, contato, senha);
 		this.plano = plano;
 		this.dataMatricula = dataMatricula;
-		this.avaliacao = avaliacao;
 	}
 
 
