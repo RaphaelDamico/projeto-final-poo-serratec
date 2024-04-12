@@ -3,19 +3,18 @@ package org.serratec.poo.classes;
 import java.time.LocalDate;
 
 public class Aluno extends Pessoa {
-	private Plano plano;
+	private String plano;
 	private String dataMatricula;
 	private Avaliacao avaliacao;
 
-	public Aluno(String nome, String dataDeNascimento, String cpf, Contato contato, String senha, Plano plano,
+	public Aluno(String nome, String dataDeNascimento, String cpf, Contato contato, String senha, String plano,
 			String dataMatricula) {
 		super(nome, dataDeNascimento, cpf, contato, senha);
 		this.plano = plano;
 		this.dataMatricula = dataMatricula;
 	}
 
-
-	public Plano getPlano() {
+	public String getPlano() {
 		return plano;
 	}
 

@@ -27,16 +27,52 @@ public class LeArquivo {
                     dados[2], //cpf
                     new Contato(dados[3], dados[4]), //contato
                     dados[5], //senha
-                    new Plano(dados[6], dados[7], Double.parseDouble(dados[8]), dados[9]),//plano
-                    dados[10]);
+                    dados[6],//plano
+                    dados[7]);
             alunos.add(aluno);
         }
-
         return alunos;
     }
+    public static List<Aluno> listaPersonal() throws IOException {
+        String diretorio = getListaAlunos();
+        BufferedReader txt = new BufferedReader(new FileReader(diretorio));
+        List<Aluno> alunos = new ArrayList();
 
-    public static void main(String[] args) throws IOException {
-        List<Aluno> alunos = listaAluno();
-        System.out.println(alunos);
+        String linha;
+        while ((linha = txt.readLine()) != null) {
+            // Processar cada linha
+            String[] dados = linha.split("-");
+
+            Aluno aluno = new Aluno(dados[0], //Nome
+                    dados[1], //Data nascimento
+                    dados[2], //cpf
+                    new Contato(dados[3], dados[4]), //contato
+                    dados[5], //senha
+                    dados[6],//plano
+                    dados[7]);
+            alunos.add(aluno);
+        }
+        return alunos;
+    }
+    public static List<Aluno> listaFuncionario() throws IOException {
+        String diretorio = getListaAlunos();
+        BufferedReader txt = new BufferedReader(new FileReader(diretorio));
+        List<Aluno> alunos = new ArrayList();
+
+        String linha;
+        while ((linha = txt.readLine()) != null) {
+            // Processar cada linha
+            String[] dados = linha.split("-");
+
+            Aluno aluno = new Aluno(dados[0], //Nome
+                    dados[1], //Data nascimento
+                    dados[2], //cpf
+                    new Contato(dados[3], dados[4]), //contato
+                    dados[5], //senha
+                    dados[6],//plano
+                    dados[7]);
+            alunos.add(aluno);
+        }
+        return alunos;
     }
 }
