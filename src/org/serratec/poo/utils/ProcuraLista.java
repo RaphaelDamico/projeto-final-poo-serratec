@@ -3,6 +3,7 @@ package org.serratec.poo.utils;
 import org.serratec.poo.classes.Aluno;
 import org.serratec.poo.classes.Funcionario;
 import org.serratec.poo.classes.PersonalTrainer;
+import org.serratec.poo.classes.Pessoa;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,37 +12,38 @@ import java.util.Scanner;
 import static org.serratec.poo.classes.Login.chamaLogin;
 
 public class ProcuraLista {
-    public static int buscarCPF(String cpf, String senha, List <Aluno> alunos, List <PersonalTrainer> personais, List <Funcionario> funcionarios) throws IOException {
+    public static Object buscarCPF(String cpf, String senha, List <Aluno> alunos, List <PersonalTrainer> personais, List <Funcionario> funcionarios) throws IOException {
 
+        Object pessoa = null;
         int marcador = 0;
         boolean encontrado = false;
 
         for (Aluno aluno : alunos) {
             if (aluno.getCpf().contains(cpf) && aluno.getSenha().contains(senha)) {
                 encontrado = true;
+                pessoa = aluno;
                 marcador = 1;
                 break;
             }
-            System.out.println(aluno);
         }
         if (!encontrado) {
             for (PersonalTrainer personalTrainer : personais) {
                 if (personalTrainer.getCpf().contains(cpf) && personalTrainer.getSenha().contains(senha)) {
                     encontrado = true;
+                    pessoa = personalTrainer;
                     marcador = 2;
                     break;
                 }
-                System.out.println(personalTrainer);
             }
         }
         if (!encontrado) {
             for (Funcionario funcionario : funcionarios) {
                 if (funcionario.getCpf().contains(cpf) && funcionario.getSenha().contains(senha)) {
                     encontrado = true;
+                    pessoa = funcionario;
                     marcador = 3;
                     break;
                 }
-                System.out.println(funcionario);
             }
         }
 
@@ -50,7 +52,6 @@ public class ProcuraLista {
                     USUARIO OU SENHA ERRADOS...
                     DESEJA BUSCAR UM NOVO CPF? (S/N)
                     """));
-            marcador = -1;
             Scanner sc = new Scanner(System.in);
             String aux = sc.nextLine();
             if (aux.equalsIgnoreCase("s")){
@@ -62,6 +63,6 @@ public class ProcuraLista {
                     """));
             }
         }
-    return marcador;
+    return pessoa;
     }
 }

@@ -26,7 +26,7 @@ public class UtilsMenu {
 				3 - Cadastrar novo Personal Trainer
 				4 - Emitir relatório de planos
 				5 - Emitir relatório de equipe
-				6 - Emitir relação de avaliações físicar por período
+				6 - Emitir relação de avaliações físicas por período
 				7 - Sair
 				""");
 	}

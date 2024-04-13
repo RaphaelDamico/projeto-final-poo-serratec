@@ -114,7 +114,8 @@ public class LeArquivo {
                 String[] dados = linha.split("-");
                 int duracao = Integer.parseInt(dados[1]);
                 Double valor = Double.parseDouble(dados[2]);
-                Plano plano = new Plano(dados[0], duracao, valor, dados[4]);
+				String descricao = dados[3];
+                Plano plano = new Plano(dados[0], duracao, valor, descricao);
                 planos.add(plano);
             }
         } catch (IOException e) {

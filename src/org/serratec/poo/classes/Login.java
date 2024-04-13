@@ -18,16 +18,21 @@ public class Login {
 		String cpf = sc.nextLine();
 		System.out.print("Senha: ");
 		String senha = sc.nextLine();
-		int marcador = buscarCPF(cpf, senha, alunos, personais, funcionarios);
-		if (marcador == 1){
-			System.out.println("\n\n\t\t\t\tOVOKURINGAR");
-			menuAluno();
+		Object pessoa = buscarCPF(cpf, senha, alunos, personais, funcionarios);
+		System.out.println(pessoa);
+
+		if (pessoa instanceof Aluno){
+			menuAluno(pessoa);
 		}
-		if (marcador == 2){
-			menuPersonal();
+		if (pessoa instanceof PersonalTrainer){
+			menuPersonal(pessoa);
 		}
-		if (marcador == 3){
-			menuFuncionario();
+		if (pessoa instanceof Funcionario){
+			menuFuncionario(pessoa);
+		}
+		else {
+			System.out.println("OBRIGADO POR USAR NOSSO SISTEMA");
+			return;
 		}
 		sc.close();
 	}

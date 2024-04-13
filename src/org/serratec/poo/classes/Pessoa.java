@@ -11,7 +11,6 @@ public abstract class Pessoa implements Comparable<Pessoa> {
 	private String cpf;
 	private Contato contato;
 	private String senha;
-	private Utils utils;
 	private static final String TXTALUNOS = "listaAlunos.txt";
 	private static final String TXTPERSONAL = "listaPersonalTrainers.txt";
 	private static final String TXTFUNCIONARIO = "listaFuncionarios.txt";

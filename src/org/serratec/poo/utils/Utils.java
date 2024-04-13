@@ -29,23 +29,18 @@ public class Utils {
 		return dataDeNascimento;
 	}
 
-	public static String cadastra(){
-		Scanner np = new Scanner (System.in);
-		String nova = np.nextLine();
-		np.close();
-		return nova;
-	}
-
 	public static void novoPlano(){
+		Scanner sc = new Scanner(System.in);
 		List<Plano> planos = (listaPlanos());
 		System.out.println("Qual o nome do novo Plano?");
-		String nomePlano = cadastra();
+		String nomePlano = sc.nextLine();
 		System.out.println("Qual a duração do novo Plano?");
-		int duracao = Integer.parseInt(cadastra());
+		int duracao = sc.nextInt();
 		System.out.println("Qual o valor do novo Plano?");
-		double valor = Double.parseDouble(cadastra());
+		double valor = sc.nextDouble();
 		System.out.println("Qual a descrição do novo Plano?");
-		String descricao = cadastra();
+		String descricao = sc.nextLine();
+		System.out.println("\n");
 		Plano novoPlano =  new Plano(nomePlano, duracao, valor, descricao);
 		planos.add(novoPlano);
 		try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaPlanos()))) {
@@ -58,26 +53,29 @@ public class Utils {
 		catch (IOException e) {
 			System.out.println("\nErro cadastrar novo plano.");
 		}
+		sc.close();
 	}
 
 	public static void novoAluno(){
+		Scanner sc = new Scanner(System.in);
 		List<Aluno> alunos = (listaAluno());
 		System.out.println("Nome: ");
-		String nomeAluno = cadastra();
+		String nomeAluno = sc.nextLine();
 		System.out.println("Data Nascimento: ");
-		String dataNascimento = cadastra();
+		String dataNascimento = sc.nextLine();
 		System.out.println("CPF: ");
-		String cpf = cadastra();
+		String cpf = sc.nextLine();
 		System.out.println("E-mail: ");
-		String email = cadastra();
+		String email = sc.nextLine();
 		System.out.println("Telefone: ");
-		String telefone = cadastra();
+		String telefone = sc.nextLine();
 		System.out.println("Senha: ");
-		String senha = cadastra();
+		String senha = sc.nextLine();
 		System.out.println("Qual o plano desejado: ");
-		String plano = cadastra();
+		String plano = sc.nextLine();
 		System.out.println("Data Matricula: ");
-		String matricula = cadastra();
+		String matricula = sc.nextLine();
+		System.out.println("\n");
 		Contato contato = new Contato(email, telefone);
 		Aluno novoAluno =  new Aluno(nomeAluno, dataNascimento, cpf, contato, senha, plano, matricula);
 		alunos.add(novoAluno);
@@ -91,26 +89,29 @@ public class Utils {
 		catch (IOException e) {
 			System.out.println("\nErro cadastrar novo aluno.");
 		}
+		sc.close();
 	}
 
 	public static void novoPersonal(){
+		Scanner sc = new Scanner(System.in);
 		List<PersonalTrainer> personais = (listaPersonal());
 		System.out.println("Nome: ");
-		String nomePersonal = cadastra();
+		String nomePersonal = sc.nextLine();
 		System.out.println("Data Nascimento: ");
-		String dataNascimento = cadastra();
+		String dataNascimento = sc.nextLine();
 		System.out.println("CPF: ");
-		String cpf = cadastra();
+		String cpf = sc.nextLine();
 		System.out.println("E-mail: ");
-		String email = cadastra();
+		String email = sc.nextLine();
 		System.out.println("Telefone: ");
-		String telefone = cadastra();
+		String telefone = sc.nextLine();
 		System.out.println("Senha: ");
-		String senha = cadastra();
+		String senha = sc.nextLine();
 		System.out.println("Especialidade: ");
-		String especialidade = cadastra();
+		String especialidade = sc.nextLine();
 		System.out.println("Data Matricula: ");
-		String cref = cadastra();
+		String cref = sc.nextLine();
+		System.out.println("\n");
 		Contato contato = new Contato(email, telefone);
 		PersonalTrainer novoPersonal =  new PersonalTrainer(nomePersonal, dataNascimento, cpf, contato, senha, especialidade, cref);
 		personais.add(novoPersonal);
@@ -126,6 +127,18 @@ public class Utils {
 		}
 	}
 
+	public static void mostraPlanos(){
+		List<Plano> planos = (listaPlanos());
+		for (Plano plano : planos){
+			System.out.println(plano);
+		}
+	}
+	public static void mostraPersonal(){
+		List<PersonalTrainer> personais = (listaPersonal());
+		for (PersonalTrainer personalTrainer : personais){
+			System.out.println(personalTrainer);
+		}
+	}
 
 //	public LocalDate converteIdade(LocalDate dataDeNascimento) {
 //		LocalDate dataAtual = LocalDate.now();
