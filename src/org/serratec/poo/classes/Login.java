@@ -19,9 +19,8 @@ public class Login {
 		System.out.print("Senha: ");
 		String senha = sc.nextLine();
 		int marcador = buscarCPF(cpf, senha, alunos, personais, funcionarios);
-		//System.out.println(buscarCPF(cpf, senha, alunos, personais, funcionarios));
-		System.out.println(marcador);
-		/*if (marcador == 1){
+		if (marcador == 1){
+			System.out.println("\n\n\t\t\t\tOVOKURINGAR");
 			menuAluno();
 		}
 		if (marcador == 2){
@@ -29,7 +28,7 @@ public class Login {
 		}
 		if (marcador == 3){
 			menuFuncionario();
-		}*/
+		}
 		sc.close();
 	}
 	

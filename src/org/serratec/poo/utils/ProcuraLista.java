@@ -25,21 +25,25 @@ public class ProcuraLista {
             }
             System.out.println(aluno);
         }
-        for (PersonalTrainer personalTrainer : personais) {
-            if (personalTrainer.getCpf().contains(cpf) && personalTrainer.getSenha().contains(senha)) {
-                encontrado = true;
-                marcador = 2;
-                break;
+        if (!encontrado) {
+            for (PersonalTrainer personalTrainer : personais) {
+                if (personalTrainer.getCpf().contains(cpf) && personalTrainer.getSenha().contains(senha)) {
+                    encontrado = true;
+                    marcador = 2;
+                    break;
+                }
+                System.out.println(personalTrainer);
             }
-            System.out.println(personalTrainer);
         }
-        for (Funcionario funcionario : funcionarios) {
-            if (funcionario.getCpf().contains(cpf) && funcionario.getSenha().contains(senha)) {
-                encontrado = true;
-                marcador = 3;
-                break;
+        if (!encontrado) {
+            for (Funcionario funcionario : funcionarios) {
+                if (funcionario.getCpf().contains(cpf) && funcionario.getSenha().contains(senha)) {
+                    encontrado = true;
+                    marcador = 3;
+                    break;
+                }
+                System.out.println(funcionario);
             }
-            System.out.println(funcionario);
         }
 
         if (!encontrado) {
