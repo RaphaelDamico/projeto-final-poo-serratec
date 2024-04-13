@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Scanner;
 
 import static org.serratec.poo.classes.Login.chamaLogin;
-import static org.serratec.poo.classes.Menu.*;
 
 public class ProcuraLista {
     public static int buscarCPF(String cpf, String senha, List <Aluno> alunos, List <PersonalTrainer> personais, List <Funcionario> funcionarios) throws IOException {

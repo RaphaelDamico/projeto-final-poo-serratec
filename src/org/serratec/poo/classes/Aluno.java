@@ -6,7 +6,7 @@ public class Aluno extends Pessoa {
 	private Avaliacao avaliacao;
 
 	public Aluno(String nome, String dataDeNascimento, String cpf, Contato contato, String senha, String plano,
-			String dataMatricula) {
+				 String dataMatricula) {
 		super(nome, dataDeNascimento, cpf, contato, senha);
 		this.plano = plano;
 		this.dataMatricula = dataMatricula;
@@ -32,5 +32,7 @@ public class Aluno extends Pessoa {
 				Avaliação: %.2f
 				""", plano, dataMatricula, avaliacao);
 	}
-
+	public String toString2() {
+		return super.toString2() + String.format("%s - %s - %s -", plano, dataMatricula, avaliacao);
+	}
 }

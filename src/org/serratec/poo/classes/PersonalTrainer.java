@@ -34,5 +34,9 @@ public class PersonalTrainer extends Pessoa {
 				Horario de Atendimento: %s
 				""", especialidade, cref, horarioAtendimento);
 	}
+	public String toString2() {
+		// TODO Auto-generated method stub
+		return super.toString2() + String.format("%s - %s - %s -", especialidade, cref, horarioAtendimento);
+	}
 
 }

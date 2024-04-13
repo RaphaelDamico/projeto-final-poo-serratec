@@ -62,9 +62,10 @@ public class Menu {
 				novoPlano();
 				break;
 			case 2:
+				novoAluno();
 				break;
 			case 3:
-				System.out.println("VAMO PORRAAAAAAA");
+				novoPersonal();
 				break;
 			case 4:
 				break;

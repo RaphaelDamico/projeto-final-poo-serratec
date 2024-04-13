@@ -77,5 +77,8 @@ public abstract class Pessoa implements Comparable<Pessoa> {
 				%s""", nome, dataDeNascimento, cpf, contato);
 
 	}
+	public String toString2() {
+		return String.format("%s - %s - %s - %s - ", nome, dataDeNascimento, cpf, contato.toString2());
+	}
 
 }

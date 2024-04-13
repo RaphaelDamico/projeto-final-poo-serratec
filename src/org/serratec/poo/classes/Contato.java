@@ -28,5 +28,7 @@ public class Contato {
 				Telefone: %s
 				""", email, telefone);
 	}
-
+	public String toString2() {
+		return String.format("%s - %s", email, telefone);
+	}
 }

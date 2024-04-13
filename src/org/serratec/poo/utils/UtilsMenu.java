@@ -21,7 +21,7 @@ public class UtilsMenu {
 	}
 	public static String exibeMenuFuncionario() {
 		return String.format("""
-				1 - Cadastrar novo plano 
+				1 - Cadastrar novo plano
 				2 - Cadastrar novo aluno
 				3 - Cadastrar novo Personal Trainer
 				4 - Emitir relatório de planos

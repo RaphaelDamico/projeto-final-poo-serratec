@@ -1,5 +1,8 @@
 package org.serratec.poo.utils;
 
+import org.serratec.poo.classes.Aluno;
+import org.serratec.poo.classes.Contato;
+import org.serratec.poo.classes.PersonalTrainer;
 import org.serratec.poo.classes.Plano;
 
 import java.io.BufferedWriter;
@@ -10,8 +13,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
+import static org.serratec.poo.classes.Pessoa.getListaAlunos;
 import static org.serratec.poo.classes.Pessoa.getListaPlanos;
-import static org.serratec.poo.utils.LeArquivo.listaPlanos;
+import static org.serratec.poo.utils.LeArquivo.*;
 
 public class Utils {
 	private DateTimeFormatter fmt;
@@ -55,6 +59,73 @@ public class Utils {
 			System.out.println("\nErro cadastrar novo plano.");
 		}
 	}
+
+	public static void novoAluno(){
+		List<Aluno> alunos = (listaAluno());
+		System.out.println("Nome: ");
+		String nomeAluno = cadastra();
+		System.out.println("Data Nascimento: ");
+		String dataNascimento = cadastra();
+		System.out.println("CPF: ");
+		String cpf = cadastra();
+		System.out.println("E-mail: ");
+		String email = cadastra();
+		System.out.println("Telefone: ");
+		String telefone = cadastra();
+		System.out.println("Senha: ");
+		String senha = cadastra();
+		System.out.println("Qual o plano desejado: ");
+		String plano = cadastra();
+		System.out.println("Data Matricula: ");
+		String matricula = cadastra();
+		Contato contato = new Contato(email, telefone);
+		Aluno novoAluno =  new Aluno(nomeAluno, dataNascimento, cpf, contato, senha, plano, matricula);
+		alunos.add(novoAluno);
+		try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAlunos()))) {
+			for (Aluno aluno : alunos) {
+				escritor.write(aluno.toString2());
+				escritor.newLine();
+			}
+			System.out.println("Aluno cadastrado com sucesso.");
+		}
+		catch (IOException e) {
+			System.out.println("\nErro cadastrar novo aluno.");
+		}
+	}
+
+	public static void novoPersonal(){
+		List<PersonalTrainer> personais = (listaPersonal());
+		System.out.println("Nome: ");
+		String nomePersonal = cadastra();
+		System.out.println("Data Nascimento: ");
+		String dataNascimento = cadastra();
+		System.out.println("CPF: ");
+		String cpf = cadastra();
+		System.out.println("E-mail: ");
+		String email = cadastra();
+		System.out.println("Telefone: ");
+		String telefone = cadastra();
+		System.out.println("Senha: ");
+		String senha = cadastra();
+		System.out.println("Especialidade: ");
+		String especialidade = cadastra();
+		System.out.println("Data Matricula: ");
+		String cref = cadastra();
+		Contato contato = new Contato(email, telefone);
+		PersonalTrainer novoPersonal =  new PersonalTrainer(nomePersonal, dataNascimento, cpf, contato, senha, especialidade, cref);
+		personais.add(novoPersonal);
+		try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAlunos()))) {
+			for (PersonalTrainer personalTrainer : personais) {
+				escritor.write(personalTrainer.toString2());
+				escritor.newLine();
+			}
+			System.out.println("Aluno cadastrado com sucesso.");
+		}
+		catch (IOException e) {
+			System.out.println("\nErro cadastrar novo aluno.");
+		}
+	}
+
 
 //	public LocalDate converteIdade(LocalDate dataDeNascimento) {
 //		LocalDate dataAtual = LocalDate.now();
