@@ -12,9 +12,9 @@ public abstract class Pessoa {
 	private Contato contato;
 	private String senha;
 	private Utils utils;
-	private static final String TXTALUNOS = "C:/Users/joaop/OneDrive/Área de Trabalho/JAVA/projeto-final-poo-serratec/Lista Alunos.txt";
-	private static final String TXTPERSONAL = "C:/Users/joaop/OneDrive/Área de Trabalho/JAVA/projeto-final-poo-serratec/Lista PersonalTrainers.txt";
-	private static final String TXTFUNCIONARIO = "C:/Users/joaop/OneDrive/Área de Trabalho/JAVA/projeto-final-poo-serratec/Lista Funcionarios.txt";
+	private static final String TXTALUNOS = "listaAlunos.txt";
+	private static final String TXTPERSONAL = "listaPersonalTrainers.txt";
+	private static final String TXTFUNCIONARIO = "listaFuncionarios.txt";
 	public static String getListaAlunos() {
 	return TXTALUNOS;
 	}

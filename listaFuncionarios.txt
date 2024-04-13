@@ -1,0 +1,15 @@
+Ana Silva-12/05/1987-12345678910-ana.silva@email.com-12345678-123456-Gerente
+Carlos Santos-23/09/1990-98765432110-carlos.santos@email.com-98765432-987654-atendente
+Maria Oliveira-03/07/1985-45678912310-maria.oliveira@email.com-45678912-456789-contabilidade
+João Pereira-17/11/1982-78912345610-joao.pereira@email.com-78912345-789123-RH
+Luiza Costa-29/02/1996-32165498710-luiza.costa@email.com-32165498-321654-Auxiliar_de_servicos_gerais
+Pedro Almeida-08/04/1993-65498732110-pedro.almeida@email.com-65498732-654987-professor
+Fernanda Souza-14/06/1988-23456789110-fernanda.souza@email.com-23456789-234567-gerente
+Rafael Lima-25/10/1991-78912345611-rafael.lima@email.com-78912345-789123-atendente
+Amanda Ferreira-07/03/1986-45678912311-amanda.ferreira@email.com-45678912-456789-contabilidade
+Marcos Santos-19/05/1983-98765432111-marcos.santos@email.com-98765432-987654-RH
+Camila Oliveira-02/08/1997-32165498711-camila.oliveira@email.com-32165498-321654-Auxiliar_de_servicos_gerais
+José Pereira-16/12/1981-65498732111-jose.pereira@email.com-65498732-654987-professor
+Patrícia Costa-28/03/1985-23456789111-patricia.costa@email.com-23456789-234567-gerente
+Gustavo Lima-04/11/1992-78912345612-gustavo.lima@email.com-78912345-789123-atendente
+Carolina Ferreira-06/09/1987-45678912312-carolina.ferreira@email.com-45678912-456789-contabilidade
