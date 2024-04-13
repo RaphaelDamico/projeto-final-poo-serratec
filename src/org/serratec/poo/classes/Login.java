@@ -15,9 +15,10 @@ public class Login {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Insira seu CPF:");
 		String cpf = sc.nextLine();
-		buscarCPF(cpf);
 		System.out.print("Senha: ");
 		String senha = sc.nextLine();
+		System.out.println(buscarCPF(cpf, senha, alunos, personais, funcionarios));
+
 
 		sc.close();
 		
@@ -26,6 +27,7 @@ public class Login {
 	}
 	
 	//TODO ValidaLogin()
-	
-
+	public static void main(String[] args) throws IOException {
+		chamaLogin();
+	}
 }

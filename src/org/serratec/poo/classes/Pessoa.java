@@ -13,9 +13,18 @@ public abstract class Pessoa {
 	private String senha;
 	private Utils utils;
 	private static final String TXTALUNOS = "C:/Users/joaop/OneDrive/Área de Trabalho/JAVA/projeto-final-poo-serratec/Lista Alunos.txt";
+	private static final String TXTPERSONAL = "C:/Users/joaop/OneDrive/Área de Trabalho/JAVA/projeto-final-poo-serratec/Lista PersonalTrainers.txt";
+	private static final String TXTFUNCIONARIO = "C:/Users/joaop/OneDrive/Área de Trabalho/JAVA/projeto-final-poo-serratec/Lista Funcionarios.txt";
 	public static String getListaAlunos() {
 	return TXTALUNOS;
 	}
+	public static String getListaPersonal() {
+	return TXTPERSONAL;
+	}
+	public static String getListaFuncionarios() {
+	return TXTFUNCIONARIO;
+	}
+
 	public Pessoa(String nome, String dataDeNascimento, String cpf, Contato contato, String senha) {
 		this.nome = nome;
 		this.dataDeNascimento = dataDeNascimento;

@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.serratec.poo.classes.Pessoa.getListaAlunos;
+import static org.serratec.poo.classes.Pessoa.*;
 
 public class LeArquivo {
     public static List<Aluno> listaAluno() throws IOException {
@@ -33,46 +33,45 @@ public class LeArquivo {
         }
         return alunos;
     }
-    public static List<Aluno> listaPersonal() throws IOException {
-        String diretorio = getListaAlunos();
+    public static List<PersonalTrainer> listaPersonal() throws IOException {
+        String diretorio = getListaPersonal();
         BufferedReader txt = new BufferedReader(new FileReader(diretorio));
-        List<Aluno> alunos = new ArrayList();
+        List<PersonalTrainer> personalTrainers = new ArrayList();
 
         String linha;
         while ((linha = txt.readLine()) != null) {
             // Processar cada linha
             String[] dados = linha.split("-");
 
-            Aluno aluno = new Aluno(dados[0], //Nome
+            PersonalTrainer personal = new PersonalTrainer(dados[0], //Nome
                     dados[1], //Data nascimento
                     dados[2], //cpf
                     new Contato(dados[3], dados[4]), //contato
                     dados[5], //senha
-                    dados[6],//plano
-                    dados[7]);
-            alunos.add(aluno);
+                    dados[6],//especialidade
+                    dados[7]);//cref
+            personalTrainers.add(personal);
         }
-        return alunos;
+        return personalTrainers;
     }
-    public static List<Aluno> listaFuncionario() throws IOException {
-        String diretorio = getListaAlunos();
+    public static List<Funcionario> listaFuncionario() throws IOException {
+        String diretorio = getListaFuncionarios();
         BufferedReader txt = new BufferedReader(new FileReader(diretorio));
-        List<Aluno> alunos = new ArrayList();
+        List<Funcionario> funcionarios = new ArrayList();
 
         String linha;
         while ((linha = txt.readLine()) != null) {
             // Processar cada linha
             String[] dados = linha.split("-");
-
-            Aluno aluno = new Aluno(dados[0], //Nome
+            Cargo cargo = Cargo.valueOf(dados[6].toUpperCase());
+            Funcionario funcionario = new Funcionario(dados[0], //Nome
                     dados[1], //Data nascimento
                     dados[2], //cpf
                     new Contato(dados[3], dados[4]), //contato
                     dados[5], //senha
-                    dados[6],//plano
-                    dados[7]);
-            alunos.add(aluno);
+                    cargo);//cargo
+            funcionarios.add(funcionario);
         }
-        return alunos;
+        return funcionarios;
     }
 }
