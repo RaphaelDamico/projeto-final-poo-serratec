@@ -33,7 +33,7 @@ public class Plano {
 	public String toString() {
 		return String.format("""
 				Plano: %s
-				Duração: %s
+				Duração: %s dias
 				Valor: R$ %.2f
 				Descrição do plano: %s
 				""", nomeDoPlano, duracao, valor, descricao);

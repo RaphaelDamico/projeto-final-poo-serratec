@@ -23,7 +23,7 @@ public class Aluno extends Pessoa {
 	public Avaliacao getAvaliacao() {
 		return avaliacao;
 	}
-
+	
 	@Override
 	public String toString() {
 		return super.toString() + String.format("""

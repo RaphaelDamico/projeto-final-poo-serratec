@@ -2,6 +2,8 @@ package org.serratec.poo.classes;
 
 import java.util.Scanner;
 
+import org.serratec.poo.utils.LeArquivo;
+
 import static org.serratec.poo.utils.UtilsMenu.*;
 
 public class Menu {
@@ -13,6 +15,7 @@ public class Menu {
 		int op = sc.nextInt();
 		switch (op){
 			case 1:
+				LeArquivo.listaAluno();
 				break;
 			case 2:
 				break;
@@ -26,7 +29,9 @@ public class Menu {
 			case 6:
 				break;
 		}
+		sc.close();
 	}
+	
 	public static void menuPersonal(){
 		String s =exibeMenuPersonal();
 		System.out.println(s);
@@ -43,6 +48,7 @@ public class Menu {
 			case 4:
 				break;
 		}
+		sc.close();
 	}
 	public static void menuFuncionario(){
 		String s = exibeMenuFuncionario();
@@ -66,5 +72,6 @@ public class Menu {
 			case 7:
 				break;
 		}
+		sc.close();
 	}
 }
