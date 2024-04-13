@@ -1,11 +1,16 @@
 package org.serratec.poo.classes;
 
-import java.util.Scanner;
-
-import org.serratec.poo.utils.UtilsMenu;
+import static org.serratec.poo.utils.UtilsMenu.*;
 
 public class Menu {
 
-	public static void menu(String opcaoMenu){
+	public static void menuAluno(){
+		exibeMenuAluno();
+	}
+	public static void menuPersonal(){
+		exibeMenuPersonal();
+	}
+	public static void menuFuncionario(){
+		exibeMenuFuncionario();
 	}
 }
