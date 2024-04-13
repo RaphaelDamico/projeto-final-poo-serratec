@@ -30,7 +30,8 @@ public class LeArquivo {
 	                    new Contato(dados[3], dados[4]), //contato
 	                    dados[5], //senha
 	                    dados[6],//plano
-	                    dados[7]);
+	                    dados[10],// Data matricula
+	                    dados[11]);//Avaliacao 
 	            alunos.add(aluno);
 	        }
 	        txt.close();

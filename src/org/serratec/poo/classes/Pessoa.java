@@ -72,8 +72,8 @@ public abstract class Pessoa implements Comparable<Pessoa> {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		return String.format("""
 				Nome: %s
-				Data de nascimento: %s
-				CPF: %s
+				Data de nascimento:%s
+				CPF:%s
 				%s""", nome, dataDeNascimento, cpf, contato);
 
 	}

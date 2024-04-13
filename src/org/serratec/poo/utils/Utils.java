@@ -78,8 +78,10 @@ public class Utils {
 		String plano = cadastra();
 		System.out.println("Data Matricula: ");
 		String matricula = cadastra();
+		System.out.println("Status da avaliação: ");
+		String avaliacao = cadastra();
 		Contato contato = new Contato(email, telefone);
-		Aluno novoAluno =  new Aluno(nomeAluno, dataNascimento, cpf, contato, senha, plano, matricula);
+		Aluno novoAluno =  new Aluno(nomeAluno, dataNascimento, cpf, contato, senha, plano, matricula, avaliacao);
 		alunos.add(novoAluno);
 		try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAlunos()))) {
 			for (Aluno aluno : alunos) {
