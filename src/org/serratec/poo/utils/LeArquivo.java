@@ -3,6 +3,7 @@ package org.serratec.poo.utils;
 import org.serratec.poo.classes.*;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -73,5 +74,22 @@ public class LeArquivo {
             funcionarios.add(funcionario);
         }
         return funcionarios;
+    }
+    public static List<Plano> listaPlanos(){
+        String diretorio = getListaPlanos();
+        List<Plano> planos = new ArrayList();
+        try (BufferedReader txt = new BufferedReader(new FileReader(diretorio))) {
+            String linha;
+            while((linha = txt.readLine()) != null) {
+                String[] dados = linha.split("-");
+                int duracao = Integer.parseInt(dados[1]);
+                Double valor = Double.parseDouble(dados[2]);
+                Plano plano = new Plano(dados[0], duracao, valor, dados[4]);
+                planos.add(plano);
+            }
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+        return planos;
     }
 }

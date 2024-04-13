@@ -31,9 +31,4 @@ public class Login {
 		}
 		sc.close();
 	}
-	
-	//TODO ValidaLogin()
-	public static void main(String[] args) throws IOException {
-		chamaLogin();
-	}
 }

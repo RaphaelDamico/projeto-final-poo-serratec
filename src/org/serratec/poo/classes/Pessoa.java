@@ -15,6 +15,7 @@ public abstract class Pessoa {
 	private static final String TXTALUNOS = "listaAlunos.txt";
 	private static final String TXTPERSONAL = "listaPersonalTrainers.txt";
 	private static final String TXTFUNCIONARIO = "listaFuncionarios.txt";
+	private static final String TXTPLANOS = "listaPlanos.txt";
 	public static String getListaAlunos() {
 	return TXTALUNOS;
 	}
@@ -23,6 +24,9 @@ public abstract class Pessoa {
 	}
 	public static String getListaFuncionarios() {
 	return TXTFUNCIONARIO;
+	}
+	public static String getListaPlanos() {
+	return TXTPLANOS;
 	}
 
 	public Pessoa(String nome, String dataDeNascimento, String cpf, Contato contato, String senha) {
