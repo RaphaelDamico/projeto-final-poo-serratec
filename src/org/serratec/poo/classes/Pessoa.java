@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 import org.serratec.poo.utils.Utils;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements Comparable<Pessoa> {
 	private String nome;
 	private String dataDeNascimento;
 	private String cpf;
@@ -55,6 +55,12 @@ public abstract class Pessoa {
 
 	public String getSenha() {
 		return senha;
+	}
+	
+	@Override
+	public int compareTo(Pessoa o) {
+		return this.getNome().compareTo(o.getNome());
+		
 	}
 	//	public int getIdade(LocalDate dataDeNascimento) {
 //		LocalDate idade = utils.converteIdade(dataDeNascimento);
