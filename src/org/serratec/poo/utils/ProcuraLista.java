@@ -15,23 +15,24 @@ public class ProcuraLista {
 
         int marcador = 0;
         boolean encontrado = false;
-
+        
         for (Aluno aluno : alunos) {
             if (aluno.getCpf().contains(cpf) && aluno.getSenha().contains(senha)) {
                 encontrado = true;
                 marcador = 1;
+                System.out.println("\nBem Vindo(a) "+aluno.getNome()+"\n");
                 break;
+                
             }
-            System.out.println(aluno);
         }
         if (!encontrado) {
             for (PersonalTrainer personalTrainer : personais) {
                 if (personalTrainer.getCpf().contains(cpf) && personalTrainer.getSenha().contains(senha)) {
                     encontrado = true;
                     marcador = 2;
+                    System.out.println("\nBem Vindo(a) "+personalTrainer.getNome()+"\n");
                     break;
                 }
-                System.out.println(personalTrainer);
             }
         }
         if (!encontrado) {
@@ -39,9 +40,9 @@ public class ProcuraLista {
                 if (funcionario.getCpf().contains(cpf) && funcionario.getSenha().contains(senha)) {
                     encontrado = true;
                     marcador = 3;
+                    System.out.println("\nBem Vindo(a) "+funcionario.getNome()+"\n");
                     break;
                 }
-                System.out.println(funcionario);
             }
         }
 
@@ -61,7 +62,6 @@ public class ProcuraLista {
                     OBRIGADO POR UTILIZAR NOSSO SISTEMA...
                     """));
             }
-            sc.close();
         }
     return marcador;
     }

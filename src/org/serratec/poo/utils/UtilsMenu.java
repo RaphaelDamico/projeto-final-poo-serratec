@@ -1,8 +1,10 @@
 package org.serratec.poo.utils;
 
+import java.io.PrintStream;
+
 public class UtilsMenu {
-	public static String exibeMenuAluno() {
-		return String.format("""
+	public static PrintStream exibeMenuAluno() {
+		return System.out.printf("""
 				1 - Visualizar dados e plano
 				2 - Solicitar agendamento com o personal
 				3 - Visualizar histórico de agendamentos
@@ -11,16 +13,16 @@ public class UtilsMenu {
 				6 - Sair
 				""");
 	}
-	public static String exibeMenuPersonal() {
-		return String.format("""
+	public static PrintStream exibeMenuPersonal() {
+		return System.out.printf("""
 				1 - Visualizar agenda de atendimentos
 				2 - Registrar avaliações físicas dos alunos.
 				3 - Visualizar lista de avaliações realizadas 
 				4 - Sair
 				""");
 	}
-	public static String exibeMenuFuncionario() {
-		return String.format("""
+	public static PrintStream exibeMenuFuncionario() {
+		return System.out.printf("""
 				1 - Cadastrar novo plano
 				2 - Cadastrar novo aluno
 				3 - Cadastrar novo Personal Trainer

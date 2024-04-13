@@ -10,8 +10,7 @@ import static org.serratec.poo.utils.Utils.*;
 public class Menu {
 
 	public static void menuAluno(){
-		String s = exibeMenuAluno();
-		System.out.println(s);
+		exibeMenuAluno();
 		Scanner sc = new Scanner(System.in);
 		int op = sc.nextInt();
 		switch (op){
@@ -34,8 +33,7 @@ public class Menu {
 	}
 	
 	public static void menuPersonal(){
-		String s =exibeMenuPersonal();
-		System.out.println(s);
+		exibeMenuPersonal();
 		Scanner sc = new Scanner(System.in);
 		int op = sc.nextInt();
 		switch (op){
@@ -52,8 +50,7 @@ public class Menu {
 		sc.close();
 	}
 	public static void menuFuncionario(){
-		String s = exibeMenuFuncionario();
-		System.out.println(s);
+		exibeMenuFuncionario();
 		Scanner sc = new Scanner(System.in);
 		int op = sc.nextInt();
 		switch (op){

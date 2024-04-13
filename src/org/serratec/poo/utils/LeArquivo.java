@@ -108,7 +108,7 @@ public class LeArquivo {
     }
     public static List<Plano> listaPlanos(){
         String diretorio = getListaPlanos();
-        List<Plano> planos = new ArrayList<>();
+        List<Plano> planos = new ArrayList();
         try (BufferedReader txt = new BufferedReader(new FileReader(diretorio))) {
             String linha;
             while((linha = txt.readLine()) != null) {

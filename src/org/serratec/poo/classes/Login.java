@@ -14,13 +14,12 @@ public class Login {
 		List<PersonalTrainer> personais = listaPersonal();
 		List<Funcionario> funcionarios = listaFuncionario();
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Insira seu CPF:");
+		System.out.print("Insira seu CPF: ");
 		String cpf = sc.nextLine();
 		System.out.print("Senha: ");
 		String senha = sc.nextLine();
 		int marcador = buscarCPF(cpf, senha, alunos, personais, funcionarios);
 		if (marcador == 1){
-			System.out.println("\n\n\t\t\t\tOVOKURINGAR");
 			menuAluno();
 		}
 		if (marcador == 2){
@@ -28,6 +27,10 @@ public class Login {
 		}
 		if (marcador == 3){
 			menuFuncionario();
+		}
+		else {
+			System.out.println("OBRIGADO POR USAR NOSSO SISTEMA!");
+			return;
 		}
 		sc.close();
 	}
