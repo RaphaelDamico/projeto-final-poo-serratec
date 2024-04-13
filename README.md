@@ -8,10 +8,10 @@ O sistema permite o cadastro de alunos, personal trainers, planos e a gestão de
 **Funcionalidades:**
 
 * **Cadastro:**
-    * Alunos: nome, CPF, data de nascimento, contato, senha, plano contratado, data de matrícula e avaliações físicas.
-    * Personal Trainers: nome, CPF, data de nascimento, contato, senha, especialidade, CREF e horário de atendimento.
-    * Funcionários: nome, CPF, data de nascimento, contato, senha, cargo (atendente, gerente, etc.).
-    * Planos: nome, duração, valor, descrição (musculação, natação, etc.).
+    * `Alunos`: nome, CPF, data de nascimento, contato, senha, plano contratado, data de matrícula e avaliações físicas.
+    * `Personal Trainers`: nome, CPF, data de nascimento, contato, senha, especialidade, CREF e horário de atendimento.
+    * `Funcionários`: nome, CPF, data de nascimento, contato, senha, cargo (atendente, gerente, etc.).
+    * `Planos`: nome, duração, valor, descrição (musculação, natação, etc.).
 * **Agendamento:**
     * Data, horário, aluno e personal trainer.
     * Status (confirmada, cancelada, etc.).
