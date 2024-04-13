@@ -61,6 +61,7 @@ public class ProcuraLista {
                     OBRIGADO POR UTILIZAR NOSSO SISTEMA...
                     """));
             }
+            sc.close();
         }
     return marcador;
     }
