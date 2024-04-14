@@ -30,7 +30,8 @@ public class LeArquivo {
 	                    new Contato(dados[3], dados[4]), //contato
 	                    dados[5], //senha
 	                    dados[6],//plano
-	                    dados[7]);
+	                    dados[10],// data matricula
+	                    dados[11]);// status avaliacao
 	            alunos.add(aluno);
 	        }
 	        txt.close();
@@ -55,7 +56,8 @@ public class LeArquivo {
 	            // Processar cada linha
 	            String[] dados = linha.split("-");
 	
-	            PersonalTrainer personal = new PersonalTrainer(dados[0], //Nome
+	            PersonalTrainer personal = new PersonalTrainer(
+	            		dados[0], //Nome
 	                    dados[1], //Data nascimento
 	                    dados[2], //cpf
 	                    new Contato(dados[3], dados[4]), //contato
@@ -86,7 +88,8 @@ public class LeArquivo {
 	            // Processar cada linha
 	            String[] dados = linha.split("-");
 	            Cargo cargo = Cargo.valueOf(dados[6].toUpperCase());
-	            Funcionario funcionario = new Funcionario(dados[0], //Nome
+	            Funcionario funcionario = new Funcionario(
+	            		dados[0], //Nome
 	                    dados[1], //Data nascimento
 	                    dados[2], //cpf
 	                    new Contato(dados[3], dados[4]), //contato
@@ -107,7 +110,7 @@ public class LeArquivo {
     }
     public static List<Plano> listaPlanos(){
         String diretorio = getListaPlanos();
-        List<Plano> planos = new ArrayList();
+        List<Plano> planos = new ArrayList<>();
         try (BufferedReader txt = new BufferedReader(new FileReader(diretorio))) {
             String linha;
             while((linha = txt.readLine()) != null) {
@@ -122,5 +125,35 @@ public class LeArquivo {
             System.err.println("Error reading file: " + e.getMessage());
         }
         return planos;
+    }
+    public static List<Avaliacao> listaAvaliacoes() {
+    	List<Avaliacao> avaliacoes = new ArrayList<>();
+    	try {
+	        String diretorio = getListaAvaliacoes();
+	        BufferedReader txt = new BufferedReader(new FileReader(diretorio));
+	
+	        String linha;
+	        while ((linha = txt.readLine()) != null) {
+	            // Processar cada linha
+	            String[] dados = linha.split("-");
+	
+	            Avaliacao avaliacao = new Avaliacao(dados[0], //Nome aluno
+	                    dados[1], //Nome personal
+	                    new Horario(dados[2], dados[3]), //data e hora da avaliacao
+	                    dados[4], //Altura
+	                    dados[5],//Peso
+	                    dados[6],// Taxa de gordura
+	                    dados[7]);//Restrição
+	            avaliacoes.add(avaliacao);
+	        }
+	        txt.close();
+    	}
+    	catch (FileNotFoundException e) {
+			System.err.println("Erro ao encontrar arquivo: " + e.getMessage());
+
+		} catch (IOException e) {
+			System.err.println("Erro ao ler o arquivo " + e.getMessage());
+		}
+        return avaliacoes;
     }
 }

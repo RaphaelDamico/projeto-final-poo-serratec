@@ -1,31 +1,31 @@
-Fernando Mario - 08/02/1998 - 78231965407- ffbolado@gmail.com - 24992943436 - senha -  Mensal TotalFit - 6 - 99.90 - Plano mensal - 01/01/2024 - Ainda nao efetuada - 55 - 55 - 33 - 33 - 33 - 22
-Amanda Costa - 14/09/1996 - 58940236715 - amanda.costa@email.com - 21987654321 - ghi789 - Semestral TotalFit - 6 - 89.90 - Plano semestral - 15/11/2023 - Ainda não efetuada - 55 - 55 - 35 - 35 - 35 - 25
-Bruno Oliveira - 20/03/1993 - 12643507891 - bruno.oliveira@email.com - 21989012345 - 789ghi - Anual TotalFit - 4 - 79.90 - Plano anual - 20/06/2024 - Ainda não efetuada - 50 - 50 - 30 - 30 - 30 - 20
-Juliana Santos - 25/08/1998 - 70386452917 - juliana.santos@email.com - 21986543210 - abc789 - Mensal TotalFit - 6 - 99.90 - Plano mensal - 01/01/2024 - Ainda não efetuada - 55 - 55 - 33 - 33 - 33 - 22
-Marcos Costa - 05/07/1995 - 30495867205 - marcos.costa@email.com - 21985203647 - def456 - Trimestral TotalFit - 5 - 95.90 - Plano trimestral - 10/08/2022 - Concluída - 45 - 45 - 30 - 30 - 30 - 20
-Camila Oliveira - 10/11/1992 - 36541892073 - camila.oliveira@email.com - 21988765432 - 678def - Semestral TotalFit - 6 - 89.90 - Plano semestral - 15/11/2023 - Ainda não efetuada - 55 - 55 - 35 - 35 - 35 - 25
-Rafael Santos - 15/12/1989 - 50849627135 - rafael.santos@email.com - 21981234567 - ghi123 - Anual TotalFit - 4 - 79.90 - Plano anual - 20/06/2024 - Ainda não efetuada - 50 - 50 - 30 - 30 - 30 - 20
-Fernanda Oliveira - 18/04/1996 - 92487103569 - fernanda.oliveira@email.com - 21987654321 - 234ghi - Mensal TotalFit - 6 - 99.90 - Plano mensal - 01/01/2024 - Ainda não efetuada - 55 - 55 - 33 - 33 - 33 - 22
-Eduardo Silva - 23/01/1991 - 25648973201 - eduardo.silva@email.com - 21984567980 - 345ghi - Trimestral TotalFit - 5 - 95.90 - Plano trimestral - 10/08/2022 - Concluída - 45 - 45 - 30 - 30 - 30 - 20
-Larissa Costa - 30/06/1994 - 64831702658 - larissa.costa@email.com - 21983042957 - 456ghi - Semestral TotalFit - 6 - 89.90 - Plano semestral - 15/11/2023 - Ainda não efetuada - 55 - 55 - 35 - 35 - 35 - 25
-Thiago Oliveira - 25/03/1988 - 08764953010 - thiago.oliveira@email.com - 21984759632 - 567ghi - Anual TotalFit - 4 - 79.90 - Plano anual - 20/06/2024 - Ainda não efetuada - 50 - 50 - 30 - 30 - 30 - 20
-Gabriela Santos - 18/09/1997 - 83715492068 - gabriela.santos@email.com - 21981472360 - ghi789 - Semestral TotalFit - 6 - 89.90 - Plano semestral - 15/11/2023 - Ainda não efetuada - 55 - 55 - 35 - 35 - 35 - 25
-Rodrigo Oliveira - 22/05/1990 - 72381649057 - rodrigo.oliveira@email.com - 21988976540 - 789ghi - Anual TotalFit - 4 - 79.90 - Plano anual - 20/06/2024 - Ainda não efetuada - 50 - 50 - 30 - 30 - 30 - 20
-Marina Costa - 27/12/1994 - 64587903216 - marina.costa@email.com - 21987654325 - abc789 - Mensal TotalFit - 6 - 99.90 - Plano mensal - 01/01/2024 - Ainda não efetuada - 55 - 55 - 33 - 33 - 33 - 22
-Felipe Santos - 05/08/1993 - 32450689173 - felipe.santos@email.com - 21984736251 - def456 - Trimestral TotalFit - 5 - 95.90 - Plano trimestral - 10/08/2022 - Concluída - 45 - 45 - 30 - 30 - 30 - 20
-Larissa Oliveira - 11/10/1996 - 21647368915 - larissa.oliveira@email.com - 21989674532 - 678def - Semestral TotalFit - 6 - 89.90 - Plano semestral - 15/11/2023 - Ainda não efetuada - 55 - 55 - 35 - 35 - 35 - 25
-Lucas Silva - 15/03/1989 - 86475139028 - lucas.silva@email.com - 21982467593 - ghi123 - Anual TotalFit - 4 - 79.90 - Plano anual - 20/06/2024 - Ainda não efetuada - 50 - 50 - 30 - 30 - 30 - 20
-Juliana Oliveira - 20/04/1992 - 15387269041 - juliana.oliveira@email.com - 21989765401 - 234ghi - Mensal TotalFit - 6 - 99.90 - Plano mensal - 01/01/2024 - Ainda não efetuada - 55 - 55 - 33 - 33 - 33 - 22
-Thiago Costa - 25/06/1987 - 70893526132 - thiago.costa@email.com - 21984567230 - 345ghi - Trimestral TotalFit - 5 - 95.90 - Plano trimestral - 10/08/2022 - Concluída - 45 - 45 - 30 - 30 - 30 - 20
-Fernanda Santos - 30/11/1990 - 96328517649 - fernanda.santos@email.com - 21987654329 - 456ghi - Semestral TotalFit - 6 - 89.90 - Plano semestral - 15/11/2023 - Ainda não efetuada - 55 - 55 - 35 - 35 - 35 - 25
-Gustavo Oliveira - 10/07/1985 - 60321749856 - gustavo.oliveira@email.com - 21982147635 - 567ghi - Anual TotalFit - 4 - 79.90 - Plano anual - 20/06/2024 - Ainda não efetuada - 50 - 50 - 30 - 30 - 30 - 20
-Rafaela Costa - 14/02/1992 - 58093416270 - rafaela.costa@email.com - 21981029348 - ghi789 - Semestral TotalFit - 6 - 89.90 - Plano semestral - 15/11/2023 - Ainda não efetuada - 55 - 55 - 35 - 35 - 35 - 25
-André Oliveira - 29/05/1986 - 96314705828 - andre.oliveira@email.com - 21983570296 - 789ghi - Anual TotalFit - 4 - 79.90 - Plano anual - 20/06/2024 - Ainda não efetuada - 50 - 50 - 30 - 30 - 30 - 20
-Isabela Santos - 06/09/1998 - 23589647023 - isabela.santos@email.com - 21984620157 - abc789 - Mensal TotalFit - 6 - 99.90 - Plano mensal - 01/01/2024 - Ainda não efetuada - 55 - 55 - 33 - 33 - 33 - 22
-Pedro Costa - 01/11/1993 - 16287349050 - pedro.costa@email.com - 21987893524 - def456 - Trimestral TotalFit - 5 - 95.90 - Plano trimestral - 10/08/2022 - Concluída - 45 - 45 - 30 - 30 - 30 - 20
-Mariana Oliveira - 18/04/1996 - 04659328172 - mariana.oliveira@email.com - 21982467915 - 678def - Semestral TotalFit - 6 - 89.90 - Plano semestral - 15/11/2023 - Ainda não efetuada - 55 - 55 - 35 - 35 - 35 - 25
-Gabriel Silva - 22/08/1991 - 60721693765 - gabriel.silva@email.com - 21989756423 - ghi123 - Anual TotalFit - 4 - 79.90 - Plano anual - 20/06/2024 - Ainda não efetuada - 50 - 50 - 30 - 30 - 30 - 20
-Larissa Oliveira - 25/11/1990 - 59134068620 - larissa.oliveira@email.com - 21987653281 - 234ghi - Mensal TotalFit - 6 - 99.90 - Plano mensal - 01/01/2024 - Ainda não efetuada - 55 - 55 - 33 - 33 - 33 - 22
-Rafael Costa - 30/06/1987 - 38578190643 - rafael.costa@email.com - 21984567392 - 345ghi - Trimestral TotalFit - 5 - 95.90 - Plano trimestral - 10/08/2022 - Concluída - 45 - 45 - 30 - 30 - 30 - 20
-Amanda Santos - 02/12/1994 - 92758190647 - amanda.santos@email.com - 21987654328 - 456ghi - Semestral TotalFit - 6 - 89.90 - Plano semestral - 15/11/2023 - Ainda não efetuada - 55 - 55 - 35 - 35 - 35 - 25
-Gustavo Oliveira - 11/03/1989 - 45693052715 - gustavo.oliveira@email.com - 21982469031 - 567ghi - Anual TotalFit - 4 - 79.90 - Plano anual - 20/06/2024 - Ainda não efetuada - 50 - 50 - 30 - 30 - 30 - 20
+Fernando Mario-08/02/1998-78231965407-ffbolado@gmail.com-24992943436-senha-Mensal TotalFit-6- 99.90-Plano mensal-01/01/2024-Ainda nao efetuada
+Amanda Costa-14/09/1996-58940236715-amanda.costa@email.com-21987654321-ghi789-Semestral TotalFit-6-89.90-Plano semestral-15/11/2023-Ainda não efetuada
+Bruno Oliveira-20/03/1993-12643507891-bruno.oliveira@email.com-21989012345-789ghi-Anual TotalFit-4-79.90-Plano anual-20/06/2024-Ainda não efetuada
+Juliana Santos-25/08/1998-70386452917-juliana.santos@email.com-21986543210-abc789-Mensal TotalFit-6-99.90-Plano mensal-01/01/2024-Ainda não efetuada
+Marcos Costa-05/07/1995-30495867205-marcos.costa@email.com-21985203647-def456-Trimestral TotalFit-5-95.90-Plano trimestral-10/08/2022-Concluída
+Camila Oliveira-10/11/1992-36541892073-camila.oliveira@email.com-21988765432-678def-Semestral TotalFit-6-89.90-Plano semestral-15/11/2023-Ainda não efetuada
+Rafael Santos-15/12/1989-50849627135-rafael.santos@email.com-21981234567-ghi123-Anual TotalFit-4-79.90-Plano anual-20/06/2024-Ainda não efetuada
+Fernanda Oliveira-18/04/1996-92487103569-fernanda.oliveira@email.com-21987654321-234ghi-Mensal TotalFit-6-99.90-Plano mensal-01/01/2024-Ainda não efetuada
+Eduardo Silva-23/01/1991-25648973201-eduardo.silva@email.com-21984567980-345ghi-Trimestral TotalFit-5-95.90-Plano trimestral-10/08/2022-Concluída
+Larissa Costa-30/06/1994-64831702658-larissa.costa@email.com-21983042957-456ghi-Semestral TotalFit-6-89.90-Plano semestral-15/11/2023-Ainda não efetuada
+Thiago Oliveira-25/03/1988-08764953010-thiago.oliveira@email.com-21984759632-567ghi-Anual TotalFit-4-79.90-Plano anual-20/06/2024-Ainda não efetuada
+Gabriela Santos-18/09/1997-83715492068-gabriela.santos@email.com-21981472360-ghi789-Semestral TotalFit-6-89.90-Plano semestral-15/11/2023-Ainda não efetuada
+Rodrigo Oliveira-22/05/1990-72381649057-rodrigo.oliveira@email.com-21988976540-789ghi-Anual TotalFit-4-79.90-Plano anual-20/06/2024-Ainda não efetuada
+Marina Costa-27/12/1994-64587903216-marina.costa@email.com-21987654325-abc789-Mensal TotalFit-6-99.90-Plano mensal-01/01/2024-Ainda não efetuada
+Felipe Santos-05/08/1993-32450689173-felipe.santos@email.com-21984736251-def456-Trimestral TotalFit-5-95.90-Plano trimestral-10/08/2022-Concluída
+Larissa Oliveira-11/10/1996-21647368915-larissa.oliveira@email.com-21989674532-678def-Semestral TotalFit-6-89.90-Plano semestral-15/11/2023-Ainda não efetuada
+Lucas Silva-15/03/1989-86475139028-lucas.silva@email.com-21982467593-ghi123-Anual TotalFit-4-79.90-Plano anual-20/06/2024-Ainda não efetuada
+Juliana Oliveira-20/04/1992-15387269041-juliana.oliveira@email.com-21989765401-234ghi-Mensal TotalFit-6-99.90-Plano mensal-01/01/2024-Ainda não efetuada
+Thiago Costa-25/06/1987-70893526132-thiago.costa@email.com-21984567230-345ghi-Trimestral TotalFit-5-95.90-Plano trimestral-10/08/2022-Concluída 
+Fernanda Santos-30/11/1990-96328517649-fernanda.santos@email.com-21987654329-456ghi-Semestral TotalFit-6-89.90-Plano semestral-15/11/2023-Ainda não efetuada
+Gustavo Oliveira-10/07/1985-60321749856-gustavo.oliveira@email.com-21982147635-567ghi-Anual TotalFit-4-79.90-Plano anual-20/06/2024-Ainda não efetuada
+Rafaela Costa-14/02/1992-58093416270-rafaela.costa@email.com-21981029348-ghi789-Semestral TotalFit-6-89.90-Plano semestral-15/11/2023-Ainda não efetuada
+André Oliveira-29/05/1986-96314705828-andre.oliveira@email.com-21983570296-789ghi-Anual TotalFit-4-79.90-Plano anual-20/06/2024-Ainda não efetuada
+Isabela Santos-06/09/1998-23589647023-isabela.santos@email.com-21984620157-abc789-Mensal TotalFit-6-99.90-Plano mensal-01/01/2024-Ainda não efetuada
+Pedro Costa-01/11/1993-16287349050-pedro.costa@email.com-21987893524-def456-Trimestral TotalFit-5-95.90-Plano trimestral-10/08/2022-Concluída
+Mariana Oliveira-18/04/1996-04659328172-mariana.oliveira@email.com-21982467915-678def-Semestral TotalFit-6-89.90-Plano semestral-15/11/2023-Ainda não efetuada
+Gabriel Silva-22/08/1991-60721693765-gabriel.silva@email.com-21989756423-ghi123-Anual TotalFit-4-79.90-Plano anual-20/06/2024-Ainda não efetuada
+Larissa Oliveira-25/11/1990-59134068620-larissa.oliveira@email.com-21987653281-234ghi-Mensal TotalFit-6-99.90-Plano mensal-01/01/2024-Ainda não efetuada
+Rafael Costa-30/06/1987-38578190643-rafael.costa@email.com-21984567392-345ghi-Trimestral TotalFit-5-95.90-Plano trimestral-10/08/2022-Concluída 
+Amanda Santos-02/12/1994-92758190647-amanda.santos@email.com-21987654328-456ghi-Semestral TotalFit-6-89.90-Plano semestral-15/11/2023-Ainda não efetuada
+Gustavo Oliveira-11/03/1989-45693052715-gustavo.oliveira@email.com-21982469031-567ghi-Anual TotalFit-4-79.90-Plano anual-20/06/2024-Ainda não efetuada

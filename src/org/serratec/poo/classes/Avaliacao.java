@@ -1,6 +1,7 @@
 package org.serratec.poo.classes;
 
 public class Avaliacao {
+	private String nomeAluno;
 	private String nomePersonal;
 	private Horario horario;
 	private double alturaAluno;
@@ -8,8 +9,9 @@ public class Avaliacao {
 	private double taxaDeGordura;
 	private String restricoes;
 
-	public Avaliacao(String nomePersonal, Horario horario, double alturaAluno,
+	public Avaliacao(String nomeAluno, String nomePersonal, Horario horario, double alturaAluno,
 			double pesoAluno, double taxaDeGordura, String restricoes) {
+		this.nomeAluno = nomeAluno;
 		this.nomePersonal = nomePersonal;
 		this.horario = horario;
 		this.alturaAluno = alturaAluno;
@@ -38,20 +40,15 @@ public class Avaliacao {
 		return pesoAluno;
 	}
 
-	public void setPesoAluno(Double pesoAluno) {
-		this.pesoAluno = pesoAluno;
-	}
-
 	public String getRestricoes() {
 		return restricoes;
 	}
 
-	public void setRestricoes(String restricoes) {
-		this.restricoes = restricoes;
+	public String getNomeAluno() {
+		return nomeAluno;
 	}
-
-
-	public String getPersonal() {
+	
+	public String getNomePersonal() {
 		return nomePersonal;
 	}
 
