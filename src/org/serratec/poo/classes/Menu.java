@@ -1,11 +1,5 @@
 package org.serratec.poo.classes;
-
-import java.lang.classfile.instruction.NewMultiArrayInstruction;
 import java.util.Scanner;
-
-import org.serratec.poo.utils.LeArquivo;
-
-import static org.serratec.poo.utils.LeArquivo.*;
 import static org.serratec.poo.utils.UtilsMenu.*;
 import static org.serratec.poo.utils.Utils.*;
 

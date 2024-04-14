@@ -19,7 +19,6 @@ public class Login {
 		System.out.print("Senha: ");
 		String senha = sc.nextLine();
 		Object pessoa = buscarCPF(cpf, senha, alunos, personais, funcionarios);
-		System.out.println(pessoa);
 
 		if (pessoa instanceof Aluno){
 			menuAluno(pessoa);

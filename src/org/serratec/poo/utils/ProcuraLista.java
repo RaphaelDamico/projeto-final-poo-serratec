@@ -15,14 +15,12 @@ public class ProcuraLista {
     public static Object buscarCPF(String cpf, String senha, List <Aluno> alunos, List <PersonalTrainer> personais, List <Funcionario> funcionarios) throws IOException {
 
         Object pessoa = null;
-        int marcador = 0;
         boolean encontrado = false;
 
         for (Aluno aluno : alunos) {
             if (aluno.getCpf().contains(cpf) && aluno.getSenha().contains(senha)) {
                 encontrado = true;
                 pessoa = aluno;
-                marcador = 1;
                 break;
             }
         }
@@ -31,7 +29,6 @@ public class ProcuraLista {
                 if (personalTrainer.getCpf().contains(cpf) && personalTrainer.getSenha().contains(senha)) {
                     encontrado = true;
                     pessoa = personalTrainer;
-                    marcador = 2;
                     break;
                 }
             }
@@ -41,7 +38,6 @@ public class ProcuraLista {
                 if (funcionario.getCpf().contains(cpf) && funcionario.getSenha().contains(senha)) {
                     encontrado = true;
                     pessoa = funcionario;
-                    marcador = 3;
                     break;
                 }
             }
