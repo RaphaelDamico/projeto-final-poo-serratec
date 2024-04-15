@@ -5,13 +5,14 @@ import java.time.LocalDate;
 public class PersonalTrainer extends Pessoa {
 	private String especialidade;
 	private String cref;
-	private Horario horarioAtendimento;
+	private String horarioAtendimento;
 
 	public PersonalTrainer(String nome, LocalDate dataDeNascimento, String cpf, Contato contato, String senha,
-			String especialidade, String cref) {
+			String especialidade, String cref, String horarioAtendimento) {
 		super(nome, dataDeNascimento, cpf, contato, senha);
 		this.especialidade = especialidade;
 		this.cref = cref;
+		this.horarioAtendimento = horarioAtendimento;
 	}
 
 	public String getEspecialidade() {
@@ -22,7 +23,7 @@ public class PersonalTrainer extends Pessoa {
 		return cref;
 	}
 
-	public Horario getHorarioAtendimento() {
+	public String getHorarioAtendimento() {
 		return horarioAtendimento;
 	}
 
@@ -37,7 +38,7 @@ public class PersonalTrainer extends Pessoa {
 	}
 
 	public String toString2() {
-		return super.toString2() + String.format("%s - %s - %s -", especialidade, cref, horarioAtendimento);
+		return super.toString2() + String.format("%s;%s;%s;", especialidade, cref, horarioAtendimento);
 	}
 
 }

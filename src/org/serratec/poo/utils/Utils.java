@@ -109,9 +109,11 @@ public class Utils {
 		String especialidade = sc.nextLine();
 		System.out.println("Data Matricula: ");
 		String cref = sc.nextLine();
+		System.out.println("Horario atendimento:");
+		String horarioAtendimento = sc.nextLine();
 		System.out.println("\n");
 		Contato contato = new Contato(email, telefone);
-		PersonalTrainer novoPersonal =  new PersonalTrainer(nomePersonal, dataNascimento, cpf, contato, senha, especialidade, cref);
+		PersonalTrainer novoPersonal =  new PersonalTrainer(nomePersonal, dataNascimento, cpf, contato, senha, especialidade, cref, horarioAtendimento);
 		personais.add(novoPersonal);
 		try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAlunos()))) {
 			for (PersonalTrainer personalTrainer : personais) {

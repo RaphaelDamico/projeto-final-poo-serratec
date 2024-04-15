@@ -66,7 +66,8 @@ public class LeArquivo {
 						new Contato(dados[3], dados[4]), // contato
 						dados[5], // senha
 						dados[6], // especialidade
-						dados[7]);// cref
+						dados[7],// cref
+						dados[7]);//horario atendimento
 				personalTrainers.add(personal);
 			}
 			txt.close();
