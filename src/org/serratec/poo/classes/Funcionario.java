@@ -1,9 +1,8 @@
 package org.serratec.poo.classes;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa {
 	private Cargo cargo;
 
 	public Funcionario(String nome, LocalDate dataDeNascimento, String cpf, Contato contato, String senha,
@@ -22,8 +21,8 @@ public class Funcionario extends Pessoa{
 				Cargo: %s
 				""", cargo);
 	}
-	
-	public String toString2(){
+
+	public String toString2() {
 		return super.toString2() + String.format("%s;", cargo);
 	}
 }

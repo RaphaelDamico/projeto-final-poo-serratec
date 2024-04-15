@@ -9,7 +9,6 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
@@ -18,7 +17,7 @@ import static org.serratec.poo.classes.Pessoa.getListaPlanos;
 import static org.serratec.poo.utils.LeArquivo.*;
 
 public class Utils {
-	private static DateTimeFormatter fmt;
+	//private static DateTimeFormatter fmt;
 	
 	/*public static LocalDate formataData(LocalDate data) {
 		Scanner sc = new Scanner(System.in);
@@ -124,6 +123,7 @@ public class Utils {
 		catch (IOException e) {
 			System.out.println("\nErro cadastrar novo aluno.");
 		}
+		sc.close();
 	}
 
 	public static void mostraPlanos(){

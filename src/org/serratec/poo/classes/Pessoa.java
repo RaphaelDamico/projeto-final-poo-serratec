@@ -3,8 +3,6 @@ package org.serratec.poo.classes;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import org.serratec.poo.utils.Utils;
-
 public abstract class Pessoa implements Comparable<Pessoa> {
 	private String nome;
 	private LocalDate dataDeNascimento;
