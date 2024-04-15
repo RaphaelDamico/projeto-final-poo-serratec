@@ -1,9 +1,11 @@
 package org.serratec.poo.utils;
 
-import org.serratec.poo.classes.Aluno;
-import org.serratec.poo.classes.Contato;
-import org.serratec.poo.classes.PersonalTrainer;
-import org.serratec.poo.classes.Plano;
+import static org.serratec.poo.classes.Pessoa.getListaAlunos;
+import static org.serratec.poo.classes.Pessoa.getListaPlanos;
+import static org.serratec.poo.utils.LeArquivo.listaAluno;
+import static org.serratec.poo.utils.LeArquivo.listaAvaliacoes;
+import static org.serratec.poo.utils.LeArquivo.listaPersonal;
+import static org.serratec.poo.utils.LeArquivo.listaPlanos;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -11,10 +13,14 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
-import static org.serratec.poo.classes.Pessoa.getListaAlunos;
-import static org.serratec.poo.classes.Pessoa.getListaPlanos;
-import static org.serratec.poo.utils.LeArquivo.*;
+import org.serratec.poo.classes.Pessoa;
+import org.serratec.poo.classes.Aluno;
+import org.serratec.poo.classes.Avaliacao;
+import org.serratec.poo.classes.Contato;
+import org.serratec.poo.classes.PersonalTrainer;
+import org.serratec.poo.classes.Plano;
 
 public class Utils {
 	//private static DateTimeFormatter fmt;
@@ -140,10 +146,12 @@ public class Utils {
 			System.out.println(personalTrainer);
 		}
 	}
+	
+	public static void visualizarAvaliacoesRealizadas(String nome) {
+		List<Avaliacao> avaliacoes = listaAvaliacoes();
+		List<Avaliacao> avaliacoesRealizadas = avaliacoes.stream()
+				.filter(a -> a.getNomePersonal().equalsIgnoreCase(nome)).toList();
+		System.out.println(avaliacoesRealizadas);
+	}
 
-//	public LocalDate converteIdade(LocalDate dataDeNascimento) {
-//		LocalDate dataAtual = LocalDate.now();
-//		Period period = Period.between(dataDeNascimento, dataAtual);
-//		return period.getYears();
-//	}
 }

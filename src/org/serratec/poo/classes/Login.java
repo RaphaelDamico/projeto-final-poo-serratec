@@ -31,6 +31,7 @@ public class Login {
 		}
 		else {
 			System.out.println("OBRIGADO POR USAR NOSSO SISTEMA");
+			sc.close();
 			return;
 		}
 		sc.close();
