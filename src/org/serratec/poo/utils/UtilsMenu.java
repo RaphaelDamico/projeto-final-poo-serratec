@@ -2,7 +2,7 @@ package org.serratec.poo.utils;
 
 public class UtilsMenu {
 	public static void exibeMenuAluno() {
-		System.out.print("""
+		System.out.printf("""
 				1 - Visualizar dados e plano
 				2 - Solicitar agendamento com o personal
 				3 - Visualizar histórico de agendamentos
@@ -13,7 +13,7 @@ public class UtilsMenu {
 	}
 
 	public static void exibeMenuPersonal() {
-		System.out.print("""
+		System.out.printf("""
 				1 - Visualizar agenda de atendimentos
 				2 - Registrar avaliações físicas dos alunos.
 				3 - Visualizar lista de avaliações realizadas
@@ -22,7 +22,7 @@ public class UtilsMenu {
 	}
 
 	public static void exibeMenuFuncionario() {
-		System.out.print("""
+		System.out.printf("""
 				1 - Cadastrar novo plano
 				2 - Cadastrar novo aluno
 				3 - Cadastrar novo Personal Trainer

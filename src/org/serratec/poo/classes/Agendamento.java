@@ -4,11 +4,21 @@ public class Agendamento {
     private Horario horario;
     private String aluno;
     private String personalTrainer;
+    public enum Status{
+        PENDENTE ("Pendente"), CONCLUIDO ("Concluído"), DESMARCADO ("Desmarcado");
 
-    public Agendamento(Horario horario, String aluno, String personalTrainer) {
+        private String status;
+        private Status(String status) {
+            this.status = status;
+        }
+    }
+    private Status status;
+
+    public Agendamento(Horario horario, String aluno, String personalTrainer, String status) {
         this.horario = horario;
         this.aluno = aluno;
         this.personalTrainer = personalTrainer;
+        this.status = Status.valueOf(status.toUpperCase());
     }
 
     public Horario getHorario() {
