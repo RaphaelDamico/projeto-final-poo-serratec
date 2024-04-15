@@ -35,8 +35,8 @@ public class Menu {
 		Scanner sc = new Scanner(System.in);
 		int op = 0;
 		while (op !=4){
-			op = sc.nextInt();
 			exibeMenuPersonal();
+			op = sc.nextInt();
 			switch (op){
 				case 1:
 
