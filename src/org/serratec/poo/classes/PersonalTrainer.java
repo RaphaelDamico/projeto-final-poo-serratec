@@ -1,12 +1,13 @@
 package org.serratec.poo.classes;
 
+import java.time.LocalDate;
 
 public class PersonalTrainer extends Pessoa {
 	private String especialidade;
 	private String cref;
 	private Horario horarioAtendimento;
 
-	public PersonalTrainer(String nome, String dataDeNascimento, String cpf, Contato contato, String senha,
+	public PersonalTrainer(String nome, LocalDate dataDeNascimento, String cpf, Contato contato, String senha,
 			String especialidade, String cref) {
 		super(nome, dataDeNascimento, cpf, contato, senha);
 		this.especialidade = especialidade;

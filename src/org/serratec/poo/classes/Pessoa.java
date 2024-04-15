@@ -78,7 +78,6 @@ public abstract class Pessoa implements Comparable<Pessoa> {
 	@Override
 	public String toString() {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		LocalDate nascimento = LocalDate.parse(dataDeNascimento);
 		return String.format("""
 				Nome: %s
 				Data de nascimento: %s

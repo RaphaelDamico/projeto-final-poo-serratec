@@ -1,16 +1,17 @@
 package org.serratec.poo.classes;
 
+import java.time.LocalDate;
 
 public class Horario {
-	private String data;
+	private LocalDate data;
 	private String hora;
 
-	public Horario(String data, String hora) {
+	public Horario(LocalDate data, String hora) {
 		this.data = data;
 		this.hora = hora;
 	}
 
-	public String getData() {
+	public LocalDate getData() {
 		return data;
 	}
 

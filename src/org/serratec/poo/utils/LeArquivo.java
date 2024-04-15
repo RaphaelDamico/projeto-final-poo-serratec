@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -23,14 +24,16 @@ public class LeArquivo {
 	        while ((linha = txt.readLine()) != null) {
 	            // Processar cada linha
 	            String[] dados = linha.split("-");
+	            LocalDate nascimento = LocalDate.parse(dados[1]);
+	            LocalDate matricula = LocalDate.parse(dados[10]);
 	
 	            Aluno aluno = new Aluno(dados[0], //Nome
-	                    dados[1], //Data nascimento
+	                    nascimento, //Data nascimento
 	                    dados[2], //cpf
 	                    new Contato(dados[3], dados[4]), //contato
 	                    dados[5], //senha
 	                    dados[6],//plano
-	                    dados[10],// data matricula
+	                    matricula,// data matricula
 	                    dados[11]);// status avaliacao
 	            alunos.add(aluno);
 	        }
@@ -55,10 +58,11 @@ public class LeArquivo {
 	        while ((linha = txt.readLine()) != null) {
 	            // Processar cada linha
 	            String[] dados = linha.split("-");
+	            LocalDate nascimento = LocalDate.parse(dados[1]);
 	
 	            PersonalTrainer personal = new PersonalTrainer(
 	            		dados[0], //Nome
-	                    dados[1], //Data nascimento
+	                    nascimento, //Data nascimento
 	                    dados[2], //cpf
 	                    new Contato(dados[3], dados[4]), //contato
 	                    dados[5], //senha
@@ -84,13 +88,15 @@ public class LeArquivo {
 	        BufferedReader txt = new BufferedReader(new FileReader(diretorio));
 	
 	        String linha;
+            
 	        while ((linha = txt.readLine()) != null) {
 	            // Processar cada linha
 	            String[] dados = linha.split("-");
+	            LocalDate nascimento = LocalDate.parse(dados[1]);
 	            Cargo cargo = Cargo.valueOf(dados[6].toUpperCase());
 	            Funcionario funcionario = new Funcionario(
 	            		dados[0], //Nome
-	                    dados[1], //Data nascimento
+	                    nascimento, //Data nascimento
 	                    dados[2], //cpf
 	                    new Contato(dados[3], dados[4]), //contato
 	                    dados[5], //senha
@@ -136,13 +142,17 @@ public class LeArquivo {
 	        while ((linha = txt.readLine()) != null) {
 	            // Processar cada linha
 	            String[] dados = linha.split("-");
+	            LocalDate dataAvaliacao = LocalDate.parse(dados[2]);
+	            double altura = Double.parseDouble(dados[4]);
+	            double peso = Double.parseDouble(dados[5]);
+	            double taxaGordura = Double.parseDouble(dados[6]);
 	
 	            Avaliacao avaliacao = new Avaliacao(dados[0], //Nome aluno
 	                    dados[1], //Nome personal
-	                    new Horario(dados[2], dados[3]), //data e hora da avaliacao
-	                    dados[4], //Altura
-	                    dados[5],//Peso
-	                    dados[6],// Taxa de gordura
+	                    new Horario(dataAvaliacao, dados[3]), //data e hora da avaliacao
+	                    altura, //Altura
+	                    peso,//Peso
+	                    taxaGordura,// Taxa de gordura
 	                    dados[7]);//Restrição
 	            avaliacoes.add(avaliacao);
 	        }
