@@ -18,16 +18,15 @@ import static org.serratec.poo.classes.Pessoa.getListaPlanos;
 import static org.serratec.poo.utils.LeArquivo.*;
 
 public class Utils {
-	private DateTimeFormatter fmt;
+	private static DateTimeFormatter fmt;
 	
-	public LocalDate formataDataDeNascimento(LocalDate dataDeNascimento) {
+	/*public static LocalDate formataData(LocalDate data) {
 		Scanner sc = new Scanner(System.in);
 		fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		System.out.println("Digite a data de nascimento (dd/MM/yyyy): ");
-		dataDeNascimento = LocalDate.parse(sc.nextLine(), fmt);
+		data = LocalDate.parse(sc.nextLine(), fmt);
 		sc.close();
-		return dataDeNascimento;
-	}
+		return data;
+	}*/
 
 	public static void novoPlano(){
 		Scanner sc = new Scanner(System.in);
@@ -62,7 +61,7 @@ public class Utils {
 		System.out.println("Nome: ");
 		String nomeAluno = sc.nextLine();
 		System.out.println("Data Nascimento: ");
-		String dataNascimento = sc.nextLine();
+		LocalDate dataNascimento = LocalDate.parse(sc.nextLine());
 		System.out.println("CPF: ");
 		String cpf = sc.nextLine();
 		System.out.println("E-mail: ");
@@ -74,7 +73,7 @@ public class Utils {
 		System.out.println("Qual o plano desejado: ");
 		String plano = sc.nextLine();
 		System.out.println("Data Matricula: ");
-		String matricula = sc.nextLine();
+		LocalDate matricula = LocalDate.parse(sc.nextLine());
 		System.out.println("\n");
 		Contato contato = new Contato(email, telefone);
 		Aluno novoAluno =  new Aluno(nomeAluno, dataNascimento, cpf, contato, senha, plano, matricula);
@@ -98,7 +97,7 @@ public class Utils {
 		System.out.println("Nome: ");
 		String nomePersonal = sc.nextLine();
 		System.out.println("Data Nascimento: ");
-		String dataNascimento = sc.nextLine();
+		LocalDate dataNascimento = LocalDate.parse(sc.nextLine());
 		System.out.println("CPF: ");
 		String cpf = sc.nextLine();
 		System.out.println("E-mail: ");

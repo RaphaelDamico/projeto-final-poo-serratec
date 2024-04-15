@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.serratec.poo.classes.Pessoa.*;
+import static org.serratec.poo.utils.Utils.*;
 
 public class LeArquivo {
     public static List<Aluno> listaAluno() {
@@ -22,21 +23,21 @@ public class LeArquivo {
 	
 	        String linha;
 	        while ((linha = txt.readLine()) != null) {
-	            // Processar cada linha
-	            String[] dados = linha.split("-");
-	            LocalDate nascimento = LocalDate.parse(dados[1]);
-	            LocalDate matricula = LocalDate.parse(dados[10]);
-	
-	            Aluno aluno = new Aluno(dados[0], //Nome
-	                    nascimento, //Data nascimento
-	                    dados[2], //cpf
-	                    new Contato(dados[3], dados[4]), //contato
-	                    dados[5], //senha
-	                    dados[6],//plano
-	                    matricula,// data matricula
-	                    dados[11]);// status avaliacao
-	            alunos.add(aluno);
-	        }
+                // Processar cada linha
+                String[] dados = linha.split(";");
+                LocalDate nascimento = LocalDate.parse(dados[1]);
+                LocalDate matricula = LocalDate.parse(dados[10]);
+
+                Aluno aluno = new Aluno(dados[0], //Nome
+                        nascimento, //Data nascimento
+                        dados[2], //cpf
+                        new Contato(dados[3], dados[4]), //contato
+                        dados[5], //senha
+                        dados[6],//plano
+                        matricula,// data matricula
+                        dados[11]);// status avaliacao
+                alunos.add(aluno);
+            }
 	        txt.close();
     	}
     	catch (FileNotFoundException e) {
@@ -57,8 +58,8 @@ public class LeArquivo {
 	        String linha;
 	        while ((linha = txt.readLine()) != null) {
 	            // Processar cada linha
-	            String[] dados = linha.split("-");
-	            LocalDate nascimento = LocalDate.parse(dados[1]);
+	            String[] dados = linha.split(";");
+				LocalDate nascimento = LocalDate.parse(dados[1]);
 	
 	            PersonalTrainer personal = new PersonalTrainer(
 	            		dados[0], //Nome
@@ -91,8 +92,8 @@ public class LeArquivo {
             
 	        while ((linha = txt.readLine()) != null) {
 	            // Processar cada linha
-	            String[] dados = linha.split("-");
-	            LocalDate nascimento = LocalDate.parse(dados[1]);
+	            String[] dados = linha.split(";");
+				LocalDate nascimento = LocalDate.parse(dados[1]);
 	            Cargo cargo = Cargo.valueOf(dados[6].toUpperCase());
 	            Funcionario funcionario = new Funcionario(
 	            		dados[0], //Nome
@@ -120,7 +121,7 @@ public class LeArquivo {
         try (BufferedReader txt = new BufferedReader(new FileReader(diretorio))) {
             String linha;
             while((linha = txt.readLine()) != null) {
-                String[] dados = linha.split("-");
+                String[] dados = linha.split(";");
                 int duracao = Integer.parseInt(dados[1]);
                 Double valor = Double.parseDouble(dados[2]);
 				String descricao = dados[3];
@@ -141,7 +142,7 @@ public class LeArquivo {
 	        String linha;
 	        while ((linha = txt.readLine()) != null) {
 	            // Processar cada linha
-	            String[] dados = linha.split("-");
+	            String[] dados = linha.split(";");
 	            LocalDate dataAvaliacao = LocalDate.parse(dados[2]);
 	            double altura = Double.parseDouble(dados[4]);
 	            double peso = Double.parseDouble(dados[5]);

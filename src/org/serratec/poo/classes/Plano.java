@@ -39,7 +39,7 @@ public class Plano {
 				""", nomeDoPlano, duracao, valor, descricao);
 	}
 	public String toString2(){
-		return String.format("%s-%s-%s-%s", nomeDoPlano, duracao, valor, descricao);
+		return String.format("%s;%s;%s;%s", nomeDoPlano, duracao, valor, descricao);
 	}
 
 }

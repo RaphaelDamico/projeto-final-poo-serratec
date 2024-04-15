@@ -88,7 +88,7 @@ public abstract class Pessoa implements Comparable<Pessoa> {
 
 	public String toString2() {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		return String.format("%s - %s - %s - %s - ", nome, dataDeNascimento.format(fmt), cpf, contato.toString2());
+		return String.format("%s;%s;%s;%s;", nome, dataDeNascimento.format(fmt), cpf, contato.toString2());
 	}
 
 }

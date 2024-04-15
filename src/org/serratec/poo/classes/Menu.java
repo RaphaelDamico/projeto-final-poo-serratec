@@ -6,10 +6,11 @@ import static org.serratec.poo.utils.Utils.*;
 public class Menu {
 
 	public static void menuAluno(Object pessoa){
-		exibeMenuAluno();
 		Scanner sc = new Scanner(System.in);
-		int op = sc.nextInt();
-		do{
+		int op = 0;
+		while(op !=6){
+			exibeMenuAluno();
+			op = sc.nextInt();
 			switch (op){
 				case 1:
 					System.out.println(pessoa);
@@ -26,15 +27,16 @@ public class Menu {
 				case 6:
 					break;
 			}
-		}while (op!=6);
+		}
 		sc.close();
 	}
 	
 	public static void menuPersonal(Object pessoa){
-		exibeMenuPersonal();
 		Scanner sc = new Scanner(System.in);
-		int op = sc.nextInt();
-		do{
+		int op = 0;
+		while (op !=4){
+			op = sc.nextInt();
+			exibeMenuPersonal();
 			switch (op){
 				case 1:
 
@@ -47,14 +49,15 @@ public class Menu {
 				case 4:
 					break;
 			}
-		}while (op!=4);
+		}
 		sc.close();
 	}
 	public static void menuFuncionario(Object pessoa){
-		exibeMenuFuncionario();
 		Scanner sc = new Scanner(System.in);
-		int op = sc.nextInt();
-		do {
+		int op = 0;
+		while (op != 7) {
+			exibeMenuFuncionario();
+			op = sc.nextInt();
 			switch (op) {
 				case 1:
 					novoPlano();
@@ -76,7 +79,7 @@ public class Menu {
 				case 7:
 					break;
 			}
-		}while (op !=7);
+		}
 		sc.close();
 	}
 }

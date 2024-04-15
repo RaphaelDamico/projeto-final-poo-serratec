@@ -1,6 +1,6 @@
-Lucas Oliveira;10-08-1985;65209413837;lucas.oliveira@email.com;12345678;123456;musculação;CREF12345
-Mariana Santos;25-04-1990;37910528446;mariana.santos@email.com;98765432;987654;cardio;CREF54321
-Rafaela Costa;03-12-1987;84197203653;rafaela.costa@email.com;45678912;456789;yoga;CREF67890
-Gustavo Lima;18-06-1992;57162038945;gustavo.lima@email.com;32165498;321654;crossfit;CREF09876
-Fernanda Pereira;07-03-1986;46208731954;fernanda.pereira@email.com;65498732;654987;pilates;CREF45678
-Pedro Almeida;14-09-1995;36298514707;pedro.almeida@email.com;78912345;789123;natação;CREF76543
+Lucas Oliveira;1985-08-10;65209413837;lucas.oliveira@email.com;12345678;123456;musculação;CREF12345
+Mariana Santos;1990-04-25;37910528446;mariana.santos@email.com;98765432;987654;cardio;CREF54321
+Rafaela Costa;1987-12-03;84197203653;rafaela.costa@email.com;45678912;456789;yoga;CREF67890
+Gustavo Lima;1992-06-18;57162038945;gustavo.lima@email.com;32165498;321654;crossfit;CREF09876
+Fernanda Pereira;1986-03-07;46208731954;fernanda.pereira@email.com;65498732;654987;pilates;CREF45678
+Pedro Almeida;1995-09-14;36298514707;pedro.almeida@email.com;78912345;789123;natação;CREF76543
