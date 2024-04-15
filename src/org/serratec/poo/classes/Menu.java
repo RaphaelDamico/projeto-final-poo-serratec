@@ -33,6 +33,7 @@ public class Menu {
 	}
 
 	public static void menuPersonal(Object pessoa) {
+		PersonalTrainer personalTrainer = (PersonalTrainer) pessoa;
 		Scanner sc = new Scanner(System.in);
 		int op = 0;
 		while (op !=4){
@@ -45,7 +46,7 @@ public class Menu {
 			case 2:
 				break;
 			case 3:
-				System.out.println("VAMO PORRAAAAAAA");
+				visualizarAvaliacoesRealizadas(personalTrainer.getNome());
 				break;
 			case 4:
 				break;
