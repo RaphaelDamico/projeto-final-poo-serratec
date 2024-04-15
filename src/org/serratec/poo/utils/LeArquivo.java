@@ -165,4 +165,34 @@ public class LeArquivo {
 		}
 		return avaliacoes;
 	}
+	
+	public static List<Agendamento> listaAgendamento() {
+		List<Agendamento> agendamentoAvaliacoes = new ArrayList<>();
+		try {
+			String diretorio = getListaAgendamento();
+			BufferedReader txt = new BufferedReader(new FileReader(diretorio));
+			
+			String linha;
+			while ((linha = txt.readLine()) != null) {
+				// Processar cada linha
+				String[] dados = linha.split(";");
+				LocalDate dataAgendamento = LocalDate.parse(dados[0]);
+				Status status = Status.valueOf(dados[4].toUpperCase());
+			
+				Agendamento agendamento = new Agendamento(
+						new Horario(dataAgendamento, dados[1]), // Data e Hora
+						dados[2], // Nome aluno
+						dados[3], // Nome personal
+						status); //Status
+				agendamentoAvaliacoes.add(agendamento);
+			}
+			txt.close();
+		} catch (FileNotFoundException e) {
+			System.err.println("Erro ao encontrar arquivo: " + e.getMessage());
+			
+		} catch (IOException e) {
+			System.err.println("Erro ao ler o arquivo " + e.getMessage());
+		}
+		return agendamentoAvaliacoes;
+	}
 }

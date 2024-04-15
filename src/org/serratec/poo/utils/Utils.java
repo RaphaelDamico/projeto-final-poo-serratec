@@ -133,6 +133,13 @@ public class Utils {
 		}
 		sc.close();
 	}
+	
+	public static void novaAvaliacao() {
+		Scanner sc = new Scanner(System.in);
+		List<Avaliacao> avaliacoes = listaAvaliacoes();
+		
+		sc.close();
+	}
 
 	public static void mostraPlanos(){
 		List<Plano> planos = (listaPlanos());
@@ -146,6 +153,8 @@ public class Utils {
 			System.out.println(personalTrainer);
 		}
 	}
+	
+	
 	
 	public static void visualizarAvaliacoesRealizadas(String nome) {
 		List<Avaliacao> avaliacoes = listaAvaliacoes();
