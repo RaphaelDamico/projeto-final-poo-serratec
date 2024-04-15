@@ -9,8 +9,8 @@ public class Avaliacao {
 	private double taxaDeGordura;
 	private String restricoes;
 
-	public Avaliacao(String nomeAluno, String nomePersonal, Horario horario, double alturaAluno,
-			double pesoAluno, double taxaDeGordura, String restricoes) {
+	public Avaliacao(String nomeAluno, String nomePersonal, Horario horario, double alturaAluno, double pesoAluno,
+			double taxaDeGordura, String restricoes) {
 		this.nomeAluno = nomeAluno;
 		this.nomePersonal = nomePersonal;
 		this.horario = horario;
@@ -47,7 +47,7 @@ public class Avaliacao {
 	public String getNomeAluno() {
 		return nomeAluno;
 	}
-	
+
 	public String getNomePersonal() {
 		return nomePersonal;
 	}
@@ -63,7 +63,7 @@ public class Avaliacao {
 	@Override
 	public String toString() {
 		return String.format("""
-				Aluno: 
+				Aluno:
 				Personal trainer: %s
 				Horario: %s Horas
 				Altura: %.2f Metros

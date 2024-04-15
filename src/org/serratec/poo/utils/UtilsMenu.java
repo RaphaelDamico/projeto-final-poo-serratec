@@ -1,7 +1,5 @@
 package org.serratec.poo.utils;
 
-import java.io.PrintStream;
-
 public class UtilsMenu {
 	public static void exibeMenuAluno() {
 		System.out.print("""
@@ -13,14 +11,16 @@ public class UtilsMenu {
 				6 - Sair
 				""");
 	}
+
 	public static void exibeMenuPersonal() {
 		System.out.print("""
 				1 - Visualizar agenda de atendimentos
 				2 - Registrar avaliações físicas dos alunos.
-				3 - Visualizar lista de avaliações realizadas 
+				3 - Visualizar lista de avaliações realizadas
 				4 - Sair
 				""");
 	}
+
 	public static void exibeMenuFuncionario() {
 		System.out.print("""
 				1 - Cadastrar novo plano
