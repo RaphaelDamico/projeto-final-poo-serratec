@@ -1,6 +1,6 @@
-Marcos Costa;Lucas Oliveira;2022-09-09;08;17;08:15;1.71;85;28;Hipertensão Arterial
-Eduardo Silva;Rafaela Costa;2022-01-23;08;15;14:30;1.80;100;33;Diabetes tipo 2
-Felipe Santos;Mariana Santos;2023-10-14;07;13;10:30;1.68;93;33;Lesão na panturrilha direita
-Mayara Costa;Gustavo Lima;2022;-12-2708;15;11:15;1.60;65;20;
-Pedro Costa;Pedro Almeida;2022-08-24;08;25;08:30;1.75;87;27;Bronquite Asmática
-Rafaela Costa;Fernanda Pereira;2023-07-25;07;25;14:30;1.73;65;26;
+Marcos Costa;Lucas Oliveira;2022-09-09;08:15;1.71;85;28;Hipertensão Arterial
+Eduardo Silva;Rafaela Costa;2022-01-23;14:30;1.80;100;33;Diabetes tipo 2
+Felipe Santos;Mariana Santos;2023-10-14;10:30;1.68;93;33;Lesão na panturrilha direita
+Mayara Costa;Gustavo Lima;2022-12-27;11:15;1.60;65;20;Não possui restrição
+Pedro Costa;Pedro Almeida;2022-08-24;08:30;1.75;87;27;Bronquite Asmática
+Rafaela Costa;Fernanda Pereira;2023-07-25;14:30;1.73;65;26;Não possui restrição

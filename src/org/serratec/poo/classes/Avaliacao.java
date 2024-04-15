@@ -63,14 +63,14 @@ public class Avaliacao {
 	@Override
 	public String toString() {
 		return String.format("""
-				Aluno:
+				Aluno: %s
 				Personal trainer: %s
-				Horario: %s Horas
+				Data: %s Hora: %s
 				Altura: %.2f Metros
 				Peso: %.2f KG
 				Taxa de gordura: %.2f
 				Restrições: %s
-				""", nomePersonal, horario, alturaAluno, pesoAluno, taxaDeGordura, restricoes);
+				""", nomeAluno, nomePersonal, horario.getData(), horario.getHora(), alturaAluno, pesoAluno, taxaDeGordura, restricoes);
 	}
 
 }
