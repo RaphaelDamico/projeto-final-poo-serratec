@@ -37,6 +37,6 @@ public class Agendamento {
                 Dia: %s     Horario: %s""", aluno, personalTrainer, horario.getData(), horario.getHora());
     }
     public String toString2() {
-        return String.format("%s;%s;%s;%s", aluno, personalTrainer, horario.getData(), horario.getHora());
+        return String.format("%s;%s;%s;%s;%s", aluno, personalTrainer, horario.getData(), horario.getHora(), status);
     }
 }

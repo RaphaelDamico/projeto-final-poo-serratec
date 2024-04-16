@@ -28,8 +28,7 @@ public class escreveArquivo {
 		System.out.print("Personal Trainer: ");
 		String nomePersonal = sc.nextLine();
 		System.out.print("Status Agendamento: ");
-		Status status = Status.valueOf(sc.nextLine());
-		System.out.println("Especialidade: ");
+		Status status = leStatus();
 		Agendamento novoAgendamento = new Agendamento(new Horario(dataAgendamento, horaAgendamento), nomeAluno,
 				nomePersonal, status);
 		agendamentos.add(novoAgendamento);
@@ -38,10 +37,40 @@ public class escreveArquivo {
 				escritor.write(agendamento.toString2());
 				escritor.newLine();
 			}
-			System.err.println("Agendamento realizado com sucesso.");
+			System.out.println("Agendamento realizado com sucesso.");
 		} catch (IOException e) {
 			System.err.println("\nErro ao agendar atendimento!");
 		}
 		sc.close();
+	}
+
+	public static Status leStatus() {
+		Scanner s = new Scanner(System.in);
+		int opcao = -1;
+		Status status = null;
+
+		boolean statusOK = false;
+		while (!statusOK) {
+			System.out.printf("""
+					1- Pendente
+					2- Concluído
+					3- Desmarcado
+
+					""");
+
+			opcao = s.nextInt();
+
+			if (opcao == 1) {
+				status = Status.PENDENTE;
+				break;
+			} else if (opcao == 2) {
+				status = Status.CONCLUIDO;
+				break;
+			} else if (opcao == 3) {
+				status = Status.DESMARCADO;
+				break;
+			}
+		}
+		return status;
 	}
 }

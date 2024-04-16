@@ -118,7 +118,7 @@ public class Utils {
 		System.out.println("Data Matricula: ");
 		String cref = sc.nextLine();
 		System.out.println("Horario atendimento:");
-		LocalTime horarioAtendimento = LocalTime.parse(sc.nextLine());
+		String horarioAtendimento = sc.nextLine();
 		System.out.println("\n");
 		Contato contato = new Contato(email, telefone);
 		PersonalTrainer novoPersonal =  new PersonalTrainer(nomePersonal, dataNascimento, cpf, contato, senha, especialidade, cref, horarioAtendimento);

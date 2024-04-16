@@ -60,7 +60,6 @@ public class LeArquivo {
 				// Processar cada linha
 				String[] dados = linha.split(";");
 				LocalDate nascimento = LocalDate.parse(dados[1]);
-				LocalTime horario = LocalTime.parse(dados[8]);
 
 				PersonalTrainer personal = new PersonalTrainer(dados[0], // Nome
 						nascimento, // Data nascimento
@@ -68,8 +67,8 @@ public class LeArquivo {
 						new Contato(dados[3], dados[4]), // contato
 						dados[5], // senha
 						dados[6], // especialidade
-						dados[7],// cref
-						horario);//horario atendimento
+						dados[7], // cref
+						dados[8]);// horario atendimento
 				personalTrainers.add(personal);
 			}
 			txt.close();
@@ -152,7 +151,7 @@ public class LeArquivo {
 
 				Avaliacao avaliacao = new Avaliacao(dados[0], // Nome aluno
 						dados[1], // Nome personal
-						new Horario(dataAvaliacao,horaAvaliacao), // data e hora da avaliacao
+						new Horario(dataAvaliacao, horaAvaliacao), // data e hora da avaliacao
 						altura, // Altura
 						peso, // Peso
 						taxaGordura, // Taxa de gordura
@@ -168,31 +167,32 @@ public class LeArquivo {
 		}
 		return avaliacoes;
 	}
+
 	public static List<Agendamento> listaAgendamento() {
 		List<Agendamento> agendamentos = new ArrayList<>();
 		try {
 			String diretorio = getListaAgendamento();
 			BufferedReader txt = new BufferedReader(new FileReader(diretorio));
-			
+
 			String linha;
 			while ((linha = txt.readLine()) != null) {
 				// Processar cada linha
 				String[] dados = linha.split(";");
-				LocalDate dataAgendamento = LocalDate.parse(dados[0]);
-				LocalTime horaAgendamento = LocalTime.parse(dados[1]);
+				LocalDate dataAgendamento = LocalDate.parse(dados[2]);
+				LocalTime horaAgendamento = LocalTime.parse(dados[3]);
 				Status status = Status.valueOf(dados[4].toUpperCase());
-			
-				Agendamento agendamento = new Agendamento(
-						new Horario(dataAgendamento,horaAgendamento), // data e hora agendamento
-						dados[2], // Nome aluno
-						dados[3], //Nome personal
+
+				Agendamento agendamento = new Agendamento(new Horario(dataAgendamento, horaAgendamento), // data e hora
+																											// agendamento
+						dados[0], // Nome aluno
+						dados[1], // Nome personal
 						status);// Status
 				agendamentos.add(agendamento);
 			}
 			txt.close();
 		} catch (FileNotFoundException e) {
 			System.err.println("Erro ao encontrar arquivo: " + e.getMessage());
-			
+
 		} catch (IOException e) {
 			System.err.println("Erro ao ler o arquivo " + e.getMessage());
 		}
