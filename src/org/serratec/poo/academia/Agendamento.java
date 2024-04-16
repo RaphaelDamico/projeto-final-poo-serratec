@@ -27,6 +27,10 @@ public class Agendamento {
         return personalTrainer;
     }
 
+    public Status getStatus() {
+    	return status;
+    }
+    
     @Override
     public String toString() {
         return String.format("""
@@ -37,4 +41,5 @@ public class Agendamento {
     public String toString2() {
         return String.format("%s;%s;%s;%s", cpfAluno, personalTrainer, horario.getData(), horario.getHora());
     }
+
 }

@@ -1,7 +1,5 @@
 package org.serratec.poo.academia;
 
-import java.util.Scanner;
-
 public interface Menu {
     void exibeMenu();
     void escolhaMenu(int opcao);
