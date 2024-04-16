@@ -9,11 +9,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 import static org.serratec.poo.academia.AgendamentoMetodos.listaAgendamento;
 import static org.serratec.poo.academia.AvaliacaoMetodos.listaAvaliacoes;
-import static org.serratec.poo.academia.Pessoa.getListaAgendamento;
 import static org.serratec.poo.academia.Pessoa.getListaAlunos;
 import static org.serratec.poo.principal.Programa.sc;
 
@@ -85,21 +83,25 @@ public class MetodosAluno {
         }
         sc.close();
     }
-    public static void visualizarAvaliacoesAluno(String cpf) {
+    public static List<Agendamento> visualizarAvaliacoesAluno(String cpf) {
         List<Avaliacao> avaliacoes = listaAvaliacoes();
         List<Avaliacao> avaliacoesRealizadas = avaliacoes.stream()
                 .filter(a -> a.getCpfAluno().equalsIgnoreCase(cpf)).toList();
         for (Avaliacao avaliacao : avaliacoesRealizadas) {
             System.out.println(avaliacao);
         }
+        return null;
     }
-    public static void visualizarAgendamentosAluno(String cpf) {
+    public static List<Agendamento> visualizarAgendamentosAluno(String cpf) {
         List<Agendamento> agendamentos = listaAgendamento();
         List<Agendamento> agendamentosFuturos = agendamentos.stream()
                 .filter(a -> a.getCPFAluno().equalsIgnoreCase(cpf)).toList();
+        int i = -1;
         for (Agendamento agendamento : agendamentosFuturos) {
-            System.out.println(agendamento);
+            i++;
+            System.out.println(i + "-" + agendamento);
         }
+        return agendamentosFuturos;
     }
     public static String buscaAluno(String cpfAluno){
         List<Aluno> alunos = (listaAluno());

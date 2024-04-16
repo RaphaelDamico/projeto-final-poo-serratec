@@ -8,6 +8,6 @@ public interface Menu {
     void exibe();
     void buscaAgendamento();
     void buscaAvaliacao();
-    void cadastra();
+    void cadastra(int opcao);
     void remove();
 }

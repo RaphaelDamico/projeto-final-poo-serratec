@@ -8,6 +8,8 @@ import java.util.List;
 
 import static java.awt.SystemColor.menu;
 import static org.serratec.poo.academia.AgendamentoMetodos.novoAgendamento;
+import static org.serratec.poo.alunos.MetodosAluno.visualizarAgendamentosAluno;
+import static org.serratec.poo.alunos.MetodosAluno.visualizarAvaliacoesAluno;
 import static org.serratec.poo.principal.Programa.sc;
 
 public class MenuAluno implements Menu {
@@ -40,7 +42,7 @@ public class MenuAluno implements Menu {
                 exibe();
                 break;
             case 2:
-                cadastra();
+                cadastra(1);
                 break;
             case 3:
                 buscaAgendamento();
@@ -49,7 +51,7 @@ public class MenuAluno implements Menu {
                 remove();
                 break;
             case 5:
-                buscaAgendamento();
+                buscaAvaliacao();
                 break;
             case 6:
                 break;
@@ -64,14 +66,28 @@ public class MenuAluno implements Menu {
         System.out.println(getAluno());
     }
     @Override
-    public void cadastra() {
+    public void cadastra(int opcao) {
         novoAgendamento();
     }
     @Override
     public void buscaAgendamento() {
+        visualizarAgendamentosAluno(getAluno().getCpf());
     }
     public void remove(){
+        System.out.println("Qual agendamento deseja cancelar?\n");
+        List <Agendamento> agendamentos = visualizarAvaliacoesAluno(getAluno().getCpf());
+        System.out.println("Digite o índice da avaliação desejada:");
+        int op = sc.nextInt();
+        if (op>-1 && op-1 <= agendamentos.size()) {
+            agendamentos.remove(op + 1);
+            System.out.println("Agendamento cancelado com sucesso!");
+        }
+        else{
+            System.out.println("Digite um indice valido...");
+            remove();
+        }
     }
     public void buscaAvaliacao() {
+        visualizarAvaliacoesAluno(getAluno().getCpf());
     }
 }
