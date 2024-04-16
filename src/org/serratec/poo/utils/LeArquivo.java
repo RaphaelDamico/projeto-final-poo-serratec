@@ -7,6 +7,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -59,6 +61,7 @@ public class LeArquivo {
 				// Processar cada linha
 				String[] dados = linha.split(";");
 				LocalDate nascimento = LocalDate.parse(dados[1]);
+				LocalTime horario = LocalTime.parse(dados[8]);
 
 				PersonalTrainer personal = new PersonalTrainer(dados[0], // Nome
 						nascimento, // Data nascimento
@@ -67,7 +70,7 @@ public class LeArquivo {
 						dados[5], // senha
 						dados[6], // especialidade
 						dados[7],// cref
-						dados[7]);//horario atendimento
+						horario);//horario atendimento
 				personalTrainers.add(personal);
 			}
 			txt.close();
@@ -143,13 +146,14 @@ public class LeArquivo {
 				// Processar cada linha
 				String[] dados = linha.split(";");
 				LocalDate dataAvaliacao = LocalDate.parse(dados[2]);
+				LocalTime horaAvaliacao = LocalTime.parse(dados[3]);
 				double altura = Double.parseDouble(dados[4]);
 				double peso = Double.parseDouble(dados[5]);
 				double taxaGordura = Double.parseDouble(dados[6]);
 
 				Avaliacao avaliacao = new Avaliacao(dados[0], // Nome aluno
 						dados[1], // Nome personal
-						new Horario(dataAvaliacao, dados[3]), // data e hora da avaliacao
+						new Horario(dataAvaliacao,horaAvaliacao), // data e hora da avaliacao
 						altura, // Altura
 						peso, // Peso
 						taxaGordura, // Taxa de gordura
@@ -164,35 +168,5 @@ public class LeArquivo {
 			System.err.println("Erro ao ler o arquivo " + e.getMessage());
 		}
 		return avaliacoes;
-	}
-	
-	public static List<Agendamento> listaAgendamento() {
-		List<Agendamento> agendamentoAvaliacoes = new ArrayList<>();
-		try {
-			String diretorio = getListaAgendamento();
-			BufferedReader txt = new BufferedReader(new FileReader(diretorio));
-			
-			String linha;
-			while ((linha = txt.readLine()) != null) {
-				// Processar cada linha
-				String[] dados = linha.split(";");
-				LocalDate dataAgendamento = LocalDate.parse(dados[0]);
-				Status status = Status.valueOf(dados[4].toUpperCase());
-			
-				Agendamento agendamento = new Agendamento(
-						new Horario(dataAgendamento, dados[1]), // Data e Hora
-						dados[2], // Nome aluno
-						dados[3], // Nome personal
-						status); //Status
-				agendamentoAvaliacoes.add(agendamento);
-			}
-			txt.close();
-		} catch (FileNotFoundException e) {
-			System.err.println("Erro ao encontrar arquivo: " + e.getMessage());
-			
-		} catch (IOException e) {
-			System.err.println("Erro ao ler o arquivo " + e.getMessage());
-		}
-		return agendamentoAvaliacoes;
 	}
 }

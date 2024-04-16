@@ -1,14 +1,17 @@
 package org.serratec.poo.classes;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class PersonalTrainer extends Pessoa {
 	private String especialidade;
 	private String cref;
-	private String horarioAtendimento;
+	private LocalTime horarioAtendimento;
 
 	public PersonalTrainer(String nome, LocalDate dataDeNascimento, String cpf, Contato contato, String senha,
-			String especialidade, String cref, String horarioAtendimento) {
+			String especialidade, String cref, LocalTime horarioAtendimento) {
 		super(nome, dataDeNascimento, cpf, contato, senha);
 		this.especialidade = especialidade;
 		this.cref = cref;
@@ -23,22 +26,23 @@ public class PersonalTrainer extends Pessoa {
 		return cref;
 	}
 
-	public String getHorarioAtendimento() {
+	public LocalTime getHorarioAtendimento() {
 		return horarioAtendimento;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		DateTimeFormatter fmth = DateTimeFormatter.ofPattern("HH:mm");
 		return super.toString() + String.format("""
 				Especialidade: %s
 				CREF: %s
 				Horario de Atendimento: %s
-				""", especialidade, cref, horarioAtendimento);
+				""", especialidade, cref, horarioAtendimento.format(fmth));
 	}
 
 	public String toString2() {
-		return super.toString2() + String.format("%s;%s;%s;", especialidade, cref, horarioAtendimento);
+		DateTimeFormatter fmth = DateTimeFormatter.ofPattern("HH:mm");
+		return super.toString2() + String.format("%s;%s;%s;", especialidade, cref, horarioAtendimento.format(fmth));
 	}
 
 }

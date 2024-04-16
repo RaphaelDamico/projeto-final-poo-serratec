@@ -1,7 +1,9 @@
 package org.serratec.poo.classes;
 
+import static org.serratec.poo.utils.Utils.*;
+
 public class Avaliacao {
-	private String nomeAluno;
+	private String cpfAluno;
 	private String nomePersonal;
 	private Horario horario;
 	private double alturaAluno;
@@ -9,9 +11,9 @@ public class Avaliacao {
 	private double taxaDeGordura;
 	private String restricoes;
 
-	public Avaliacao(String nomeAluno, String nomePersonal, Horario horario, double alturaAluno, double pesoAluno,
+	public Avaliacao(String cpfAluno, String nomePersonal, Horario horario, double alturaAluno, double pesoAluno,
 			double taxaDeGordura, String restricoes) {
-		this.nomeAluno = nomeAluno;
+		this.cpfAluno = cpfAluno;
 		this.nomePersonal = nomePersonal;
 		this.horario = horario;
 		this.alturaAluno = alturaAluno;
@@ -44,8 +46,8 @@ public class Avaliacao {
 		return restricoes;
 	}
 
-	public String getNomeAluno() {
-		return nomeAluno;
+	public String getCpfAluno() {
+		return cpfAluno;
 	}
 
 	public String getNomePersonal() {
@@ -59,6 +61,8 @@ public class Avaliacao {
 	public double imc() {
 		return pesoAluno / Math.pow(alturaAluno, 2);
 	}
+	
+	
 
 	@Override
 	public String toString() {
@@ -68,9 +72,10 @@ public class Avaliacao {
 				Data: %s Hora: %s
 				Altura: %.2f Metros
 				Peso: %.2f KG
-				Taxa de gordura: %.2f
+				Taxa de gordura: %.2f %
+				Imc: %.2f
 				Restrições: %s
-				""", nomeAluno, nomePersonal, horario.getData(), horario.getHora(), alturaAluno, pesoAluno, taxaDeGordura, restricoes);
+				""", buscaAluno(cpfAluno), nomePersonal, horario.getData(), horario.getHora(), alturaAluno, pesoAluno, taxaDeGordura, imc(), restricoes);
 	}
 
 }

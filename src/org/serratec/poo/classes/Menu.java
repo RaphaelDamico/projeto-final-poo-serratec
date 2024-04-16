@@ -7,6 +7,7 @@ import static org.serratec.poo.utils.Utils.*;
 public class Menu {
 
 	public static void menuAluno(Object pessoa) {
+		Aluno aluno = (Aluno) pessoa;
 		Scanner sc = new Scanner(System.in);
 		int op = 0;
 		while (op != 6) {
@@ -24,6 +25,7 @@ public class Menu {
 			case 4:
 				break;
 			case 5:
+				visualizarAvaliacoesAluno(aluno.getCpf());
 				break;
 			case 6:
 				break;
@@ -46,7 +48,7 @@ public class Menu {
 			case 2:
 				break;
 			case 3:
-				visualizarAvaliacoesRealizadas(personalTrainer.getNome());
+				visualizarAvaliacoesPersonal(personalTrainer.getNome());
 				break;
 			case 4:
 				break;

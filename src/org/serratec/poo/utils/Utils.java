@@ -11,6 +11,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Stream;
@@ -116,7 +118,7 @@ public class Utils {
 		System.out.println("Data Matricula: ");
 		String cref = sc.nextLine();
 		System.out.println("Horario atendimento:");
-		String horarioAtendimento = sc.nextLine();
+		LocalTime horarioAtendimento = LocalTime.parse(sc.nextLine());
 		System.out.println("\n");
 		Contato contato = new Contato(email, telefone);
 		PersonalTrainer novoPersonal =  new PersonalTrainer(nomePersonal, dataNascimento, cpf, contato, senha, especialidade, cref, horarioAtendimento);
@@ -133,13 +135,6 @@ public class Utils {
 		}
 		sc.close();
 	}
-	
-	public static void novaAvaliacao() {
-		Scanner sc = new Scanner(System.in);
-		List<Avaliacao> avaliacoes = listaAvaliacoes();
-		
-		sc.close();
-	}
 
 	public static void mostraPlanos(){
 		List<Plano> planos = (listaPlanos());
@@ -154,13 +149,39 @@ public class Utils {
 		}
 	}
 	
-	
-	
-	public static void visualizarAvaliacoesRealizadas(String nome) {
+	public static void visualizarAvaliacoesPersonal(String nome) {
 		List<Avaliacao> avaliacoes = listaAvaliacoes();
 		List<Avaliacao> avaliacoesRealizadas = avaliacoes.stream()
 				.filter(a -> a.getNomePersonal().equalsIgnoreCase(nome)).toList();
-		System.out.println(avaliacoesRealizadas);
+		for (Avaliacao avaliacao : avaliacoesRealizadas) {
+			System.out.println(avaliacao);
+		}
+	}
+	
+	public static void visualizarAvaliacoesAluno(String cpf) {
+		List<Avaliacao> avaliacoes = listaAvaliacoes();
+		List<Avaliacao> avaliacoesRealizadas = avaliacoes.stream()
+				.filter(a -> a.getCpfAluno().equalsIgnoreCase(cpf)).toList();
+		for (Avaliacao avaliacao : avaliacoesRealizadas) {
+			System.out.println(avaliacao);
+		}
+	}
+	
+	public static String buscaAluno(String cpfAluno){
+		List<Aluno> alunos = (listaAluno());
+		String nomeAluno = null;
+		boolean encontrado = false;
+		for (Aluno aluno : alunos) {
+			if (aluno.getCpf().contains(cpfAluno)) {
+				nomeAluno = aluno.getNome(); 
+				encontrado = true;
+				break;
+			}
+		}
+		if (!encontrado) {
+			System.out.println("Aluno não encontrado!");
+		}
+		return nomeAluno;
 	}
 
 }
