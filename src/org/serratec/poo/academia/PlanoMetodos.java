@@ -3,7 +3,6 @@ package org.serratec.poo.academia;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import static org.serratec.poo.academia.Pessoa.getListaPlanos;
 import static org.serratec.poo.principal.Programa.sc;

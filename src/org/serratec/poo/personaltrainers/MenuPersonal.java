@@ -27,12 +27,17 @@ public class MenuPersonal implements Menu {
     public void escolhaMenu(int opcao) {
         switch (opcao){
             case 1:
+            	//Visualizar agenda de atendimentos.
+
                 exibe();
                 break;
             case 2:
+            	// Registrar avaliações físicas dos alunos.
                 cadastra();
                 break;
             case 3:
+            	//Visualizar lista de avaliações realizadas.
+
                 exibe();
                 break;
             case 4:

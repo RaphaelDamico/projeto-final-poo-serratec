@@ -37,18 +37,25 @@ public class MenuAluno implements Menu {
     public void escolhaMenu(int opcao) {
         switch (opcao){
             case 1:
+            	//Visualizar dados pessoais e plano contratado.
                 exibe();
                 break;
             case 2:
+            	//Solicitar agendamento de horário com personal trainer.
+
                 cadastra();
                 break;
             case 3:
+            	//Visualizar histórico de agendamentos.
                 buscaAgendamento();
                 break;
             case 4:
+            	//Cancelar agendamento.
+
                 remove();
                 break;
             case 5:
+            	//Visualizar avaliações físicas.
                 buscaAgendamento();
                 break;
             case 6:
