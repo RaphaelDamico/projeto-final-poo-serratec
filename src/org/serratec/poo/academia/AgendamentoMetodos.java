@@ -64,7 +64,6 @@ public class AgendamentoMetodos {
 			}
 		}
 		System.out.print("Hora Agendamento: ");
-		;
 		String hora = sc.nextLine();
 		String nomePersonal = null;
 		while (nomePersonal == null) {
@@ -86,7 +85,6 @@ public class AgendamentoMetodos {
 		Agendamento novoAgendamento = new Agendamento(new Horario(dataAgendamento, horaAgendamento), cpf, nomePersonal,
 				status);
 		agendamentos.add(novoAgendamento);
-		System.out.println(agendamentos);
 		try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAgendamento()))) {
 			for (Agendamento agendamento : agendamentos) {
 				escritor.write(agendamento.toString2());
