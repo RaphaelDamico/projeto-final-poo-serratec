@@ -2,6 +2,9 @@ package org.serratec.poo.personaltrainers;
 
 import org.serratec.poo.academia.Menu;
 
+import static org.serratec.poo.academia.AvaliacaoMetodos.novaAvaliacao;
+import static org.serratec.poo.personaltrainers.MetodosPersonal.*;
+
 public class MenuPersonal implements Menu {
     private PersonalTrainer personalTrainer;
 
@@ -28,17 +31,15 @@ public class MenuPersonal implements Menu {
         switch (opcao){
             case 1:
             	//Visualizar agenda de atendimentos.
-
-                exibe();
+                exibe(1);
                 break;
             case 2:
             	// Registrar avaliações físicas dos alunos.
-                cadastra();
+                cadastra(1);
                 break;
             case 3:
             	//Visualizar lista de avaliações realizadas.
-
-                exibe();
+                exibe(2);
                 break;
             case 4:
                 break;
@@ -49,8 +50,13 @@ public class MenuPersonal implements Menu {
     }
 
     @Override
-    public void exibe() {
-
+    public void exibe(int opcao) {
+        if (opcao==1){
+            visualizarAgendamentosPersonal(getPersonalTrainer().getNome());
+        }
+        if (opcao==2){
+            visualizarAvaliacoesPersonal(getPersonalTrainer().getNome());
+        }
     }
 
     @Override
@@ -64,8 +70,8 @@ public class MenuPersonal implements Menu {
     }
 
     @Override
-    public void cadastra() {
-
+    public void cadastra(int opcao) {
+        novaAvaliacao();
     }
 
     @Override

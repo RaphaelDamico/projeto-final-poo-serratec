@@ -46,9 +46,11 @@ public class AgendamentoMetodos{
     }
     public static void novoAgendamento(String cpf ) {
         System.out.print("Data Agendamento: ");
-        LocalDate dataAgendamento = LocalDate.parse(sc.nextLine());
+        String data = sc.nextLine();
+        LocalDate dataAgendamento = LocalDate.parse(data);
         System.out.print("Hora Agendamento: ");
-        LocalTime horaAgendamento = LocalTime.parse(sc.nextLine());
+        String hora = sc.nextLine();
+        LocalTime horaAgendamento = LocalTime.parse(hora);
         String nomePersonal = null;
         while (nomePersonal == null) {
             System.out.print("Personal Trainer: ");

@@ -1,5 +1,6 @@
 package org.serratec.poo.personaltrainers;
 
+import org.serratec.poo.academia.Agendamento;
 import org.serratec.poo.academia.Avaliacao;
 import org.serratec.poo.academia.Contato;
 import org.serratec.poo.alunos.Aluno;
@@ -11,6 +12,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import static org.serratec.poo.academia.AgendamentoMetodos.listaAgendamento;
 import static org.serratec.poo.academia.AvaliacaoMetodos.listaAvaliacoes;
 import static org.serratec.poo.academia.Pessoa.getListaAlunos;
 import static org.serratec.poo.academia.Pessoa.getListaPersonal;
@@ -95,7 +97,17 @@ public class MetodosPersonal {
         List<Avaliacao> avaliacoes = listaAvaliacoes();
         List<Avaliacao> avaliacoesRealizadas = avaliacoes.stream()
                 .filter(a -> a.getNomePersonal().equalsIgnoreCase(nome)).toList();
-        System.out.println(avaliacoesRealizadas);
+        for(Avaliacao avaliacao:avaliacoesRealizadas){
+            System.out.println(avaliacao);
+        }
+    }
+    public static void visualizarAgendamentosPersonal(String nome) {
+        List<Agendamento> agendamentos = listaAgendamento();
+        List<Agendamento> agendamentosRealizados = agendamentos.stream()
+                .filter(a -> a.getPersonalTrainer().equalsIgnoreCase(nome)).toList();
+        for (Agendamento agendamento: agendamentosRealizados){
+            System.out.println(agendamento);
+        }
     }
     public static String buscaPersonal(String nomePersonal){
         List<PersonalTrainer> personalTrainers = (listaPersonal());

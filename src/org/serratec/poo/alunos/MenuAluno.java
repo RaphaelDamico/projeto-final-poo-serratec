@@ -2,11 +2,7 @@ package org.serratec.poo.alunos;
 
 import org.serratec.poo.academia.Agendamento;
 import org.serratec.poo.academia.Menu;
-
-import java.time.LocalDate;
 import java.util.List;
-
-import static java.awt.SystemColor.menu;
 import static org.serratec.poo.academia.AgendamentoMetodos.novoAgendamento;
 import static org.serratec.poo.alunos.MetodosAluno.visualizarAgendamentosAluno;
 import static org.serratec.poo.alunos.MetodosAluno.visualizarAvaliacoesAluno;
@@ -40,16 +36,11 @@ public class MenuAluno implements Menu {
         switch (opcao){
             case 1:
             	//Visualizar dados pessoais e plano contratado.
-                exibe();
+                exibe(1);
                 break;
             case 2:
-<<<<<<< HEAD
             	//Solicitar agendamento de horário com personal trainer.
-
-                cadastra();
-=======
                 cadastra(1);
->>>>>>> 135474ae22d45d800e60fd152a16695465a5c678
                 break;
             case 3:
             	//Visualizar histórico de agendamentos.
@@ -57,16 +48,11 @@ public class MenuAluno implements Menu {
                 break;
             case 4:
             	//Cancelar agendamento.
-
                 remove();
                 break;
             case 5:
-<<<<<<< HEAD
             	//Visualizar avaliações físicas.
-                buscaAgendamento();
-=======
                 buscaAvaliacao();
->>>>>>> 135474ae22d45d800e60fd152a16695465a5c678
                 break;
             case 6:
                 break;
@@ -77,7 +63,7 @@ public class MenuAluno implements Menu {
     }
 
     @Override
-    public void exibe(){
+    public void exibe(int opcao){
         System.out.println(getAluno());
     }
     @Override
@@ -90,7 +76,7 @@ public class MenuAluno implements Menu {
     }
     public void remove(){
         System.out.println("Qual agendamento deseja cancelar?\n");
-        List <Agendamento> agendamentos = visualizarAvaliacoesAluno(getAluno().getCpf());
+        List <Agendamento> agendamentos = visualizarAgendamentosAluno(getAluno().getCpf());
         System.out.println("Digite o índice da avaliação desejada:");
         int op = sc.nextInt();
         if (op>-1 && op-1 <= agendamentos.size()) {

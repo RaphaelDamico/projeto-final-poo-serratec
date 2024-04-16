@@ -1,5 +1,6 @@
 package org.serratec.poo.funcionarios;
 
+import static org.serratec.poo.academia.AvaliacaoMetodos.buscarAvaliacoesPorPeriodo;
 import static org.serratec.poo.academia.PlanoMetodos.mostraPlanos;
 import static org.serratec.poo.academia.PlanoMetodos.novoPlano;
 import static org.serratec.poo.alunos.MetodosAluno.listaAluno;
@@ -7,7 +8,9 @@ import static org.serratec.poo.alunos.MetodosAluno.novoAluno;
 import static org.serratec.poo.funcionarios.MetodosFuncionario.listaFuncionario;
 import static org.serratec.poo.personaltrainers.MetodosPersonal.listaPersonal;
 import static org.serratec.poo.personaltrainers.MetodosPersonal.novoPersonal;
+import static org.serratec.poo.principal.Programa.sc;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -71,7 +74,7 @@ public class MenuFuncionario implements Menu {
                 break;
             case 7:
             	//Emitir relação de avaliações físicas por período
-            	
+            	exibe(7);
                 break;
             case 8:
             	//Sair 
@@ -92,25 +95,30 @@ public class MenuFuncionario implements Menu {
     		for (Aluno aluno : alunos) {
 				System.out.println(aluno);
 			}
-    	}if(opcao == 6) {
-    		List<Funcionario> listaFuncionarios = (listaFuncionario());
-    		List<PersonalTrainer> listaPersonais = (listaPersonal());
+    	}
+        if(opcao == 6) {
     		List<Pessoa> listaCombinada = 
     				Stream.concat(listaFuncionario().stream(), listaPersonal().stream())
     				.collect(Collectors.toList());
     		System.out.println(listaCombinada);
     	}
-
+        if (opcao==7){
+            System.out.println("Insira a data do inicio do periodo (yyyy-MM-dd): ");
+            String dataI = sc.nextLine();
+            LocalDate dataInicio = LocalDate.parse(dataI);
+            System.out.println("Insira a data do fim do periodo (yyyy-MM-dd): ");
+            String dataF = sc.nextLine();
+            LocalDate dataFim = LocalDate.parse(dataF);
+            buscarAvaliacoesPorPeriodo(dataInicio, dataFim);
+        }
     }
 
     @Override
     public void buscaAgendamento() {
-
     }
 
     @Override
     public void buscaAvaliacao() {
-
     }
 
     @Override
