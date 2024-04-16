@@ -35,8 +35,7 @@ public class MetodosAluno {
 						new Contato(dados[3], dados[4]), // contato
 						dados[5], // senha
 						dados[6], // plano
-						matricula, // data matricula
-						dados[11]);// status avaliacao
+						matricula); // data matricula
 				alunos.add(aluno);
 			}
 			txt.close();
@@ -55,7 +54,8 @@ public class MetodosAluno {
 		System.out.println("Nome: ");
 		String nomeAluno = sc.nextLine();
 		System.out.println("Data Nascimento: ");
-		LocalDate dataNascimento = LocalDate.parse(sc.nextLine());
+		String data = sc.nextLine();
+		LocalDate dataNascimento = LocalDate.parse(data);
 		System.out.println("CPF: ");
 		String cpf = sc.nextLine();
 		System.out.println("E-mail: ");
@@ -67,7 +67,8 @@ public class MetodosAluno {
 		System.out.println("Qual o plano desejado: ");
 		String plano = sc.nextLine();
 		System.out.println("Data Matricula: ");
-		LocalDate matricula = LocalDate.parse(sc.nextLine());
+		data = sc.nextLine();
+		LocalDate matricula = LocalDate.parse(data);
 		System.out.println("\n");
 		Contato contato = new Contato(email, telefone);
 		Aluno novoAluno = new Aluno(nomeAluno, dataNascimento, cpf, contato, senha, plano, matricula);
@@ -89,16 +90,18 @@ public class MetodosAluno {
 		List<Avaliacao> avaliacoesRealizadas = avaliacoes.stream().filter(a -> a.getCpfAluno().equalsIgnoreCase(cpf))
 				.toList();
 		for (Avaliacao avaliacao : avaliacoesRealizadas) {
-			System.out.println(avaliacao);
+			System.out.println(avaliacao + "\n");
 		}
 	}
 
 	public static List<Agendamento> visualizarAgendamentosAluno(String cpf) {
 		List<Agendamento> agendamentos = listaAgendamento();
-		List<Agendamento> agendamentosFuturos = agendamentos.stream().filter(a -> a.getCPFAluno().equalsIgnoreCase(cpf))
+		agendamentos = agendamentos.stream().filter(a -> a.getCPFAluno().equalsIgnoreCase(cpf))
 				.toList();
-		for (Agendamento agendamento : agendamentosFuturos) {
-			System.out.println(agendamento);
+		int i = -1;
+		for (Agendamento agendamento : agendamentos) {
+			i ++;
+			System.out.println((i + 1) + "=\n" + agendamento + "\n");
 		}
 		return agendamentos;
 	}
@@ -115,7 +118,7 @@ public class MetodosAluno {
 			}
 		}
 		if (!encontrado) {
-			System.out.println("Aluno não encontrado!");
+			System.out.println("Aluno não encontrado!\n");
 		}
 		return nomeAluno;
 	}

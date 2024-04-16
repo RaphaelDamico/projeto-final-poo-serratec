@@ -80,7 +80,7 @@ public class AgendamentoMetodos {
 			}
 		}
 		LocalTime horaAgendamento = LocalTime.parse(hora);
-		System.out.print("Status Agendamento: ");
+		System.out.print("Status Agendamento: \n");
 		Status status = leStatus();
 		Agendamento novoAgendamento = new Agendamento(new Horario(dataAgendamento, horaAgendamento), cpf, nomePersonal,
 				status);

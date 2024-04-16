@@ -55,7 +55,8 @@ public class MetodosPersonal {
 		System.out.println("Nome: ");
 		String nomePersonal = sc.nextLine();
 		System.out.println("Data Nascimento: ");
-		LocalDate dataNascimento = LocalDate.parse(sc.nextLine());
+		String data = sc.nextLine();
+		LocalDate dataNascimento = LocalDate.parse(data);
 		System.out.println("CPF: ");
 		String cpf = sc.nextLine();
 		System.out.println("E-mail: ");
@@ -66,7 +67,7 @@ public class MetodosPersonal {
 		String senha = sc.nextLine();
 		System.out.println("Especialidade: ");
 		String especialidade = sc.nextLine();
-		System.out.println("Data Matricula: ");
+		System.out.println("CREF: ");
 		String cref = sc.nextLine();
 		System.out.println("Horario atendimento:");
 		String horarioAtendimento = sc.nextLine();
