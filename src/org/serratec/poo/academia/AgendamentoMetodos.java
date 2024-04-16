@@ -1,5 +1,7 @@
 package org.serratec.poo.academia;
 
+import org.serratec.poo.alunos.Aluno;
+
 import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -7,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.serratec.poo.academia.Pessoa.getListaAgendamento;
+import static org.serratec.poo.personaltrainers.MetodosPersonal.buscaPersonal;
 import static org.serratec.poo.principal.Programa.sc;
 
 public class AgendamentoMetodos{
@@ -41,18 +44,28 @@ public class AgendamentoMetodos{
         }
         return agendamentos;
     }
-    public static void novoAgendamento() {
+    public static void novoAgendamento(String cpf ) {
         System.out.print("Data Agendamento: ");
         LocalDate dataAgendamento = LocalDate.parse(sc.nextLine());
         System.out.print("Hora Agendamento: ");
         LocalTime horaAgendamento = LocalTime.parse(sc.nextLine());
-        System.out.print("CPF Aluno Agendado: ");
-        String nomeAluno = sc.nextLine();
-        System.out.print("Personal Trainer: ");
-        String nomePersonal = sc.nextLine();
+        String nomePersonal = null;
+        while (nomePersonal == null) {
+            System.out.print("Personal Trainer: ");
+            String nomeBusca = sc.nextLine();
+            nomePersonal = buscaPersonal(nomeBusca);
+            if (nomePersonal == null){
+                System.out.println("Deseja buscar um novo personal? (s/n)");
+                String op = sc.nextLine();
+                if (op.equalsIgnoreCase("n")){
+                    System.out.println("Retornando ao menu...");
+                    break;
+                }
+            }
+        }
         System.out.print("Status Agendamento: ");
         Status status = leStatus();
-        Agendamento novoAgendamento = new Agendamento(new Horario(dataAgendamento, horaAgendamento), nomeAluno,
+        Agendamento novoAgendamento = new Agendamento(new Horario(dataAgendamento, horaAgendamento), cpf,
                 nomePersonal, status);
         agendamentos.add(novoAgendamento);
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAgendamento()))) {

@@ -2,6 +2,7 @@ package org.serratec.poo.personaltrainers;
 
 import org.serratec.poo.academia.Avaliacao;
 import org.serratec.poo.academia.Contato;
+import org.serratec.poo.alunos.Aluno;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -95,5 +96,20 @@ public class MetodosPersonal {
         List<Avaliacao> avaliacoesRealizadas = avaliacoes.stream()
                 .filter(a -> a.getNomePersonal().equalsIgnoreCase(nome)).toList();
         System.out.println(avaliacoesRealizadas);
+    }
+    public static String buscaPersonal(String nomePersonal){
+        List<PersonalTrainer> personalTrainers = (listaPersonal());
+        boolean encontrado = false;
+        for (PersonalTrainer personalTrainer : personalTrainers) {
+            if (personalTrainer.getNome().contains(nomePersonal)) {
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado) {
+            nomePersonal = null;
+            System.out.println("Profissional não cadastrado!");
+        }
+        return nomePersonal;
     }
 }

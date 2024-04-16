@@ -67,7 +67,7 @@ public class MenuAluno implements Menu {
     }
     @Override
     public void cadastra(int opcao) {
-        novoAgendamento();
+        novoAgendamento(getAluno().getCpf());
     }
     @Override
     public void buscaAgendamento() {
