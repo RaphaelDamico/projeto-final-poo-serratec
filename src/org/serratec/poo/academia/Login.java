@@ -33,37 +33,36 @@ public class Login {
 			System.out.print("Senha: ");
 			senha = sc.nextLine();
 			limpaTela();
-		}while (cpf == "" || senha == "");
+		} while (cpf == "" || senha == "");
 
 		Pessoa pessoa = (Pessoa) validaLogin(cpf, senha, alunos, personais, funcionarios);
 
 		Menu menu;
-		int opcao=0;
-		if (pessoa instanceof Aluno){
+		int opcao = 0;
+		if (pessoa instanceof Aluno) {
 			menu = new MenuAluno((Aluno) pessoa);
-			while(opcao!=6) {
+			while (opcao != 6) {
 				menu.exibeMenu();
 				opcao = sc.nextInt();
 				menu.escolhaMenu(opcao);
 			}
 		}
-		if (pessoa instanceof PersonalTrainer){
-			while(opcao!=4) {
+		if (pessoa instanceof PersonalTrainer) {
+			while (opcao != 4) {
 				menu = new MenuPersonal((PersonalTrainer) pessoa);
 				menu.exibeMenu();
 				opcao = sc.nextInt();
 				menu.escolhaMenu(opcao);
 			}
 		}
-		if (pessoa instanceof Funcionario){
-			while(opcao!=7) {
+		if (pessoa instanceof Funcionario) {
+			while (opcao != 7) {
 				menu = new MenuFuncionario((Funcionario) pessoa);
 				menu.exibeMenu();
 				opcao = sc.nextInt();
 				menu.escolhaMenu(opcao);
 			}
-		}
-		else {
+		} else {
 			System.out.println("OBRIGADO POR USAR NOSSO SISTEMA");
 			return;
 		}

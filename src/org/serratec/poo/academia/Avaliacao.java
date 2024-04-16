@@ -73,10 +73,12 @@ public class Avaliacao {
 				Taxa de gordura: %.2f
 				Imc: %.2f
 				Restrições: %s
-				""", buscaAluno(cpfAluno), nomePersonal, horario.getData(), horario.getHora(), alturaAluno, pesoAluno, taxaDeGordura, imc(), restricoes);
+				""", buscaAluno(cpfAluno), nomePersonal, horario.getData(), horario.getHora(), alturaAluno, pesoAluno,
+				taxaDeGordura, imc(), restricoes);
 	}
+
 	public String toString2() {
-		return String.format("%s;%s;%s;%s;%s;%s;%s;%s",
-				cpfAluno,nomePersonal,horario.getData(),horario.getHora(),alturaAluno,pesoAluno,taxaDeGordura,restricoes);
+		return String.format("%s;%s;%s;%s;%s;%s;%s;%s", cpfAluno, nomePersonal, horario.getData(), horario.getHora(),
+				alturaAluno, pesoAluno, taxaDeGordura, restricoes);
 	}
 }

@@ -38,7 +38,8 @@ public class Plano {
 				Descrição do plano: %s
 				""", nomeDoPlano, duracao, valor, descricao);
 	}
-	public String toString2(){
+
+	public String toString2() {
 		return String.format("%s;%s;%s;%s", nomeDoPlano, duracao, valor, descricao);
 	}
 

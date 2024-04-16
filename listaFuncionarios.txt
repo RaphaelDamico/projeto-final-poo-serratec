@@ -1,16 +1,7 @@
 Ana Silva;1987-05-12;91743620856;ana.silva@email.com;12345678;123456;Gerente
-Carlos Santos;1990-09-23;75281390542;carlos.santos@email.com;98765432;987654;atendente
-Maria Oliveira;1985-07-03;92607538169;maria.oliveira@email.com;45678912;456789;contabilidade
-João Pereira;1982-11-17;47980563024;joao.pereira@email.com;78912345;789123;RH
-Luiza Costa;1996-02-29;96314705828;luiza.costa@email.com;32165498;321654;Auxiliar_de_servicos_gerais
-Pedro Almeida;1993-04-08;32578941053;pedro.almeida@email.com;65498732;654987;professor
-Fernanda Souza;1988-06-14;07859421305;fernanda.souza@email.com;23456789;234567;gerente
-Rafael Lima;1991-10-25;91547628382;rafael.lima@email.com;78912345;789123;atendente
-Amanda Ferreira;1986-03-07;89405367102;amanda.ferreira@email.com;45678912;456789;contabilidade
-Marcos Santos;1983-05-19;64250317985;marcos.santos@email.com;98765432;987654;RH
-João Pedro;2000-08-21;19051981759;ppzovsky@gmail.com;992943436;senha;gerente
-Camila Oliveira;1997-08-02;84369251007;camila.oliveira@email.com;32165498;321654;Auxiliar_de_servicos_gerais
-José Pereira;1981-12-16;95316870242;jose.pereira@email.com;65498732;654987;professor
-Patrícia Costa;1985-03-28;51786234094;patricia.costa@email.com;23456789;234567;gerente
-Gustavo Lima;1992-11-04;12609457380;gustavo.lima@email.com;78912345;789123;atendente
-Carolina Ferreira;1987-09-06;94701582360;carolina.ferreira@email.com;45678912;456789;contabilidade
+Fernanda Souza;1988-06-14;07859421305;fernanda.souza@email.com;23456789;234567;Gerente
+Carina Santos;1990-09-23;75281390542;carlos.santos@email.com;98765432;987654;Atendente
+Rafaela Lima;1991-10-25;91547628382;rafael.lima@email.com;78912345;789123;Atendente
+Gustavo Lima;1992-11-04;12609457380;gustavo.lima@email.com;78912345;789123;Atendente
+Maria Luiza Costa;1976-02-29;96314705828;luiza.costa@email.com;32165498;321654;Auxiliar_de_servicos_gerais
+Romildo Teixeira;1980-08-02;84369251007;camila.oliveira@email.com;32165498;321654;Auxiliar_de_servicos_gerais

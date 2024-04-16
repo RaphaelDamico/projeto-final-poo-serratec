@@ -35,6 +35,7 @@ public abstract class Pessoa implements Comparable<Pessoa> {
 	public static String getListaAvaliacoes() {
 		return TXTAVALIACOES;
 	}
+
 	public static String getListaAgendamento() {
 		return TXTAGENDAMENTOS;
 	}

@@ -12,7 +12,7 @@ import static org.serratec.poo.principal.Programa.sc;
 
 public class LoginMetodos {
 	public static Object validaLogin(String cpf, String senha, List<Aluno> alunos, List<PersonalTrainer> personais,
-									 List<Funcionario> funcionarios) throws IOException {
+			List<Funcionario> funcionarios) throws IOException {
 
 		Object pessoa = null;
 		boolean encontrado = false;

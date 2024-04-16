@@ -14,7 +14,7 @@ public class Aluno extends Pessoa {
 	private String statusAvaliacao;
 
 	public Aluno(String nome, LocalDate dataDeNascimento, String cpf, Contato contato, String senha, String plano,
-				 LocalDate dataMatricula, String statusAvaliacao) {
+			LocalDate dataMatricula, String statusAvaliacao) {
 		super(nome, dataDeNascimento, cpf, contato, senha);
 		this.plano = plano;
 		this.dataMatricula = dataMatricula;
@@ -55,7 +55,7 @@ public class Aluno extends Pessoa {
 				""", plano, dataMatricula.format(fmt), statusAvaliacao);
 	}
 
-		public String toString2() {
+	public String toString2() {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		return super.toString2() + String.format("%s;%s;%s;", plano, dataMatricula.format(fmt), avaliacao);
 	}
