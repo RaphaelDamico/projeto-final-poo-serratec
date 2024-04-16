@@ -20,6 +20,7 @@ import java.util.stream.Stream;
 import org.serratec.poo.classes.Pessoa;
 import org.serratec.poo.classes.Aluno;
 import org.serratec.poo.classes.Avaliacao;
+import org.serratec.poo.classes.Cargo;
 import org.serratec.poo.classes.Contato;
 import org.serratec.poo.classes.PersonalTrainer;
 import org.serratec.poo.classes.Plano;
@@ -182,6 +183,36 @@ public class Utils {
 			System.out.println("Aluno não encontrado!");
 		}
 		return nomeAluno;
+	}
+	
+	public static Cargo leCargo() {
+		Scanner sc = new Scanner(System.in);
+		int opcao = -1;
+		Cargo cargo = null;
+		
+		boolean cargoOK = false;
+		while(!cargoOK) {
+			System.out.printf("""	
+							Selecione o cargo desejado:
+							1- Gerente
+							2- Auxiliar de Serviços Gerais
+							3- Atendente
+							
+							""");
+			
+			opcao = sc.nextInt();
+			
+			if(opcao == 1) {
+				cargo = Cargo.GERENTE;
+				break;
+			}else if (opcao == 2) {
+				cargo = Cargo.AUXILIAR_DE_SERVICOS_GERAIS;
+				break;
+			}else if (opcao == 3) {
+				cargo = Cargo.ATENDENTE;
+				break;
+			}
+		}
 	}
 
 }
