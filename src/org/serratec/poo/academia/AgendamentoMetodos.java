@@ -46,9 +46,23 @@ public class AgendamentoMetodos{
     }
     public static void novoAgendamento(String cpf ) {
         agendamentos = listaAgendamento();
-        System.out.print("Data Agendamento: ");
-        sc.nextLine();
-        String data = sc.nextLine();
+        boolean validaData = false;
+        LocalDate dataAgendamento = null;
+        while (!validaData){
+            System.out.print("Data Agendamento: ");
+            sc.nextLine();
+            String data = sc.nextLine();
+            dataAgendamento = LocalDate.parse(data);
+            validaData = validaDataAgendamento(dataAgendamento);
+            if (!validaData){
+                System.out.println("Deseja escolher uma nova data?(S/N)");
+                String op = sc.nextLine();
+                if (op.equalsIgnoreCase("n")){
+                    System.out.println("Retornando ao menu...");
+                    break;
+                }
+            }
+        }
         System.out.print("Hora Agendamento: ");;
         String hora = sc.nextLine();
         String nomePersonal = null;
@@ -65,7 +79,6 @@ public class AgendamentoMetodos{
                 }
             }
         }
-        LocalDate dataAgendamento = LocalDate.parse(data);
         LocalTime horaAgendamento = LocalTime.parse(hora);
         System.out.print("Status Agendamento: ");
         Status status = leStatus();
@@ -110,5 +123,16 @@ public class AgendamentoMetodos{
             }
         }
         return status;
+    }
+    public static boolean validaDataAgendamento(LocalDate data) {
+        LocalDate dataAtual = LocalDate.now();
+
+        if(data.isEqual(dataAtual) || data.isAfter(dataAtual)) {
+            return true;
+        } else {
+            System.err.println("Você não pode fazer agendamentos para datas passadas");
+            return false;
+        }
+
     }
 }

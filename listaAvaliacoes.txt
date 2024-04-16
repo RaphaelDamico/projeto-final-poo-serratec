@@ -1,6 +1,7 @@
-30495867205;Lucas Oliveira;2022-09-09;08:15;1.71;85;28;Hipertensão Arterial
-25648973201;Rafaela Costa;2022-01-23;14:30;1.80;100;33;Diabetes tipo 2
-32450689173;Mariana Santos;2023-10-14;10:30;1.68;93;33;Lesão na panturrilha direita
-50849627135;Gustavo Lima;2022-12-27;11:15;1.60;65;20;Não possui restrição
-16287349050;Pedro Almeida;2022-08-24;08:30;1.75;87;27;Bronquite Asmática
-201012038;Fernanda Pereira;2023-07-25;14:30;1.73;65;26;Não possui restrição
+30495867205;Lucas Oliveira;2022-09-09;08:15;1.71;85.0;28.0;Hipertensão Arterial
+25648973201;Rafaela Costa;2022-01-23;14:30;1.8;100.0;33.0;Diabetes tipo 2
+32450689173;Mariana Santos;2023-10-14;10:30;1.68;93.0;33.0;Lesão na panturrilha direita
+50849627135;Gustavo Lima;2022-12-27;11:15;1.6;65.0;20.0;Não possui restrição
+16287349050;Pedro Almeida;2022-08-24;08:30;1.75;87.0;27.0;Bronquite Asmática
+201012038;Fernanda Pereira;2023-07-25;14:30;1.73;65.0;26.0;Não possui restrição
+201012038;Gustavo Lima;2024-04-16;16:00;1.87;80.0;24.0;Nenhuma

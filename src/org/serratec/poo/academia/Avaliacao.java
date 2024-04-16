@@ -70,7 +70,7 @@ public class Avaliacao {
 				Data: %s Hora: %s
 				Altura: %.2f Metros
 				Peso: %.2f KG
-				Taxa de gordura: %.2f %
+				Taxa de gordura: %.2f
 				Imc: %.2f
 				Restrições: %s
 				""", buscaAluno(cpfAluno), nomePersonal, horario.getData(), horario.getHora(), alturaAluno, pesoAluno, taxaDeGordura, imc(), restricoes);

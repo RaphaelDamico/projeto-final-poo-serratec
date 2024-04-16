@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.util.List;
 
 import static org.serratec.poo.academia.Login.chamaLogin;
-import static org.serratec.poo.academia.Utils.limpaTela;
 import static org.serratec.poo.principal.Programa.sc;
 
 public class LoginMetodos {

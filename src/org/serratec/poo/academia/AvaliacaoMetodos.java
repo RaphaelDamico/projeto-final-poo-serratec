@@ -8,6 +8,7 @@ import java.util.List;
 
 import static org.serratec.poo.academia.Pessoa.getListaAgendamento;
 import static org.serratec.poo.academia.Pessoa.getListaAvaliacoes;
+import static org.serratec.poo.alunos.MetodosAluno.buscaAluno;
 import static org.serratec.poo.personaltrainers.MetodosPersonal.buscaPersonal;
 import static org.serratec.poo.principal.Programa.sc;
 
@@ -48,15 +49,29 @@ public class AvaliacaoMetodos {
     }
     public static void novaAvaliacao(){
         List<Avaliacao> avaliacoes = (listaAvaliacoes());
-        System.out.println("CPF do Aluno: ");
-        String cpfAluno = sc.nextLine();
+        String cpfAluno = null;
+        while (cpfAluno == null){
+            System.out.println("CPF do Aluno: ");
+            sc.nextLine();
+            String cpfBusca = sc.nextLine();
+            cpfAluno = buscaAluno(cpfBusca);
+            if (cpfAluno == null){
+                System.out.println("Aluno não econtrado...\n");
+                System.out.println("Deseja buscar um novo aluno? (S/N)");
+                String op = sc.nextLine();
+                if (op.equalsIgnoreCase("n")){
+                    System.out.println("Retornando ao menu...");
+                    break;
+                }
+            }
+        }
         String nomePersonal = null;
         while (nomePersonal == null) {
             System.out.print("Personal Trainer: ");
             String nomeBusca = sc.nextLine();
             nomePersonal = buscaPersonal(nomeBusca);
             if (nomePersonal == null){
-                System.out.println("Deseja buscar um novo personal? (s/n)");
+                System.out.println("Deseja buscar um novo personal? (S/N)");
                 String op = sc.nextLine();
                 if (op.equalsIgnoreCase("n")){
                     System.out.println("Retornando ao menu...");
@@ -66,22 +81,23 @@ public class AvaliacaoMetodos {
         }
         System.out.println("Data: ");
         String data = sc.nextLine();
-        LocalDate dataAvaliacao = LocalDate.parse(data);
         System.out.println("Horário: ");
         String hora = sc.nextLine();
-        LocalTime horaAvaliacao = LocalTime.parse(hora);
         System.out.println("Altura do Aluno: ");
         double altura = sc.nextDouble();
         System.out.println("Peso do Aluno: ");
         double peso = sc.nextDouble();
         System.out.println("Taxa de Gordura: ");
         double taxaDeGordura = sc.nextDouble();
+        sc.nextLine();
         System.out.println("Restrições: ");
         String restricoes = sc.nextLine();
+        LocalTime horaAvaliacao = LocalTime.parse(hora);
+        LocalDate dataAvaliacao = LocalDate.parse(data);
         Horario horario = new Horario(dataAvaliacao, horaAvaliacao);
         Avaliacao novoAvaliacao =  new Avaliacao(cpfAluno, nomePersonal, horario, altura, peso, taxaDeGordura, restricoes);
         avaliacoes.add(novoAvaliacao);
-        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAgendamento()))) {
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAvaliacoes()))) {
             for (Avaliacao avaliacao : avaliacoes) {
                 escritor.write(avaliacao.toString2());
                 escritor.newLine();
