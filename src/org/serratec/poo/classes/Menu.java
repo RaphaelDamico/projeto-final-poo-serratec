@@ -3,6 +3,8 @@ package org.serratec.poo.classes;
 import java.util.Scanner;
 import static org.serratec.poo.utils.UtilsMenu.*;
 import static org.serratec.poo.utils.Utils.*;
+import static org.serratec.poo.utils.escreveArquivo.novoAgendamento;;
+
 
 public class Menu {
 
@@ -18,6 +20,7 @@ public class Menu {
 				System.out.println(pessoa);
 				break;
 			case 2:
+				novoAgendamento();
 				break;
 			case 3:
 				System.out.println("VAMO PORRAAAAAAA");

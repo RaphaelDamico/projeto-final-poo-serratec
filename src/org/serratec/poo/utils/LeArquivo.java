@@ -7,7 +7,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -168,5 +167,35 @@ public class LeArquivo {
 			System.err.println("Erro ao ler o arquivo " + e.getMessage());
 		}
 		return avaliacoes;
+	}
+	public static List<Agendamento> listaAgendamento() {
+		List<Agendamento> agendamentos = new ArrayList<>();
+		try {
+			String diretorio = getListaAgendamento();
+			BufferedReader txt = new BufferedReader(new FileReader(diretorio));
+			
+			String linha;
+			while ((linha = txt.readLine()) != null) {
+				// Processar cada linha
+				String[] dados = linha.split(";");
+				LocalDate dataAgendamento = LocalDate.parse(dados[0]);
+				LocalTime horaAgendamento = LocalTime.parse(dados[1]);
+				Status status = Status.valueOf(dados[4].toUpperCase());
+			
+				Agendamento agendamento = new Agendamento(
+						new Horario(dataAgendamento,horaAgendamento), // data e hora agendamento
+						dados[2], // Nome aluno
+						dados[3], //Nome personal
+						status);// Status
+				agendamentos.add(agendamento);
+			}
+			txt.close();
+		} catch (FileNotFoundException e) {
+			System.err.println("Erro ao encontrar arquivo: " + e.getMessage());
+			
+		} catch (IOException e) {
+			System.err.println("Erro ao ler o arquivo " + e.getMessage());
+		}
+		return agendamentos;
 	}
 }

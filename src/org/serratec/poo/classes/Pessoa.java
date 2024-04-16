@@ -14,6 +14,7 @@ public abstract class Pessoa implements Comparable<Pessoa> {
 	private static final String TXTFUNCIONARIO = "listaFuncionarios.txt";
 	private static final String TXTPLANOS = "listaPlanos.txt";
 	private static final String TXTAVALIACOES = "listaAvaliacoes.txt";
+	private static final String TXTAGENDAMENTOS = "listaAgendamento.txt";
 
 	public static String getListaAlunos() {
 		return TXTALUNOS;
@@ -33,6 +34,10 @@ public abstract class Pessoa implements Comparable<Pessoa> {
 
 	public static String getListaAvaliacoes() {
 		return TXTAVALIACOES;
+	}
+
+	public static String getListaAgendamento() {
+		return TXTAGENDAMENTOS;
 	}
 
 	public Pessoa(String nome, LocalDate dataDeNascimento, String cpf, Contato contato, String senha) {
@@ -68,10 +73,6 @@ public abstract class Pessoa implements Comparable<Pessoa> {
 		return this.getNome().compareTo(o.getNome());
 
 	}
-	// public int getIdade(LocalDate dataDeNascimento) {
-//		LocalDate idade = utils.converteIdade(dataDeNascimento);
-//		return getIdade(idade);
-//	}
 
 	@Override
 	public String toString() {

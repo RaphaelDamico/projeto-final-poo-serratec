@@ -1,27 +1,28 @@
 package org.serratec.poo.utils;
 
-import static org.serratec.poo.classes.Pessoa.*;
-import static org.serratec.poo.utils.LeArquivo.*;
+import static org.serratec.poo.classes.Pessoa.getListaAgendamento;
+import static org.serratec.poo.utils.LeArquivo.listaAgendamento;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Scanner;
 
-import org.serratec.poo.classes.Status;
-import org.serratec.poo.classes.Horario;
 import org.serratec.poo.classes.Agendamento;
+import org.serratec.poo.classes.Horario;
+import org.serratec.poo.classes.Status;
 
 public class escreveArquivo {
 	public static void novoAgendamento() {
 		Scanner sc = new Scanner(System.in);
-		List<Agendamento> agendamentos = (listaAgendamento());
+		List<Agendamento> agendamentos = listaAgendamento();
 		System.out.print("Data Agendamento: ");
 		LocalDate dataAgendamento = LocalDate.parse(sc.nextLine());
 		System.out.print("Hora Agendamento: ");
-		String horaAgendamento = sc.nextLine();
+		LocalTime horaAgendamento = LocalTime.parse(sc.nextLine());
 		System.out.print("Aluno: ");
 		String nomeAluno = sc.nextLine();
 		System.out.print("Personal Trainer: ");
