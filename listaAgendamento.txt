@@ -1,2 +1,3 @@
-Eduardo;Monica;2024-05-05;11:00;PENDENTE
-Jose;Carlos;2024-05-20;15:00;DESMARCADO
+Eduardo;Monica;2024-05-05;11:00
+Jose;Carlos;2024-05-20;15:00
+201012038;Lucas Oliveira;2024-12-12;11:00

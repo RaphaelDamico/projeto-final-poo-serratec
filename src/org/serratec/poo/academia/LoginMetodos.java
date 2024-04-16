@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.List;
 
 import static org.serratec.poo.academia.Login.chamaLogin;
+import static org.serratec.poo.academia.Utils.limpaTela;
 import static org.serratec.poo.principal.Programa.sc;
 
 public class LoginMetodos {
@@ -18,26 +19,29 @@ public class LoginMetodos {
 		boolean encontrado = false;
 
 		for (Aluno aluno : alunos) {
-			if (aluno.getCpf().contains(cpf) && aluno.getSenha().contains(senha)) {
+			if (aluno.getCpf().equals(cpf) && aluno.getSenha().equals(senha)) {
 				encontrado = true;
 				pessoa = aluno;
+				System.out.printf("\t\t======== BEM VINDO %s ==========\n\n", aluno.getNome());
 				break;
 			}
 		}
 		if (!encontrado) {
 			for (PersonalTrainer personalTrainer : personais) {
-				if (personalTrainer.getCpf().contains(cpf) && personalTrainer.getSenha().contains(senha)) {
+				if (personalTrainer.getCpf().equals(cpf) && personalTrainer.getSenha().equals(senha)) {
 					encontrado = true;
 					pessoa = personalTrainer;
+					System.out.printf("\t\t======== BEM VINDO %s ==========\n\n", personalTrainer.getNome());
 					break;
 				}
 			}
 		}
 		if (!encontrado) {
 			for (Funcionario funcionario : funcionarios) {
-				if (funcionario.getCpf().contains(cpf) && funcionario.getSenha().contains(senha)) {
+				if (funcionario.getCpf().equals(cpf) && funcionario.getSenha().equals(senha)) {
 					encontrado = true;
 					pessoa = funcionario;
+					System.out.printf("\t\t======== BEM VINDO %s ==========\n\n", funcionario.getNome());
 					break;
 				}
 			}
@@ -59,4 +63,5 @@ public class LoginMetodos {
 		}
 		return pessoa;
 	}
+
 }

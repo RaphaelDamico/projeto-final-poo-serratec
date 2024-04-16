@@ -45,12 +45,12 @@ public class AgendamentoMetodos{
         return agendamentos;
     }
     public static void novoAgendamento(String cpf ) {
+        agendamentos = listaAgendamento();
         System.out.print("Data Agendamento: ");
+        sc.nextLine();
         String data = sc.nextLine();
-        LocalDate dataAgendamento = LocalDate.parse(data);
-        System.out.print("Hora Agendamento: ");
+        System.out.print("Hora Agendamento: ");;
         String hora = sc.nextLine();
-        LocalTime horaAgendamento = LocalTime.parse(hora);
         String nomePersonal = null;
         while (nomePersonal == null) {
             System.out.print("Personal Trainer: ");
@@ -65,11 +65,14 @@ public class AgendamentoMetodos{
                 }
             }
         }
+        LocalDate dataAgendamento = LocalDate.parse(data);
+        LocalTime horaAgendamento = LocalTime.parse(hora);
         System.out.print("Status Agendamento: ");
         Status status = leStatus();
         Agendamento novoAgendamento = new Agendamento(new Horario(dataAgendamento, horaAgendamento), cpf,
                 nomePersonal, status);
         agendamentos.add(novoAgendamento);
+        System.out.println(agendamentos);
         try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAgendamento()))) {
             for (Agendamento agendamento : agendamentos) {
                 escritor.write(agendamento.toString2());

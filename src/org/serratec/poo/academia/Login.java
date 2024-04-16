@@ -9,6 +9,8 @@ import org.serratec.poo.personaltrainers.PersonalTrainer;
 
 import java.io.IOException;
 import java.util.List;
+
+import static org.serratec.poo.academia.Utils.limpaTela;
 import static org.serratec.poo.alunos.MetodosAluno.listaAluno;
 import static org.serratec.poo.funcionarios.MetodosFuncionario.listaFuncionario;
 import static org.serratec.poo.personaltrainers.MetodosPersonal.listaPersonal;
@@ -22,10 +24,17 @@ public class Login {
 		List<PersonalTrainer> personais = listaPersonal();
 		List<Funcionario> funcionarios = listaFuncionario();
 
-		System.out.print("Insira seu CPF:");
-		String cpf = sc.nextLine();
-		System.out.print("Senha: ");
-		String senha = sc.nextLine();
+		String cpf;
+		String senha;
+
+		do {
+			System.out.print("Insira seu CPF:");
+			cpf = sc.nextLine();
+			System.out.print("Senha: ");
+			senha = sc.nextLine();
+			limpaTela();
+		}while (cpf == "" || senha == "");
+
 		Pessoa pessoa = (Pessoa) validaLogin(cpf, senha, alunos, personais, funcionarios);
 
 		Menu menu;
