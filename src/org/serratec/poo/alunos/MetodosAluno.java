@@ -9,11 +9,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 import static org.serratec.poo.academia.AgendamentoMetodos.listaAgendamento;
 import static org.serratec.poo.academia.AvaliacaoMetodos.listaAvaliacoes;
-import static org.serratec.poo.academia.Pessoa.getListaAgendamento;
 import static org.serratec.poo.academia.Pessoa.getListaAlunos;
 import static org.serratec.poo.principal.Programa.sc;
 
@@ -45,6 +43,7 @@ public class MetodosAluno {
 		} catch (FileNotFoundException e) {
 			System.err.println("Erro ao encontrar arquivo: " + e.getMessage());
 
+<<<<<<< HEAD
 		} catch (IOException e) {
 			System.err.println("Erro ao ler o arquivo " + e.getMessage());
 		}
@@ -120,4 +119,82 @@ public class MetodosAluno {
 		}
 		return nomeAluno;
 	}
+=======
+        } catch (IOException e) {
+            System.err.println("Erro ao ler o arquivo " + e.getMessage());
+        }
+        Collections.sort(alunos);
+        return alunos;
+    }
+    public static void novoAluno(){
+        List<Aluno> alunos = (listaAluno());
+        System.out.println("Nome: ");
+        String nomeAluno = sc.nextLine();
+        System.out.println("Data Nascimento: ");
+        LocalDate dataNascimento = LocalDate.parse(sc.nextLine());
+        System.out.println("CPF: ");
+        String cpf = sc.nextLine();
+        System.out.println("E-mail: ");
+        String email = sc.nextLine();
+        System.out.println("Telefone: ");
+        String telefone = sc.nextLine();
+        System.out.println("Senha: ");
+        String senha = sc.nextLine();
+        System.out.println("Qual o plano desejado: ");
+        String plano = sc.nextLine();
+        System.out.println("Data Matricula: ");
+        LocalDate matricula = LocalDate.parse(sc.nextLine());
+        System.out.println("\n");
+        Contato contato = new Contato(email, telefone);
+        Aluno novoAluno =  new Aluno(nomeAluno, dataNascimento, cpf, contato, senha, plano, matricula);
+        alunos.add(novoAluno);
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAlunos()))) {
+            for (Aluno aluno : alunos) {
+                escritor.write(aluno.toString2());
+                escritor.newLine();
+            }
+            System.out.println("Aluno cadastrado com sucesso.");
+        }
+        catch (IOException e) {
+            System.out.println("\nErro cadastrar novo aluno.");
+        }
+        sc.close();
+    }
+    public static List<Agendamento> visualizarAvaliacoesAluno(String cpf) {
+        List<Avaliacao> avaliacoes = listaAvaliacoes();
+        List<Avaliacao> avaliacoesRealizadas = avaliacoes.stream()
+                .filter(a -> a.getCpfAluno().equalsIgnoreCase(cpf)).toList();
+        for (Avaliacao avaliacao : avaliacoesRealizadas) {
+            System.out.println(avaliacao);
+        }
+        return null;
+    }
+    public static List<Agendamento> visualizarAgendamentosAluno(String cpf) {
+        List<Agendamento> agendamentos = listaAgendamento();
+        List<Agendamento> agendamentosFuturos = agendamentos.stream()
+                .filter(a -> a.getCPFAluno().equalsIgnoreCase(cpf)).toList();
+        int i = -1;
+        for (Agendamento agendamento : agendamentosFuturos) {
+            i++;
+            System.out.println(i + "-" + agendamento);
+        }
+        return agendamentosFuturos;
+    }
+    public static String buscaAluno(String cpfAluno){
+        List<Aluno> alunos = (listaAluno());
+        String nomeAluno = null;
+        boolean encontrado = false;
+        for (Aluno aluno : alunos) {
+            if (aluno.getCpf().contains(cpfAluno)) {
+                nomeAluno = aluno.getNome();
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado) {
+            System.out.println("Aluno não encontrado!");
+        }
+        return nomeAluno;
+    }
+>>>>>>> 135474ae22d45d800e60fd152a16695465a5c678
 }
