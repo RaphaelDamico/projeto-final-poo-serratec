@@ -5,6 +5,8 @@ import org.serratec.poo.academia.Menu;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.serratec.poo.academia.AgendamentoMetodos.listaAgendamento;
 import static org.serratec.poo.academia.AgendamentoMetodos.novoAgendamento;
 import static org.serratec.poo.alunos.MetodosAluno.visualizarAgendamentosAluno;
 import static org.serratec.poo.alunos.MetodosAluno.visualizarAvaliacoesAluno;
@@ -12,7 +14,6 @@ import static org.serratec.poo.principal.Programa.sc;
 
 public class MenuAluno implements Menu {
 	private Aluno aluno;
-	private List<Agendamento> agendamentos = new ArrayList<Agendamento>();
 
 	public MenuAluno(Aluno aluno) {
 		this.aluno = aluno;
@@ -81,17 +82,17 @@ public class MenuAluno implements Menu {
 	}
 
 	public void remove() {
+		List<Agendamento> agendamentos = visualizarAgendamentosAluno(getAluno().getCpf());
 		System.out.println("Qual agendamento deseja cancelar?\n");
-		agendamentos = visualizarAgendamentosAluno(getAluno().getCpf());
 		System.out.println("Digite o índice da avaliação desejada:");
 		int op = sc.nextInt();
-		if (op > -1 && op - 1 <= agendamentos.size()) {
-			agendamentos.remove(op - 1);
-			System.out.println("Agendamento cancelado com sucesso!");
-		} else {
-			System.out.println("Digite um indice valido...");
+		sc.nextLine();
+		if (op<1 || op>agendamentos.size()){
+			System.out.println("Digite um valor valido!\n");
 			remove();
 		}
+		agendamentos.remove(op-1);
+		System.out.println("Agendamento cancelado com sucesso!");
 	}
 
 	public void buscaAvaliacao() {

@@ -54,8 +54,8 @@ public class AvaliacaoMetodos {
 			System.out.println("CPF do Aluno: ");
 			sc.nextLine();
 			String cpfBusca = sc.nextLine();
-			cpfAluno = buscaAluno(cpfBusca);
-			if (cpfAluno == null) {
+			String encontrado = buscaAluno(cpfBusca);
+			if (encontrado == null) {
 				System.out.println("Aluno não econtrado...\n");
 				System.out.println("Deseja buscar um novo aluno? (S/N)");
 				String op = sc.nextLine();
@@ -63,6 +63,10 @@ public class AvaliacaoMetodos {
 					System.out.println("Retornando ao menu...");
 					break;
 				}
+			}
+			else{
+				cpfAluno = cpfBusca;
+				break;
 			}
 		}
 		String nomePersonal = null;

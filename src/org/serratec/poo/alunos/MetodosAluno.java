@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.serratec.poo.academia.AgendamentoMetodos.listaAgendamento;
 import static org.serratec.poo.academia.AvaliacaoMetodos.listaAvaliacoes;
@@ -16,6 +17,7 @@ import static org.serratec.poo.academia.Pessoa.getListaAlunos;
 import static org.serratec.poo.principal.Programa.sc;
 
 public class MetodosAluno {
+	public static List<Agendamento> agendamentos = listaAgendamento();
 	public static List<Aluno> listaAluno() {
 		List<Aluno> alunos = new ArrayList<>();
 		try {
@@ -95,9 +97,8 @@ public class MetodosAluno {
 	}
 
 	public static List<Agendamento> visualizarAgendamentosAluno(String cpf) {
-		List<Agendamento> agendamentos = listaAgendamento();
 		agendamentos = agendamentos.stream().filter(a -> a.getCPFAluno().equalsIgnoreCase(cpf))
-				.toList();
+				.collect(Collectors.toList());
 		int i = -1;
 		for (Agendamento agendamento : agendamentos) {
 			i ++;

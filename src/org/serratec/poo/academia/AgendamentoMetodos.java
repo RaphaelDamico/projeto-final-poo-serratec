@@ -85,6 +85,9 @@ public class AgendamentoMetodos {
 		Agendamento novoAgendamento = new Agendamento(new Horario(dataAgendamento, horaAgendamento), cpf, nomePersonal,
 				status);
 		agendamentos.add(novoAgendamento);
+		salvaAgendamentos(agendamentos);
+	}
+	public static void salvaAgendamentos(List<Agendamento> agendamentos){
 		try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAgendamento()))) {
 			for (Agendamento agendamento : agendamentos) {
 				escritor.write(agendamento.toString2());

@@ -5,3 +5,4 @@
 16287349050;Pedro Almeida;2022-08-24;08:30;1.75;87.0;27.0;Bronquite Asmática
 201012038;Fernanda Pereira;2023-07-25;14:30;1.73;65.0;26.0;Não possui restrição
 201012038;Gustavo Lima;2024-04-16;16:00;1.87;80.0;24.0;Nenhuma
+16287349050;Gustavo Lima;2024-04-15;11:30;1.65;125.0;67.0;Superdoente
