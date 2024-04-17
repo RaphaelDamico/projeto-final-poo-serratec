@@ -53,6 +53,7 @@ public class MetodosPersonal {
 	public static void novoPersonal() {
 		List<PersonalTrainer> personais = (listaPersonal());
 		System.out.println("Nome: ");
+		sc.nextLine();
 		String nomePersonal = sc.nextLine();
 		System.out.println("Data Nascimento: ");
 		String data = sc.nextLine();
@@ -76,16 +77,15 @@ public class MetodosPersonal {
 		PersonalTrainer novoPersonal = new PersonalTrainer(nomePersonal, dataNascimento, cpf, contato, senha,
 				especialidade, cref, horarioAtendimento);
 		personais.add(novoPersonal);
-		try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaAlunos()))) {
+		try (BufferedWriter escritor = new BufferedWriter(new FileWriter(getListaPersonal()))) {
 			for (PersonalTrainer personalTrainer : personais) {
 				escritor.write(personalTrainer.toString2());
 				escritor.newLine();
 			}
-			System.out.println("Aluno cadastrado com sucesso.");
+			System.out.println("Personal cadastrado com sucesso.");
 		} catch (IOException e) {
-			System.out.println("\nErro cadastrar novo aluno.");
+			System.err.println("\nErro cadastrar novo personal.");
 		}
-		sc.close();
 	}
 
 	public static void mostraPersonal() {
