@@ -83,8 +83,22 @@ public class AvaliacaoMetodos {
 				}
 			}
 		}
-		System.out.println("Data: ");
-		String data = sc.nextLine();
+		boolean validaData = false;
+		LocalDate dataAvaliacao = null;
+		while (!validaData) {
+			System.out.print("Data Avaliação: ");
+			String data = sc.nextLine();
+			dataAvaliacao = LocalDate.parse(data);
+			validaData = validaDataAvaliacao(dataAvaliacao);
+			if (!validaData) {
+				System.out.println("Deseja escolher uma nova data?(S/N)");
+				String op = sc.nextLine();
+				if (op.equalsIgnoreCase("n")) {
+					System.out.println("Retornando ao menu...");
+					break;
+				}
+			}
+		}
 		System.out.println("Horário: ");
 		String hora = sc.nextLine();
 		System.out.println("Altura do Aluno: ");
@@ -97,7 +111,6 @@ public class AvaliacaoMetodos {
 		System.out.println("Restrições: ");
 		String restricoes = sc.nextLine();
 		LocalTime horaAvaliacao = LocalTime.parse(hora);
-		LocalDate dataAvaliacao = LocalDate.parse(data);
 		Horario horario = new Horario(dataAvaliacao, horaAvaliacao);
 		Avaliacao novoAvaliacao = new Avaliacao(cpfAluno, nomePersonal, horario, altura, peso, taxaDeGordura,
 				restricoes);
@@ -128,5 +141,17 @@ public class AvaliacaoMetodos {
 		for (Avaliacao avaliacao : filtro) {
 			System.out.println(avaliacao);
 		}
+	}
+	
+	public static boolean validaDataAvaliacao(LocalDate data) {
+		LocalDate dataAtual = LocalDate.now();
+
+		if (data.isEqual(dataAtual) || data.isBefore(dataAtual)) {
+			return true;
+		} else {
+			System.err.println("Você não pode registrar avaliações para datas futuras.");
+			return false;
+		}
+
 	}
 }
