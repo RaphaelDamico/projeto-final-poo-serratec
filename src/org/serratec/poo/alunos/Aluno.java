@@ -38,7 +38,6 @@ public class Aluno extends Pessoa {
 	}
 
 	public String toString2() {
-		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		return super.toString2() + String.format("%s;%s;", plano, dataMatricula.format(fmt));
+		return super.toString2() + String.format("%s;%s;", plano, dataMatricula);
 	}
 }

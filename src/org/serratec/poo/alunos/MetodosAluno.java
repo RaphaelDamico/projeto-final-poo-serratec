@@ -51,6 +51,7 @@ public class MetodosAluno {
 
 	public static void novoAluno() {
 		List<Aluno> alunos = (listaAluno());
+		sc.nextLine();
 		System.out.println("Nome: ");
 		String nomeAluno = sc.nextLine();
 		System.out.println("Data Nascimento: ");
@@ -82,7 +83,6 @@ public class MetodosAluno {
 		} catch (IOException e) {
 			System.out.println("\nErro cadastrar novo aluno.");
 		}
-		sc.close();
 	}
 
 	public static void visualizarAvaliacoesAluno(String cpf) {

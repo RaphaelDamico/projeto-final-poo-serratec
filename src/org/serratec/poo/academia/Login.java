@@ -66,6 +66,6 @@ public class Login {
 			System.out.println("OBRIGADO POR USAR NOSSO SISTEMA");
 			return;
 		}
-		sc.close();
+		//sc.close();
 	}
 }

@@ -30,12 +30,14 @@ public class PlanoMetodos {
 	public static void novoPlano() {
 		List<Plano> planos = (listaPlanos());
 		System.out.println("Qual o nome do novo Plano?");
+		sc.nextLine();
 		String nomePlano = sc.nextLine();
 		System.out.println("Qual a duração do novo Plano?");
 		int duracao = sc.nextInt();
 		System.out.println("Qual o valor do novo Plano?");
 		double valor = sc.nextDouble();
 		System.out.println("Qual a descrição do novo Plano?");
+		sc.nextLine();
 		String descricao = sc.nextLine();
 		System.out.println("\n");
 		Plano novoPlano = new Plano(nomePlano, duracao, valor, descricao);
@@ -48,8 +50,7 @@ public class PlanoMetodos {
 			System.out.println("Plano cadastrado com sucesso.");
 		} catch (IOException e) {
 			System.out.println("\nErro cadastrar novo plano.");
-		}
-		sc.close();
+		} 
 	}
 
 	public static void mostraPlanos() {
