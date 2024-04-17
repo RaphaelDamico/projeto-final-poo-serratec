@@ -94,6 +94,9 @@ public class MetodosAluno {
 		for (Avaliacao avaliacao : avaliacoesRealizadas) {
 			System.out.println(avaliacao + "\n");
 		}
+		if (avaliacoesRealizadas.isEmpty()){
+			System.err.println("Nenhuma avaliação registrada...");
+		}
 	}
 
 	public static List<Agendamento> visualizarAgendamentosAluno(String cpf) {
