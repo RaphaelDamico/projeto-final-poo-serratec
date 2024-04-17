@@ -49,8 +49,8 @@ public class AgendamentoMetodos {
 		boolean validaData = false;
 		LocalDate dataAgendamento = null;
 		while (!validaData) {
-			System.out.print("Data Agendamento: ");
 			sc.nextLine();
+			System.out.print("Data Agendamento: ");
 			String data = sc.nextLine();
 			dataAgendamento = LocalDate.parse(data);
 			validaData = validaDataAgendamento(dataAgendamento);

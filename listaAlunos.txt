@@ -1,31 +1,32 @@
-Fernando Mario;1998-02-08;11111111111;ffbolado@gmail.com;24992943436;senha;Mensal TotalFit;6; 99.90;Plano mensal;2024-01-01;Ainda nao efetuada
-Amanda Costa;1996-09-14;58940236715;amanda.costa@email.com;21987654321;ghi789;Semestral TotalFit;6;89.90;Plano semestral;2023-11-15;Ainda não efetuada
-Bruno Oliveira;1993-03-20;12643507891;bruno.oliveira@email.com;21989012345;789ghi;Anual TotalFit;4;79.90;Plano anual;2024-06-20;Ainda não efetuada
-Juliana Santos;1998-08-25;70386452917;juliana.santos@email.com;21986543210;abc789;Mensal TotalFit;6;99.90;Plano mensal;2024-01-01;Ainda não efetuada
-Marcos Costa;1995-07-05;30495867205;marcos.costa@email.com;21985203647;def456;Trimestral TotalFit;5;95.90;Plano trimestral;2022-08-10;Concluída
-Camila Oliveira;1992-11-10;36541892073;camila.oliveira@email.com;21988765432;678def;Semestral TotalFit;6;89.90;Plano semestral;2023-11-15;Ainda não efetuada
-Rafael Santos;1989-12-15;50849627135;rafael.santos@email.com;21981234567;ghi123;Anual TotalFit;4;79.90;Plano anual;2024-06-20;Ainda não efetuada
-Fernanda Oliveira;1996-04-18;92487103569;fernanda.oliveira@email.com;21987654321;234ghi;Mensal TotalFit;6;99.90;Plano mensal;2024-01-01;Ainda não efetuada
-Eduardo Silva;1991-01-23;25648973201;eduardo.silva@email.com;21984567980;345ghi;Trimestral TotalFit;5;95.90;Plano trimestral;2022-08-10;Concluída
-Larissa Costa;1994-06-30;64831702658;larissa.costa@email.com;21983042957;456ghi;Semestral TotalFit;6;89.90;Plano semestral;2023-11-15;Ainda não efetuada
-Thiago Oliveira;1988-03-25;08764953010;thiago.oliveira@email.com;21984759632;567ghi;Anual TotalFit;4;79.90;Plano anual;2024-06-20;Ainda não efetuada
-Gabriela Santos;1997-09-18;83715492068;gabriela.santos@email.com;21981472360;ghi789;Semestral TotalFit;6;89.90;Plano semestral;2023-11-15;Ainda não efetuada
-Rodrigo Oliveira;1990-05-22;72381649057;rodrigo.oliveira@email.com;21988976540;789ghi;Anual TotalFit;4;79.90;Plano anual;2024-06-20;Ainda não efetuada
-Marina Costa;1994-12-27;64587903216;marina.costa@email.com;21987654325;abc789;Mensal TotalFit;6;99.90;Plano mensal;2024-01-01;Ainda não efetuada
-Felipe Santos;1993-08-05;32450689173;felipe.santos@email.com;21984736251;def456;Trimestral TotalFit;5;95.90;Plano trimestral;2022-08-10;Concluída
-Larissa Oliveira;1996-10-11;21647368915;larissa.oliveira@email.com;21989674532;678def;Semestral TotalFit;6;89.90;Plano semestral;2023-11-15;Ainda não efetuada
-Lucas Silva;1989-03-15;86475139028;lucas.silva@email.com;21982467593;ghi123;Anual TotalFit;4;79.90;Plano anual;2024-06-20;Ainda não efetuada
-Juliana Oliveira;1992-04-20;15387269041;juliana.oliveira@email.com;21989765401;234ghi;Mensal TotalFit;6;99.90;Plano mensal;2024-01-01;Ainda não efetuada
-Thiago Costa;1987-06-25;70893526132;thiago.costa@email.com;21984567230;345ghi;Trimestral TotalFit;5;95.90;Plano trimestral;2022-08-10;Concluída 
-Fernanda Santos;1990-11-30;96328517649;fernanda.santos@email.com;21987654329;456ghi;Semestral TotalFit;6;89.90;Plano semestral;2023-11-15;Ainda não efetuada
-Gustavo Oliveira;1985-07-10;60321749856;gustavo.oliveira@email.com;21982147635;567ghi;Anual TotalFit;4;79.90;Plano anual;2024-06-20;Ainda não efetuada
-Rafaela Costa;1992-02-14;58093416270;rafaela.costa@email.com;21981029348;ghi789;Semestral TotalFit;6;89.90;Plano semestral;2023-11-15;Ainda não efetuada
-André Oliveira;1986-05-29;96314705828;andre.oliveira@email.com;21983570296;789ghi;Anual TotalFit;4;79.90;Plano anual;2024-06-20;Ainda não efetuada
-Isabela Santos;1998-09-06;23589647023;isabela.santos@email.com;21984620157;abc789;Mensal TotalFit;6;99.90;Plano mensal;2024-01-01;Ainda não efetuada
-Pedro Costa;1993-11-01;16287349050;pedro.costa@email.com;21987893524;def456;Trimestral TotalFit;5;95.90;Plano trimestral;2022-08-10;Concluída
-Mariana Oliveira;1996-04-18;04659328172;mariana.oliveira@email.com;21982467915;678def;Semestral TotalFit;6;89.90;Plano semestral;2023-11-15;Ainda não efetuada
-Gabriel Silva;1991-08-22;60721693765;gabriel.silva@email.com;21989756423;ghi123;Anual TotalFit;4;79.90;Plano anual;2024-06-20;Ainda não efetuada
-Larissa Oliveira;1990-11-25;59134068620;larissa.oliveira@email.com;21987653281;234ghi;Mensal TotalFit;6;99.90;Plano mensal;2024-01-01;Ainda não efetuada
-Rafael Costa;1987-06-30;38578190643;rafael.costa@email.com;21984567392;345ghi;Trimestral TotalFit;5;95.90;Plano trimestral;2022-08-10;Concluída
-Amanda Santos;1994-12-02;92758190647;amanda.santos@email.com;21987654328;456ghi;Semestral TotalFit;6;89.90;Plano semestral;2023-11-15;Ainda não efetuada
-Gustavo Oliveira;1989-03-11;201012038;gustavo.oliveira@email.com;21982469031;wdjibs69;Anual TotalFit;4;79.90;Plano anual;2024-06-20;Ainda não efetuada
+Amanda Costa;1996-09-14;58940236715;amanda.costa@email.com;21987654321;ghi789;Semestral TotalFit;2023-11-15;
+Amanda Santos;1994-12-02;92758190647;amanda.santos@email.com;21987654328;456ghi;Semestral TotalFit;2023-11-15;
+André Oliveira;1986-05-29;96314705828;andre.oliveira@email.com;21983570296;789ghi;Anual TotalFit;2024-06-20;
+Bruno Oliveira;1993-03-20;12643507891;bruno.oliveira@email.com;21989012345;789ghi;Anual TotalFit;2024-06-20;
+Camila Oliveira;1992-11-10;36541892073;camila.oliveira@email.com;21988765432;678def;Semestral TotalFit;2023-11-15;
+Eduardo Silva;1991-01-23;25648973201;eduardo.silva@email.com;21984567980;345ghi;Trimestral TotalFit;2022-08-10;
+Felipe Santos;1993-08-05;32450689173;felipe.santos@email.com;21984736251;def456;Trimestral TotalFit;2022-08-10;
+Fernanda Oliveira;1996-04-18;92487103569;fernanda.oliveira@email.com;21987654321;234ghi;Mensal TotalFit;2024-01-01;
+Fernanda Santos;1990-11-30;96328517649;fernanda.santos@email.com;21987654329;456ghi;Semestral TotalFit;2023-11-15;
+Fernando Mario;1998-02-08;11111111111;ffbolado@gmail.com;24992943436;senha;Mensal TotalFit;2024-01-01;
+Gabriel Silva;1991-08-22;60721693765;gabriel.silva@email.com;21989756423;ghi123;Anual TotalFit;2024-06-20;
+Gabriela Santos;1997-09-18;83715492068;gabriela.santos@email.com;21981472360;ghi789;Semestral TotalFit;2023-11-15;
+Gustavo Oliveira;1985-07-10;60321749856;gustavo.oliveira@email.com;21982147635;567ghi;Anual TotalFit;2024-06-20;
+Gustavo Oliveira;1989-03-11;201012038;gustavo.oliveira@email.com;21982469031;wdjibs69;Anual TotalFit;2024-06-20;
+Isabela Santos;1998-09-06;23589647023;isabela.santos@email.com;21984620157;abc789;Mensal TotalFit;2024-01-01;
+Juliana Oliveira;1992-04-20;15387269041;juliana.oliveira@email.com;21989765401;234ghi;Mensal TotalFit;2024-01-01;
+Juliana Santos;1998-08-25;70386452917;juliana.santos@email.com;21986543210;abc789;Mensal TotalFit;2024-01-01;
+Larissa Costa;1994-06-30;64831702658;larissa.costa@email.com;21983042957;456ghi;Semestral TotalFit;2023-11-15;
+Larissa Oliveira;1996-10-11;21647368915;larissa.oliveira@email.com;21989674532;678def;Semestral TotalFit;2023-11-15;
+Larissa Oliveira;1990-11-25;59134068620;larissa.oliveira@email.com;21987653281;234ghi;Mensal TotalFit;2024-01-01;
+Lucas Silva;1989-03-15;86475139028;lucas.silva@email.com;21982467593;ghi123;Anual TotalFit;2024-06-20;
+Marcos Costa;1995-07-05;30495867205;marcos.costa@email.com;21985203647;def456;Trimestral TotalFit;2022-08-10;
+Mariana Oliveira;1996-04-18;04659328172;mariana.oliveira@email.com;21982467915;678def;Semestral TotalFit;2023-11-15;
+Marina Costa;1994-12-27;64587903216;marina.costa@email.com;21987654325;abc789;Mensal TotalFit;2024-01-01;
+Pedro Costa;1993-11-01;16287349050;pedro.costa@email.com;21987893524;def456;Trimestral TotalFit;2022-08-10;
+Rafael Costa;1987-06-30;38578190643;rafael.costa@email.com;21984567392;345ghi;Trimestral TotalFit;2022-08-10;
+Rafael Santos;1989-12-15;50849627135;rafael.santos@email.com;21981234567;ghi123;Anual TotalFit;2024-06-20;
+Rafaela Costa;1992-02-14;58093416270;rafaela.costa@email.com;21981029348;ghi789;Semestral TotalFit;2023-11-15;
+Rodrigo Oliveira;1990-05-22;72381649057;rodrigo.oliveira@email.com;21988976540;789ghi;Anual TotalFit;2024-06-20;
+Thiago Costa;1987-06-25;70893526132;thiago.costa@email.com;21984567230;345ghi;Trimestral TotalFit;2022-08-10;
+Thiago Oliveira;1988-03-25;08764953010;thiago.oliveira@email.com;21984759632;567ghi;Anual TotalFit;2024-06-20;
+Joao Pedro Soares;2000-08-21;77711177712;pppf@gmail.com;24992943436;senha;JAVA LOVER;2024-04-17;

@@ -29,7 +29,7 @@ public class MetodosAluno {
 				// Processar cada linha
 				String[] dados = linha.split(";");
 				LocalDate nascimento = LocalDate.parse(dados[1]);
-				LocalDate matricula = LocalDate.parse(dados[10]);
+				LocalDate matricula = LocalDate.parse(dados[7]);
 
 				Aluno aluno = new Aluno(dados[0], // Nome
 						nascimento, // Data nascimento

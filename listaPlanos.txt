@@ -2,3 +2,4 @@ Mensal;1;99.9;Dura 1 mes
 Trimestral;3;95.9;Dura 3 meses
 Semestral;6;89.9;Dura 6 meses
 Anual;1;79.9;Dura 1 ano
+JAVA LOVER;12;39.9;Plano para aqueles que amam java
