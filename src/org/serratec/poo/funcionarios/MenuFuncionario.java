@@ -110,16 +110,16 @@ public class MenuFuncionario implements Menu {
 			String dataI = sc.nextLine();
 			LocalDate dataInicio = LocalDate.parse(dataI);
 			System.out.println("Insira a data do fim do periodo (yyyy-MM-dd): ");
-			sc.nextLine();
 			String dataF = sc.nextLine();
 			LocalDate dataFim = LocalDate.parse(dataF);
 			List<Avaliacao> filtro = buscarAvaliacoesPorPeriodo(dataInicio, dataFim);
-			try {
+			if (filtro.isEmpty()){
+				System.err.println("Não foram encontradas avaliações para este período.");
+			}
+			else{
 				for (Avaliacao avaliacao : filtro) {
 					System.out.println(avaliacao);
 				}
-			}catch (DateTimeParseException e) {
-				System.err.println("Não foram encontradas avaliações para este período." + e);
 			}
 		}
 	}
