@@ -11,10 +11,12 @@ import static org.serratec.poo.personaltrainers.MetodosPersonal.novoPersonal;
 import static org.serratec.poo.principal.Programa.sc;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.serratec.poo.academia.Avaliacao;
 import org.serratec.poo.academia.Menu;
 import org.serratec.poo.academia.Pessoa;
 import org.serratec.poo.alunos.Aluno;
@@ -104,12 +106,21 @@ public class MenuFuncionario implements Menu {
 		}
 		if (opcao == 7) {
 			System.out.println("Insira a data do inicio do periodo (yyyy-MM-dd): ");
+			sc.nextLine();
 			String dataI = sc.nextLine();
 			LocalDate dataInicio = LocalDate.parse(dataI);
 			System.out.println("Insira a data do fim do periodo (yyyy-MM-dd): ");
+			sc.nextLine();
 			String dataF = sc.nextLine();
 			LocalDate dataFim = LocalDate.parse(dataF);
-			buscarAvaliacoesPorPeriodo(dataInicio, dataFim);
+			List<Avaliacao> filtro = buscarAvaliacoesPorPeriodo(dataInicio, dataFim);
+			try {
+				for (Avaliacao avaliacao : filtro) {
+					System.out.println(avaliacao);
+				}
+			}catch (DateTimeParseException e) {
+				System.err.println("Não foram encontradas avaliações para este período." + e);
+			}
 		}
 	}
 

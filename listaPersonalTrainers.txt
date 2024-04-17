@@ -1,7 +1,7 @@
-Fernanda Pereira;1986-03-07;46208731954;fernanda.pereira@email.com;65498732;654987pilates;CREF45678; segunda/terca/quarta das 8h as 17h;
-Gustavo Lima;1992-06-18;2250845;gustavo.lima@email.com;32165498;senhapercrossfit;CREF09876; Segunda a sabado a partir das 17h;
-Lucas Oliveira;1985-08-10;65209413837;lucas.oliveira@email.com;12345678;123456musculação;CREF12345; Segunda a sexta 8h as 11h;
-Mariana Santos;1990-04-25;37910528446;mariana.santos@email.com;98765432;987654cardio;CREF54321; Sabado 12h as 17h;
-Pedro Almeida;1995-09-14;36298514707;pedro.almeida@email.com;78912345;789123natação;CREF76543; Todos os dias a partir das 12h;
-Rafaela Costa;1987-12-03;84197203653;rafaela.costa@email.com;45678912;456789yoga;CREF67890; Segunda 12h as 17h;
-Pepê Soares;1990-03-08;99987654321;pepeboladao@pepezinho.com;24987654321;pp1234rei delas;CREF96969;1h por dia, 1 dia por mês;
+Fernanda Pereira;1986-03-07;46208731954;fernanda.pereira@email.com;65498732;654987;pilates;CREF45678; segunda/terca/quarta das 8h as 17h;
+Gustavo Lima;1992-06-18;2250845;gustavo.lima@email.com;32165498;senhaper;crossfit;CREF09876; Segunda a sabado a partir das 17h;
+Lucas Oliveira;1985-08-10;65209413837;lucas.oliveira@email.com;12345678;123456;musculação;CREF12345; Segunda a sexta 8h as 11h;
+Mariana Santos;1990-04-25;37910528446;mariana.santos@email.com;98765432;987654;cardio;CREF54321; Sabado 12h as 17h;
+Pedro Almeida;1995-09-14;36298514707;pedro.almeida@email.com;78912345;789123;natação;CREF76543; Todos os dias a partir das 12h;
+Rafaela Costa;1987-12-03;84197203653;rafaela.costa@email.com;45678912;456789;yoga;CREF67890; Segunda 12h as 17h;
+Pepê Soares;1990-03-08;99987654321;pepeboladao@pepezinho.com;24987654321;pp1234;rei delas;CREF96969;1h por dia, 1 dia por mês;

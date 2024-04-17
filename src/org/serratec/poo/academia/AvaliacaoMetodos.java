@@ -122,11 +122,11 @@ public class AvaliacaoMetodos {
 			}
 			System.out.println("Avaliacção cadastrada.");
 		} catch (IOException e) {
-			System.out.println("\nErro ao criar Avaliação.");
+			System.err.println("\nErro ao criar Avaliação.");
 		}
 	}
 
-	public static void buscarAvaliacoesPorPeriodo(LocalDate dataInicio, LocalDate dataFim) {
+	public static List<Avaliacao> buscarAvaliacoesPorPeriodo(LocalDate dataInicio, LocalDate dataFim) {
 		// Carregar as avaliações do arquivo
 		List<Avaliacao> avaliacoes = listaAvaliacoes();
 		List<Avaliacao> filtro = new ArrayList<>();
@@ -138,9 +138,7 @@ public class AvaliacaoMetodos {
 				filtro.add(avaliacao);
 			}
 		}
-		for (Avaliacao avaliacao : filtro) {
-			System.out.println(avaliacao);
-		}
+		return filtro;
 	}
 	
 	public static boolean validaDataAvaliacao(LocalDate data) {
